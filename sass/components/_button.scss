@@ -32,6 +32,11 @@
     background-color: $color-primary-dark;
   }
 
+  &__arrow {
+    font-size: 2.2rem;
+    padding-left: 1rem;
+  }
+
   &--blue {
     background: $color-primary;
     color: $color-white;
