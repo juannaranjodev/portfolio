@@ -4,8 +4,8 @@
   background-image:
     linear-gradient(
       to right bottom,
-      rgba($color-black, 0.4),
-      rgba($color-black, 0.2)),
+      rgba($color-primary-dark, 0.5),
+      rgba($color-secondary-light, 0.3)),
     url(../img/hero-small.jpg);
   background-size: cover;
   background-position: right;
@@ -17,8 +17,8 @@
     background-image:
       linear-gradient(
         to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)),
+        rgba($color-primary-dark, 0.5),
+        rgba($color-secondary-light, 0.3)),
       url(../img/hero.jpg);
   }
 
@@ -26,7 +26,6 @@
     position: absolute;
     top: 30%;
     left: 5%;
-    // transform: translate(-50%, -40%);
     text-align: left;
   }
 }

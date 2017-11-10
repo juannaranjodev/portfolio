@@ -51,7 +51,7 @@ body {
   box-sizing: border-box; }
 
 ::selection {
-  background-color: #55c57a;
+  background-color: #ffa81e;
   color: #fff; }
 
 body {
@@ -95,11 +95,11 @@ body {
   font-weight: 700;
   letter-spacing: .2rem;
   transition: all .2s;
-  color: #28b485; }
+  color: #458cc1; }
   @supports (-webkit-background-clip: text) {
     .heading-secondary {
       -webkit-background-clip: text;
-      background-image: linear-gradient(to right, #7ed56f, #28b485);
+      background-image: linear-gradient(to right, #75c9f9, #458cc1);
       color: transparent; } }
   @media only screen and (max-width: 56.25em) {
     .heading-secondary {
@@ -152,7 +152,6 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.6rem;
-  border-radius: 10rem;
   transition: all .2s;
   border: none;
   cursor: pointer; }
@@ -167,19 +166,20 @@ body {
 .btn:active, .btn:focus {
   outline: none;
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  background-color: #458cc1; }
 
-.btn--white {
-  background: #fff;
-  color: #777; }
-  .btn--white::after {
-    background: #fff; }
+.btn--blue {
+  background: #3ea5e0;
+  color: #fff; }
+  .btn--blue::after {
+    background: #3ea5e0; }
 
 .btn--green {
-  background: #55c57a;
+  background: #3ea5e0;
   color: #fff; }
   .btn--green::after {
-    background: #55c57a; }
+    background: #3ea5e0; }
 
 .btn::after {
   position: absolute;
@@ -190,7 +190,6 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 10rem;
   transition: all .4s; }
 
 .btn--animated {
@@ -199,14 +198,14 @@ body {
 .btn-text:link, .btn-text:visited {
   display: inline-block;
   font-size: 1.6rem;
-  color: #55c57a;
+  color: #3ea5e0;
   text-decoration: none;
-  border-bottom: 1px solid #55c57a;
+  border-bottom: 1px solid #3ea5e0;
   padding: 3px;
   transition: all .2s; }
 
 .btn-text:hover {
-  background-color: #55c57a;
+  background-color: #3ea5e0;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
@@ -258,12 +257,12 @@ body {
 .header {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url(../img/hero-small.jpg);
+  background-image: linear-gradient(to right bottom, rgba(69, 140, 193, 0.5), rgba(255, 168, 30, 0.3)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: right; }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg); } }
+      background-image: linear-gradient(to right bottom, rgba(69, 140, 193, 0.5), rgba(255, 168, 30, 0.3)), url(../img/hero.jpg); } }
   .header__text-box {
     position: absolute;
     top: 30%;
@@ -309,7 +308,7 @@ body {
     display: inline-block;
     transition: all .2s; }
   .footer__link:hover, .footer__link:active {
-    color: #55c57a;
+    color: #3ea5e0;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
     transform: rotate(5deg) scale(1.3); }
   .footer__copyright {
@@ -354,7 +353,7 @@ body {
   top: 6.5rem;
   right: 6.5rem;
   z-index: 1000;
-  background-image: radial-gradient(#7ed56f, #28b485);
+  background-image: radial-gradient(#75c9f9, #458cc1);
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
   @media only screen and (max-width: 56.25em) {
     .navigation__background {
@@ -406,7 +405,7 @@ body {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: #55c57a;
+  color: #3ea5e0;
   transform: translateX(1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -462,7 +461,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-image: linear-gradient(to right bottom, rgba(117, 201, 249, 0.8), rgba(69, 140, 193, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem; }
@@ -489,7 +488,7 @@ body {
 
 .section-book {
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  background-image: linear-gradient(to right bottom, #75c9f9, #458cc1); }
   @media only screen and (max-width: 56.25em) {
     .section-book {
       padding: 10rem 0; } }
