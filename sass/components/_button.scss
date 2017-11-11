@@ -15,7 +15,7 @@
   }
 
   &:hover {
-    transform: translateY(-0.3rem);
+    transform: translateY(-0.3rem) rotate(2deg);
     box-shadow: 0 1rem 1.5rem rgba($color-black, .2);
 
     &::after {
@@ -27,7 +27,7 @@
   &:active,
   &:focus {
     outline: none;
-    transform: translateY(-0.1rem);
+    transform: translateY(-0.1rem) rotate(2deg);
     box-shadow: 0 .5rem .5rem rgba($color-black, .2);
     background-color: $color-primary-dark;
   }
