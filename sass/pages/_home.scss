@@ -1,6 +1,5 @@
 .section-about {
-  margin-top: -20rem;
-  padding: 25rem 0;
+  padding: 10rem 0;
   background-color: $color-gray-light-1;
 
   @include respond(tab-port) {
@@ -8,21 +7,17 @@
   }
 }
 
-.section-features {
-  padding: 20rem 0;
+.section-projects {
+  padding: 10rem 0;
   background-image:
     linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)),
-    url(../img/nat-4.jpg);
+      rgba($color-secondary-dark, .8),
+      rgba($color-primary-dark, .8)),
+    url(../img/working-large-2.jpg);
   background-size: cover;
-  transform: skewY(-7deg);
-  margin-top: -10rem;
-
-  & > * {
-    transform: skewY(7deg);
-  }
+  background-attachment: fixed;
+  background-position: bottom;
 
   @include respond(tab-port) {
     padding: 10rem 0;
