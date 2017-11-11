@@ -27,8 +27,10 @@ body {
   }
 
   &--sub-1 {
+    opacity: 0;
     font-size: 3rem;
     font-weight: 300;
+    animation: fadeIn .8s .75s forwards;
   }
 
   &--sub {

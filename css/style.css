@@ -28,6 +28,12 @@
     opacity: 1;
     transform: translateY(0); } }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 *,
 *::after,
 *::before {
@@ -78,8 +84,10 @@ body {
         letter-spacing: 1rem;
         font-size: 5rem; } }
   .heading-primary--sub-1 {
+    opacity: 0;
     font-size: 3rem;
-    font-weight: 300; }
+    font-weight: 300;
+    animation: fadeIn .8s .75s forwards; }
   .heading-primary--sub {
     display: block;
     width: 60rem;
