@@ -1,6 +1,6 @@
-.photo {
+.image-box {
 
-  &__image {
+  &__photo {
     width: 100%;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
     border-radius: 2px;
@@ -14,7 +14,7 @@
     }
 
     &:hover {
-      outline: 1.5rem solid $color-primary-light;
+      outline: 1rem solid $color-primary-light;
       transform: scale(1.05) rotate(2deg);
       box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
     }
