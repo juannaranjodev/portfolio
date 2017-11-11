@@ -77,6 +77,9 @@ body {
       .heading-primary--main {
         letter-spacing: 1rem;
         font-size: 5rem; } }
+  .heading-primary--sub-1 {
+    font-size: 3rem;
+    font-weight: 300; }
   .heading-primary--sub {
     display: block;
     width: 60rem;
