@@ -132,6 +132,9 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
+.email {
+  font-size: 2rem; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -529,6 +532,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .section-projects {
       padding: 10rem 0; } }
+
+.section-contacts {
+  padding: 10rem 0; }
 
 .section-tours {
   margin-top: -10rem;
