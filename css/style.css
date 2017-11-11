@@ -168,7 +168,7 @@ body {
   cursor: pointer; }
 
 .btn:hover {
-  transform: translateY(-0.3rem) rotate(2deg);
+  transform: translateY(-0.3rem) rotate(3deg);
   box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2); }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
@@ -257,6 +257,34 @@ body {
     outline: 1rem solid #75c9f9;
     transform: scale(1.05) rotate(2deg);
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); }
+
+.project {
+  position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .project {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  .project__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transition: all .3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .project:hover .project__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .project:hover .project__image {
+    outline: 1rem solid #75c9f9;
+    transform: scale(1.05) rotate(2deg);
+    filter: blur(3px) brightness(80%); }
 
 .row {
   max-width: 114rem;
