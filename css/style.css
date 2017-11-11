@@ -101,7 +101,7 @@ body {
 
 .heading-secondary {
   display: inline-block;
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .2rem;
@@ -114,12 +114,12 @@ body {
       color: transparent; } }
   @media only screen and (max-width: 56.25em) {
     .heading-secondary {
-      font-size: 3rem; } }
+      font-size: 2.5rem; } }
   @media only screen and (max-width: 37.5em) {
     .heading-secondary {
-      font-size: 2.5rem; } }
+      font-size: 2rem; } }
   .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    transform: skewY(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
@@ -229,6 +229,35 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+.link:link, .link:visited {
+  color: #458cc1;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all .2s; }
+
+.link:hover, .link:active {
+  color: #fff;
+  background-color: #75c9f9;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  transform: rotate(3deg) scale(1.1); }
+
+.photo__image {
+  width: 100%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  transition: all .2s; }
+  @media only screen and (max-width: 56.25em) {
+    .photo__image {
+      float: left;
+      position: relative;
+      width: 33.33333333%;
+      box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); } }
+  .photo__image:hover {
+    outline: 1.5rem solid #75c9f9;
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -274,7 +303,8 @@ body {
   height: 100vh;
   background-image: linear-gradient(to right bottom, rgba(69, 140, 193, 0.5), rgba(255, 168, 30, 0.3)), url(../img/hero-small.jpg);
   background-size: cover;
-  background-position: right; }
+  background-position: right;
+  background-attachment: fixed; }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(69, 140, 193, 0.5), rgba(255, 168, 30, 0.3)), url(../img/hero.jpg); } }
@@ -315,17 +345,6 @@ body {
     display: inline-block; }
     .footer__item:not(:last-child) {
       margin-right: 1.5rem; }
-  .footer__link:link, .footer__link:visited {
-    color: #f7f7f7;
-    background-color: #333;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-block;
-    transition: all .2s; }
-  .footer__link:hover, .footer__link:active {
-    color: #3ea5e0;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-    transform: rotate(5deg) scale(1.3); }
   .footer__copyright {
     border-top: 1px solid #777;
     padding-top: 2rem;
