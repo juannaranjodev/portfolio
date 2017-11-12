@@ -13,6 +13,13 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin heroBgSettings {
+  height: 100vh;
+  background-size: cover;
+  background-position: right;
+  background-attachment: fixed;
+}
+
 // Media Query Manager
 
 // 0 - 600px : Phone

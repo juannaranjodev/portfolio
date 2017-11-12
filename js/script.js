@@ -8,9 +8,18 @@ var btnList = document.querySelectorAll('.project__btn');
 // Get the <span> element that closes the modal
 var modalCloseList = document.querySelectorAll(".modal__close");
 
+var header = document.querySelector('.header');
 var body = document.querySelector('body');
 // Iterator
 var index;
+
+header.addEventListener('mouseover', function() {
+  document.querySelector('.header__background-filter').style.opacity = '0';
+});
+
+header.addEventListener('mouseout', function() {
+  document.querySelector('.header__background-filter').style.opacity = '1';
+});
 
 // Set event listeners for all project buttons
 for (var i = 0; i < btnList.length; i++) {
@@ -39,7 +48,7 @@ function showModal(currentIndex) {
   return function() {
     modalContentList[currentIndex].classList.remove('modal__content--animate-out');
     modalContentList[currentIndex].classList.add('modal__content--animate-in');
-    
+
     modalList[currentIndex].style.display = 'block';
   };
 }
