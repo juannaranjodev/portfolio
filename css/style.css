@@ -34,6 +34,13 @@
   100% {
     opacity: 1; } }
 
+@keyframes moveOut {
+  0% {
+    transform: translateY(0); }
+  100% {
+    opacity: 0;
+    transform: translateY(80%); } }
+
 *,
 *::after,
 *::before {
@@ -319,8 +326,11 @@ body {
     border: 1rem solid #458cc1;
     border-radius: 2px;
     width: 50%;
-    position: relative;
-    animation: moveInBottom .5s .2s ease-out backwards; }
+    position: relative; }
+    .modal__content--animate-in {
+      animation: moveInBottom .5s .5s ease-out backwards; }
+    .modal__content--animate-out {
+      animation: moveOut .5s ease-out forwards; }
   .modal__heading {
     padding-top: 2rem;
     padding-left: 2rem; }

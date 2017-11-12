@@ -1,12 +1,14 @@
 // Select all modal popups
 var modalList = document.querySelectorAll('.modal');
 
+var modalContentList = document.querySelectorAll('.modal__content');
 // Select all project buttons
 var btnList = document.querySelectorAll('.project__btn');
 
 // Get the <span> element that closes the modal
 var modalCloseList = document.querySelectorAll(".modal__close");
 
+var body = document.querySelector('body');
 // Iterator
 var index;
 
@@ -35,6 +37,9 @@ window.onclick = function(event) {
 // Open the modal
 function showModal(currentIndex) {
   return function() {
+    modalContentList[currentIndex].classList.remove('modal__content--animate-out');
+    modalContentList[currentIndex].classList.add('modal__content--animate-in');
+    
     modalList[currentIndex].style.display = 'block';
   };
 }
@@ -42,6 +47,12 @@ function showModal(currentIndex) {
 // Close the modal
 function hideModal(currentIndex) {
   return function() {
-    modalList[currentIndex].style.display = 'none';
+    modalContentList[currentIndex].classList.remove('modal__content--animate-in');
+    modalContentList[currentIndex].classList.add('modal__content--animate-out');
+
+    setTimeout(function() {
+      modalList[currentIndex].style.display = 'none';
+    }, 500);
+
   };
 }

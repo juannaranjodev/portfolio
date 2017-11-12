@@ -48,3 +48,13 @@
     opacity: 1;
   }
 }
+
+@keyframes moveOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+}
