@@ -11,9 +11,9 @@
 
     <nav class="navigation">
       <ul class="navigation__list">
-        <li class="navigation__item"><a href="#section-about" class="navigation__link link">About me</a></li>
-        <li class="navigation__item"><a href="#section-projects" class="navigation__link link">Projects</a></li>
-        <li class="navigation__item"><a href="#section-contacts" class="navigation__link link">Contacts</a></li>
+        <li class="navigation__item"><a data-scroll href="#section-about" class="navigation__link link">About me</a></li>
+        <li class="navigation__item"><a data-scroll href="#section-projects" class="navigation__link link">Projects</a></li>
+        <li class="navigation__item"><a data-scroll href="#section-contacts" class="navigation__link link">Contacts</a></li>
       </ul>
     </nav>
 
@@ -25,7 +25,7 @@
           <span class="heading-primary--main">Oleksii Bespalko</span>
           <span class="heading-primary--sub">A simple guy who wants to create really cool things</span>
         </h1>
-        <a href="#section-projects" id="header-btn" class="btn btn--blue btn--animated">Projects <span class="btn__arrow">&darr;</span></a>
+        <a data-scroll href="#section-projects" id="header-btn" class="btn btn--blue btn--animated">Projects <span class="btn__arrow">&darr;</span></a>
       </div>
     </header>
 
@@ -281,7 +281,7 @@
         </div>
       </div>
     </div>
-
+    <script src="js/smooth-scroll.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+// Smooth scrolling
+var scroll = new SmoothScroll('a[href*="#"]');
 // Select all modal popups
 var modalList = document.querySelectorAll('.modal');
 
