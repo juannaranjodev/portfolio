@@ -188,12 +188,12 @@ body {
   text-decoration: none;
   font-size: 1.6rem;
   transition: all .2s;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
   border: none;
   cursor: pointer; }
 
 .btn:hover {
-  transform: translateY(-0.3rem) rotate(3deg);
-  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2); }
+  transform: translateY(-0.3rem) rotate(3deg); }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
@@ -424,6 +424,7 @@ body {
   z-index: 1500;
   padding: 1rem 2rem;
   width: 100%;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   @media only screen and (max-width: 37.5em) {
     .navigation {

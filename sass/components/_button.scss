@@ -9,6 +9,7 @@
     text-decoration: none;
     font-size: $default-font-size;
     transition: all .2s;
+    box-shadow: 0 1rem 1.5rem rgba($color-black, .2);
     // Change for the <button> element
     border: none;
     cursor: pointer;
@@ -16,7 +17,7 @@
 
   &:hover {
     transform: translateY(-0.3rem) rotate(3deg);
-    box-shadow: 0 1rem 1.5rem rgba($color-black, .2);
+
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);

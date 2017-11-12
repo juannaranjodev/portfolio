@@ -6,6 +6,7 @@
   z-index: 1500;
   padding: 1rem 2rem;
   width: 100%;
+  box-shadow: 0 1rem 1.5rem rgba($color-black, .2);
   transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   @include respond(phone) {
