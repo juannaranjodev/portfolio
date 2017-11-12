@@ -156,8 +156,11 @@ body {
 .u-margin-top-big {
   margin-top: 10rem !important; }
 
-.u-margin-top-big {
+.u-margin-top-medium {
   margin-top: 8rem !important; }
+
+.u-margin-top-small {
+  margin-top: 5rem !important; }
 
 .btn, .btn:link, .btn:visited {
   position: relative;
@@ -234,6 +237,7 @@ body {
 
 .link:link, .link:visited {
   color: #458cc1;
+  padding: 0 .5rem;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
@@ -311,21 +315,38 @@ body {
   /* Black w/ opacity */ }
   .modal__content {
     background-color: #fefefe;
-    margin: 15% auto;
-    /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    /* Could be more or less, depending on screen size */ }
+    margin: 2rem auto;
+    border: 1rem solid #458cc1;
+    border-radius: 2px;
+    width: 50%;
+    position: relative;
+    animation: moveInBottom .5s .2s ease-out backwards; }
+  .modal__heading {
+    padding-top: 2rem;
+    padding-left: 2rem; }
   .modal__close {
     color: #aaa;
     float: right;
     font-size: 28px;
-    font-weight: bold; }
+    font-weight: bold;
+    position: absolute;
+    top: .8rem;
+    right: 2rem; }
     .modal__close:hover, .modal__close:focus {
       color: black;
       text-decoration: none;
       cursor: pointer; }
+  .modal__image-box {
+    padding: 1rem; }
+  .modal__project-description {
+    padding: 2rem; }
+  .modal__footer::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .modal__footer__link {
+    float: right;
+    margin-right: 3rem; }
 
 .row {
   max-width: 114rem;
