@@ -32,3 +32,11 @@ body {
   background-color: $color-secondary-light;
   color: $color-white;
 }
+
+section {
+  padding: 10rem 0;
+
+  @include respond(tab-port) {
+    padding: 5rem 0;
+  }
+}

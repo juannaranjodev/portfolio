@@ -6,13 +6,6 @@
     border-radius: 2px;
     transition: all .2s;
 
-    @include respond(tab-port) {
-      float: left;
-      position: relative;
-      width: 33.33333333%;
-      box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
-    }
-
     &:hover {
       outline: 1rem solid $color-primary-light;
       transform: scale(1.05) rotate(2deg);

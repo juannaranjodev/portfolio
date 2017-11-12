@@ -22,7 +22,7 @@ body {
 
     @include respond(phone) {
       letter-spacing: 1rem;
-      font-size: 5rem;
+      font-size: 4rem;
     }
   }
 
@@ -31,6 +31,10 @@ body {
     font-size: 3rem;
     font-weight: 300;
     animation: fadeIn .8s .75s forwards;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
   }
 
   &--sub {
@@ -42,7 +46,9 @@ body {
     animation: moveInRight 1s ease-out;
 
     @include respond(phone) {
+      width: 70%;
       letter-spacing: .5rem;
+      font-size: 1.5rem;
     }
   }
 }
