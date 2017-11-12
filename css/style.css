@@ -201,8 +201,7 @@ body {
 .btn:active, .btn:focus {
   outline: none;
   transform: translateY(-0.1rem) rotate(2deg);
-  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-  background-color: #458cc1; }
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
 
 .btn__arrow {
   font-size: 2.2rem;
@@ -211,14 +210,18 @@ body {
 .btn--blue {
   background: #3ea5e0;
   color: #fff; }
+  .btn--blue:focus, .btn--blue:active {
+    background-color: #458cc1; }
   .btn--blue::after {
     background: #3ea5e0; }
 
-.btn--green {
-  background: #3ea5e0;
+.btn--orange {
+  background: #ffa81e;
   color: #fff; }
-  .btn--green::after {
-    background: #3ea5e0; }
+  .btn--orange:focus, .btn--orange:active {
+    background-color: #b76a0c; }
+  .btn--orange::after {
+    background: #ffa81e; }
 
 .btn::after {
   position: absolute;
@@ -233,25 +236,6 @@ body {
 
 .btn--animated {
   animation: moveInBottom .5s .75s ease-out backwards; }
-
-.btn-text:link, .btn-text:visited {
-  display: inline-block;
-  font-size: 1.6rem;
-  color: #3ea5e0;
-  text-decoration: none;
-  border-bottom: 1px solid #3ea5e0;
-  padding: 3px;
-  transition: all .2s; }
-
-.btn-text:hover {
-  background-color: #3ea5e0;
-  color: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px); }
-
-.btn-text:active {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transform: translateY(0); }
 
 .link:link, .link:visited {
   color: #458cc1;
