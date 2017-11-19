@@ -289,7 +289,6 @@ body {
     filter: blur(3px) brightness(80%); }
 
 .modal {
-  display: none;
   position: fixed;
   z-index: 2000;
   left: 0;
