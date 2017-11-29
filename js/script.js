@@ -28,16 +28,6 @@
     var projectModal = [
       {
         project: {
-          name: "trillo",
-          img: "img/project-7.jpg",
-          description:
-          "\"trillo\" is an app for hotels review. I made this UI when I was taking the 'Advanced CSS & Sass course' at Udemy.com.",
-          demoLink: "https://olbesp.github.io/trillo/",
-          gitHubLink: "https://github.com/olbesp/trillo"
-        }
-      },
-      {
-        project: {
           name: "Crazy Drummer",
           img: "img/project-1.jpg",
           description:
@@ -100,6 +90,16 @@
           "'The Advanced Web Developer Bootcamp' course at UDEMY.",
           demoLink: "https://olbesp.github.io/mountain-travel/",
           gitHubLink: "https://github.com/olbesp/mountain-travel"
+        }
+      },
+      {
+        project: {
+          name: "Trillo",
+          img: "img/project-7.jpg",
+          description:
+          "\"trillo\" is an app for hotels review. I made this UI when I was taking the 'Advanced CSS & Sass course' at Udemy.com.",
+          demoLink: "https://olbesp.github.io/trillo/",
+          gitHubLink: "https://github.com/olbesp/trillo"
         }
       }
     ];
