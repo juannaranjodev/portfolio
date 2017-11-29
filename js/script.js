@@ -62,7 +62,7 @@
         project: {
           name: "Pig Game",
           img: "img/project-4.jpg",
-          description: "<a href=\"http://dicegames.org/pig/\" target=\"_blank\" class=\"link\">Pig</a>" +
+          description: "Pig " +
           "is a very simple dice game that is exceptionally easy both to learn and to play." +
           "As a jeopardy dice game, it manages to keep players on the edge of their seat as" +
           "they try to determine whether to risk it all or to play it safe. Pig can be played" +
@@ -97,7 +97,7 @@
           name: "Trillo",
           img: "img/project-7.jpg",
           description:
-          "\"trillo\" is an app for hotels review. I made this UI when I was taking the 'Advanced CSS & Sass course' at Udemy.com.",
+          "\"Trillo\" is an app for hotels review. I made this UI when I was taking the 'Advanced CSS & Sass course' at Udemy.com.",
           demoLink: "https://olbesp.github.io/trillo/",
           gitHubLink: "https://github.com/olbesp/trillo"
         }
