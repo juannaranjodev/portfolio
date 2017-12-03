@@ -101,6 +101,16 @@
           demoLink: "https://olbesp.github.io/trillo/",
           gitHubLink: "https://github.com/olbesp/trillo"
         }
+      },
+      {
+        project: {
+          name: "The Words Of People",
+          img: "img/project-8.jpg",
+          description:
+          "Random quotes machine is built with using \"Quotes on design\" API.",
+          demoLink: "https://olbesp.github.io/the-words/",
+          gitHubLink: "https://github.com/olbesp/the-words"
+        }
       }
     ];
 
