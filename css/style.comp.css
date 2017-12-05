@@ -151,7 +151,8 @@ body {
     margin-bottom: 3rem; }
 
 .email {
-  font-size: 2rem; }
+  font-size: 2rem;
+  text-align: center; }
 
 .u-center-text {
   text-align: center !important; }
