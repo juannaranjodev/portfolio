@@ -111,6 +111,16 @@
           demoLink: "https://olbesp.github.io/the-words/",
           gitHubLink: "https://github.com/olbesp/the-words"
         }
+      },
+      {
+        project: {
+          name: "Weather Watcher",
+          img: "img/project-9.jpg",
+          description:
+          "Web application showing your local weather. Tools, technics and APIs: JavaScript, Ajax, Sass, Google Maps API, FreeCodeCamp Weather API",
+          demoLink: "https://olbesp.github.io/weather-watcher/",
+          gitHubLink: "https://github.com/olbesp/weather-watcher"
+        }
       }
     ];
 
