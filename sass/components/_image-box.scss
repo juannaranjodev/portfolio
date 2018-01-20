@@ -8,7 +8,7 @@
 
     &:hover {
       outline: 1rem solid $color-primary-light;
-      transform: scale(1.05) rotate(2deg);
+      transform: scale(1.05);
       box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
     }
   }

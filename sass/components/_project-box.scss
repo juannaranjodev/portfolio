@@ -29,7 +29,7 @@
 
   &:hover &__image {
     outline: 1rem solid $color-primary-light;
-    transform: scale(1.05) rotate(2deg);
+    transform: scale(1.05);
     filter: blur(3px) brightness(80%);
   }
 }
