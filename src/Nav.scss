@@ -1,0 +1,44 @@
+@import 'sass/_variables';
+@import 'sass/_mixins';
+@import 'sass/components/_link';
+
+.navigation {
+  background-color: $color-gray-dark-3;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  padding: 1rem 2rem;
+  width: 100%;
+  box-shadow: 0 1rem 1.5rem rgba($color-black, .2);
+  transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  @include respond(phone) {
+    padding: 1rem;
+  }
+
+  &__list {
+    list-style: none;
+    float: right;
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-white;
+      font-size: 2rem;
+      font-weight: 300;
+
+      @include respond(phone) {
+        font-size: 1.5rem;
+      }
+    }
+
+
+  }
+}
