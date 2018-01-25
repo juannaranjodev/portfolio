@@ -37,11 +37,11 @@ export class Home extends Component {
         <div className="Home__background-filter"></div>
         <div className="Home__text-box">
           <h1 className="heading-primary">
-            <span className="heading-primary--sub-1">Frontend Developer</span>
+            <span className="heading-primary--sub-1">Front-end Web Developer</span>
             <span className="heading-primary--main">Oleksii Bespalko</span>
             <span className="heading-primary--sub">{this.state.message[this.selectRandomMessage()]}</span>
           </h1>
-          <a data-scroll href="#section-projects" id="Home-btn" className="btn btn--blue btn--animated">Projects <span className="btn__arrow">&darr;</span></a>
+          <a href="#projects" id="Home-btn" className="btn btn--blue btn--animated">Projects <span className="btn__arrow">&rarr;</span></a>
         </div>
       </div>
     );

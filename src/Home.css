@@ -1,3 +1,42 @@
+.btn, .btn:link, .btn:visited {
+  position: relative;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all .2s;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  transform: translateY(-0.3rem); }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
+
+.btn__arrow {
+  font-size: 2.2rem;
+  padding-left: 1rem; }
+
+.btn--blue {
+  background: #3ea5e0;
+  color: #fff; }
+  .btn--blue:focus, .btn--blue:active {
+    background-color: #458cc1; }
+
+.btn--orange {
+  background: #ffa81e;
+  color: #fff; }
+  .btn--orange:focus, .btn--orange:active {
+    background-color: #b76a0c; }
+
+.btn--animated {
+  animation: moveInBottom .5s .75s ease-out backwards; }
+
 .Home {
   position: relative;
   background-image: url(img/hero-filter-small.jpg);
