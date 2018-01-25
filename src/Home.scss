@@ -1,0 +1,58 @@
+@import 'sass/_variables';
+@import 'sass/_mixins';
+
+.Home {
+  position: relative;
+  background-image:
+    linear-gradient(
+      to right bottom,
+      rgba($color-primary-dark, 0.5),
+      rgba($color-secondary-light, 0.3)),
+    url(img/hero-small.jpg);
+  @include heroBgSettings;
+
+  &__background-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(
+      to right bottom,
+      rgba($color-primary-dark, .5),
+      rgba($color-secondary-light, .3)),
+    url(img/hero-filter-small.jpg);
+    transition: opacity 1s;
+    @include heroBgSettings;
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+           only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+           only screen and (min-width: 125em)
+    {
+      background-image:
+        linear-gradient(
+          to right bottom,
+          rgba($color-primary-dark, .5),
+          rgba($color-secondary-light, .3)),
+        url(img/hero-filter.jpg);
+    }
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+         only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+         only screen and (min-width: 125em)
+  {
+    background-image:
+      linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark, .5),
+        rgba($color-secondary-light, .3)),
+      url(img/hero.jpg);
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    text-align: left;
+  }
+}

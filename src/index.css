@@ -1,4 +1,31 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.5%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
 body {
-  margin: 0rem;
-  padding: 0rem;
-  font-family: sans-serif; }
+  box-sizing: border-box; }
+
+::selection {
+  background-color: #ffa81e;
+  color: #fff; }
+
+section {
+  padding: 10rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    section {
+      padding: 5rem 0; } }

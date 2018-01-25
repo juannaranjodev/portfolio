@@ -1,0 +1,29 @@
+.Home {
+  position: relative;
+  background-image: linear-gradient(to right bottom, rgba(69, 140, 193, 0.5), rgba(255, 168, 30, 0.3)), url(img/hero-small.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: right;
+  background-attachment: fixed; }
+  .Home__background-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgba(69, 140, 193, 0.5), rgba(255, 168, 30, 0.3)), url(img/hero-filter-small.jpg);
+    transition: opacity 1s;
+    height: 100vh;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed; }
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+      .Home__background-filter {
+        background-image: linear-gradient(to right bottom, rgba(69, 140, 193, 0.5), rgba(255, 168, 30, 0.3)), url(img/hero-filter.jpg); } }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+    .Home {
+      background-image: linear-gradient(to right bottom, rgba(69, 140, 193, 0.5), rgba(255, 168, 30, 0.3)), url(img/hero.jpg); } }
+  .Home__text-box {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    text-align: left; }
