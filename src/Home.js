@@ -12,15 +12,28 @@ export class Home extends Component {
       ]
     }
     this.selectRandomMessage = this.selectRandomMessage.bind(this);
+    this.setTransparencyHandle = this.setTransparencyHandle.bind(this);
+    this.setVisibilityHandle = this.setVisibilityHandle.bind(this);
+    
   }
 
   selectRandomMessage() {
     return Math.floor(Math.random() * this.state.message.length);
   }
 
+  setTransparencyHandle() {
+    document.querySelector('.Home__background-filter').style.opacity = '0';
+  }
+
+  setVisibilityHandle() {
+    document.querySelector('.Home__background-filter').style.opacity = '1';
+  }
+
   render() {
     return (
-      <div className="Home">
+      <div className="Home" 
+        onMouseOver={this.setTransparencyHandle}
+        onMouseOut={this.setVisibilityHandle}>
         <div className="Home__background-filter"></div>
         <div className="Home__text-box">
           <h1 className="heading-primary">
