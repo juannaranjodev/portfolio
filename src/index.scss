@@ -1,5 +1,7 @@
 @import 'sass/_variables';
 @import 'sass/_mixins';
+@import 'sass/_animations';
+@import 'sass/_typography';
 
 *,
 *::after,
@@ -29,6 +31,11 @@ html {
 
 body {
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: 1.7;
+  color: $color-gray-dark;
 }
 
 ::selection {

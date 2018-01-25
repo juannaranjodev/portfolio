@@ -1,0 +1,96 @@
+@import './_animations';
+
+.heading-primary {
+  margin-bottom: 6rem;
+  color: $color-white;
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  &--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+    animation: moveInLeft 1s ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 4rem;
+    }
+  }
+
+  &--sub-1 {
+    opacity: 0;
+    font-size: 3rem;
+    font-weight: 300;
+    animation: fadeIn .8s .75s forwards;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &--sub {
+    display: block;
+    width: 60rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .75rem;
+    animation: moveInRight 1s ease-out;
+
+    @include respond(phone) {
+      width: 70%;
+      letter-spacing: .5rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  transition: all .2s;
+  color: $color-primary-dark;
+
+  @supports (-webkit-background-clip: text) {
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    color: transparent;
+  }
+
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+
+  &:hover {
+    transform: skewY(2deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.email {
+  font-size: 2rem;
+  text-align: center;
+}
