@@ -1,0 +1,38 @@
+.social-media__icon:link, .social-media__icon:visited {
+  display: inline-block;
+  font-size: 4rem;
+  padding: 0 2rem;
+  color: #f7f7f7;
+  transition: all .3s; }
+
+.social-media__icon:hover {
+  color: #3ea5e0;
+  transform: translateY(-0.3rem); }
+
+.social-media__icon:active {
+  color: #458cc1;
+  transform: translateY(-0.1rem); }
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1500;
+  background-color: #333;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #f7f7f7; }
+  @media only screen and (max-width: 56.25em) {
+    .footer {
+      padding: 1rem 0; } }
+  .footer__copyright {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); }
+  .footer__social {
+    text-align: right;
+    flex-grow: .5;
+    margin-right: 4rem; }
