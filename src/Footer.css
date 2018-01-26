@@ -46,7 +46,7 @@
 
 .social-media__icon:link, .social-media__icon:visited {
   display: inline-block;
-  font-size: 4rem;
+  font-size: 3rem;
   padding: 0 2rem;
   color: #f7f7f7;
   transition: all .3s; }
