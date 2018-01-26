@@ -1,5 +1,7 @@
 @import 'sass/_variables';
 @import 'sass/_mixins';
+@import 'sass/_amimations';
+
 @import 'sass/components/_social-media';
 
 .footer {
@@ -22,7 +24,6 @@
   &__copyright {
     position: absolute;
     left: 50%;
-    // bottom: 0;
     transform: translateX(-50%);   
   }
 

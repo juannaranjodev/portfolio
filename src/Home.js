@@ -41,7 +41,7 @@ export class Home extends Component {
             <span className="heading-primary--main">Oleksii Bespalko</span>
             <span className="heading-primary--sub">{this.state.message[this.selectRandomMessage()]}</span>
           </h1>
-          <a href="#projects" id="Home-btn" className="btn btn--blue btn--animated">Projects <span className="btn__arrow">&rarr;</span></a>
+          <a href="#projects" id="Home-btn" className="btn btn--blue animated">Projects <span className="btn__arrow">&rarr;</span></a>
         </div>
       </div>
     );

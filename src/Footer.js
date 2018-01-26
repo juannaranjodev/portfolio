@@ -15,15 +15,16 @@ export class Footer extends Component {
       { icon: <FontAwesomeIcon icon={["fab", "github"]} />, link: 'https://github.com/olbesp' },
     ];
 
-    const socialMedia = socialLinks.map((socialLink, i) => (
+    const socialMedia = socialLinks.map((socialLink, i) => {
       
-      <a key={"link_" + i} 
-        className="social-media__icon" 
+      return (
+        <a key={"link_" + i} 
+        className="social-media__icon animated" 
+          
         href={socialLink.link} target="_blank">
-        {socialLink.icon}
-        
-      </a>
-    ));
+          {socialLink.icon}
+        </a>
+    )});
 
     return (
       <footer className="footer">

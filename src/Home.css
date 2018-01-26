@@ -34,9 +34,6 @@
   .btn--orange:focus, .btn--orange:active {
     background-color: #b76a0c; }
 
-.btn--animated {
-  animation: moveInBottom .5s .75s ease-out backwards; }
-
 .Home {
   position: relative;
   background-image: url(img/hero-filter-small.jpg);

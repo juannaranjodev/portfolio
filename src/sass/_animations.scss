@@ -58,3 +58,7 @@
     transform: translateY(80%);
   }
 }
+
+.animated {
+  animation: moveInBottom .5s .75s ease-out backwards;
+}
