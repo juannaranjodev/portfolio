@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import './Footer.css';
-
-
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import './Footer.css';
 // eslint-disable-next-line
-import brands from '@fortawesome/fontawesome-free-brands';
+// import brands from '@fortawesome/fontawesome-free-brands';
 
 export class Footer extends Component {
   render() {

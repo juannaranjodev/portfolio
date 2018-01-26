@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import './Home.css';
+
 
 export class Home extends Component {
   constructor(props) {
@@ -28,7 +30,7 @@ export class Home extends Component {
   setVisibilityHandle() {
     document.querySelector('.Home__background-filter').style.opacity = '1';
   }
-
+// <span className="btn__arrow">&rarr;</span>
   render() {
     return (
       <div className="Home" 
@@ -41,7 +43,9 @@ export class Home extends Component {
             <span className="heading-primary--main">Oleksii Bespalko</span>
             <span className="heading-primary--sub">{this.state.message[this.selectRandomMessage()]}</span>
           </h1>
-          <a href="#projects" id="Home-btn" className="btn btn--blue animated">Projects <span className="btn__arrow">&rarr;</span></a>
+          <a href="#projects" id="Home-btn" className="btn btn--blue animated">
+            Projects <FontAwesomeIcon icon="arrow-right" />
+          </a>
         </div>
       </div>
     );
