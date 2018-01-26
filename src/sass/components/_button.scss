@@ -27,8 +27,11 @@
   }
 
   &__arrow {
-    //font-size: 2.2rem;
-    padding-left: 1rem;
+    transition: all .2s;
+  }
+
+  &:hover > .btn__arrow {
+    transform: translateX(.5rem) scale(1.3);
   }
 
   &--blue {

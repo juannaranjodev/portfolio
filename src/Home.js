@@ -30,10 +30,10 @@ export class Home extends Component {
   setVisibilityHandle() {
     document.querySelector('.Home__background-filter').style.opacity = '1';
   }
-// <span className="btn__arrow">&rarr;</span>
+
   render() {
     return (
-      <div className="Home" 
+      <div className="Home" id="section-home" 
         onMouseOver={this.setTransparencyHandle}
         onMouseOut={this.setVisibilityHandle}>
         <div className="Home__background-filter"></div>
@@ -44,7 +44,7 @@ export class Home extends Component {
             <span className="heading-primary--sub">{this.state.message[this.selectRandomMessage()]}</span>
           </h1>
           <a href="#projects" id="Home-btn" className="btn btn--blue animated">
-            Projects <FontAwesomeIcon icon="arrow-right" />
+            Projects <FontAwesomeIcon icon="arrow-right" className="btn__arrow" />
           </a>
         </div>
       </div>
