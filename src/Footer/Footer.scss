@@ -1,8 +1,8 @@
-@import 'sass/_variables';
-@import 'sass/_mixins';
-@import 'sass/_animations';
+@import '../sass/_variables';
+@import '../sass/_mixins';
+@import '../sass/_animations';
 
-@import 'sass/components/_social-media';
+@import '../sass/components/_social-media';
 
 .footer {
   width: 100%;
@@ -10,7 +10,7 @@
   bottom: 0;
   left: 0;
   z-index: 1500;
-  background-color: $color-gray-dark-3;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .5));
   font-size: 1.4rem;
   display: flex;
   justify-content: flex-end;

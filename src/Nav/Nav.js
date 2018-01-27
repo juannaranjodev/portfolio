@@ -13,7 +13,7 @@ export class Nav extends Component {
 
     const menuItems = menu.map((menuItem, i) => (
       <li key={"menuItem_" + i} className="navigation__item">
-        <a href={menuItem.target} className="navigation__link link">
+        <a href={menuItem.target} className="navigation__link">
           {menuItem.name}
         </a>
       </li>

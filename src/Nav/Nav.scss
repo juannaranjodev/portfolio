@@ -1,17 +1,16 @@
-@import 'sass/_variables';
-@import 'sass/_mixins';
-@import 'sass/components/_link';
+@import '../sass/_variables';
+@import '../sass/_mixins';
+@import '../sass/components/_link';
 
 .navigation {
-  background-color: $color-gray-dark-3;
+  //background-color: $color-gray-dark-3;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 1500;
   padding: 1rem 2rem;
   width: 100%;
-  box-shadow: 0 1rem 1.5rem rgba($color-black, .2);
-  transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  //transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   @include respond(phone) {
     padding: 1rem;
@@ -33,12 +32,23 @@
       color: $color-white;
       font-size: 2rem;
       font-weight: 300;
+      border-bottom: 1px solid transparent;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1rem 0;
+      display: inline-block;
+      transition: all .2s;
 
       @include respond(phone) {
         font-size: 1.5rem;
       }
     }
 
-
+    &:hover,
+    &:active {
+      border-bottom: 1px solid $color-white; 
+    }
   }
 }
+
+  

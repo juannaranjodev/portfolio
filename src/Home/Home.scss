@@ -1,11 +1,11 @@
-@import 'sass/_variables';
-@import 'sass/_mixins';
-@import 'sass/components/_button';
+@import '../sass/_variables';
+@import '../sass/_mixins';
+@import '../sass/components/_button';
 
 
 .Home {
   position: relative;
-  background-image: url(img/hero-filter-small.jpg);
+  background-image: url(../img/hero-filter-small.jpg);
   @include heroBgSettings;
 
   &__background-filter {
@@ -13,7 +13,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: url(img/hero-small.jpg);
+    background: url(../img/hero-small.jpg);
     transition: opacity 1s;
     @include heroBgSettings;
 
@@ -21,7 +21,7 @@
            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
            only screen and (min-width: 125em)
     {
-      background-image: url(img/hero.jpg);
+      background-image: url(../img/hero.jpg);
     }
   }
 
@@ -29,7 +29,7 @@
          only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
          only screen and (min-width: 125em)
   {
-    background-image: url(img/hero-filter.jpg);
+    background-image: url(../img/hero-filter.jpg);
   }
 
   &__text-box {
