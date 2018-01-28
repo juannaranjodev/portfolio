@@ -31,8 +31,7 @@
           name: "Crazy Drummer",
           img: "img/project-1.jpg",
           description:
-          "\"Crazy Drummer\" is a virtual drum kit includes basic percussion instruments." +
-          "You can choose one set of drums in menu and play the music by pressing corresponding keys on the keyboard.",
+          "\"Crazy Drummer\" is a virtual drum kit includes basic percussion instruments. You can choose one set of drums in menu and play the music by pressing corresponding keys on the keyboard. a virtual drum kit in browser. Tools: JavaScript, Howler.js, SASS.",
           demoLink: "https://olbesp.github.io/crazy-drummer/",
           gitHubLink: "https://github.com/olbesp/crazy-drummer"
         }
@@ -42,8 +41,7 @@
           name: "Natours",
           img: "img/project-2.jpg",
           description:
-          "Responsive landing page with a lots of cool CSS3 features, built for travel company." +
-          "I made this web page when I was taking the 'Advanced CSS & Sass course' at Udemy.com.",
+          "Responsive landing page with a lots of cool CSS3 features. I've built it using Sass for travel company. ",
           demoLink: "https://olbesp.github.io/natours/",
           gitHubLink: "https://github.com/olbesp/natours"
         }
@@ -52,8 +50,7 @@
         project: {
           name: "Color Game",
           img: "img/project-3.jpg",
-          description: "This simple game will be helpful if you're designer or web developer." +
-          "You can increase your understanding in RGB color model.",
+          description: "This simple game will be helpful if you're designer or web developer. You can increase your understanding in RGB color model. Tools: JavaScript.",
           demoLink: "https://olbesp.github.io/color-game/",
           gitHubLink: "https://github.com/olbesp/color-game"
         }
@@ -63,11 +60,11 @@
           name: "Pig Game",
           img: "img/project-4.jpg",
           description: "Pig " +
-          "is a very simple dice game that is exceptionally easy both to learn and to play." +
-          "As a jeopardy dice game, it manages to keep players on the edge of their seat as" +
-          "they try to determine whether to risk it all or to play it safe. Pig can be played" +
-          "virtually anywhere and it only requires one die and something to keep score with," +
-          "making it a fun and convenient way to pass the time.",
+          "is a very simple dice game that is exceptionally easy both to learn and to play. " +
+          "As a jeopardy dice game, it manages to keep players on the edge of their seat as " +
+          "they try to determine whether to risk it all or to play it safe. Pig can be played " +
+          "virtually anywhere and it only requires one die and something to keep score with, " +
+          "making it a fun and convenient way to pass the time. Tools: JavaScript",
           demoLink: "https://olbesp.github.io/pig-game/",
           gitHubLink: "https://github.com/olbesp/pig-game"
         }
@@ -76,8 +73,7 @@
         project: {
           name: "Omnifood",
           img: "img/project-5.jpg",
-          description: "Responsive website built for food delivery service. I made this web page when" +
-          "I was taking the 'Build Responsive Real World Websites with HTML5 and CSS3' course at Udemy.com.",
+          description: "Responsive website I've built for food delivery service. Tools: jQuery, Animate.css",
           demoLink: "https://olbesp.github.io/omnifood/",
           gitHubLink: "https://github.com/olbesp/omnifood"
         }
@@ -86,8 +82,7 @@
         project: {
           name: "Mountain Travel",
           img: "img/project-6.jpg",
-          description: "Responsive landing page built with flexbox. The 'Mountain Travel' web page is a project that I've created while taking" +
-          "'The Advanced Web Developer Bootcamp' course at UDEMY.",
+          description: "Responsive landing page for travel company built with flexbox layout and jQuery.",
           demoLink: "https://olbesp.github.io/mountain-travel/",
           gitHubLink: "https://github.com/olbesp/mountain-travel"
         }
@@ -97,7 +92,7 @@
           name: "Trillo",
           img: "img/project-7.jpg",
           description:
-          "\"Trillo\" is an app for hotels review. I made this UI when I was taking the 'Advanced CSS & Sass course' at Udemy.com.",
+          "\"Trillo\" is an app for hotels review. I've build this UI using Sass and flexbox layout",
           demoLink: "https://olbesp.github.io/trillo/",
           gitHubLink: "https://github.com/olbesp/trillo"
         }
@@ -107,7 +102,7 @@
           name: "The Words Of People",
           img: "img/project-8.jpg",
           description:
-          "Random quotes machine is built with using \"Quotes on design\" API.",
+          "Random quotes machine is built with using \"Quotes on design\" API, jQuery, AJAX",
           demoLink: "https://olbesp.github.io/the-words/",
           gitHubLink: "https://github.com/olbesp/the-words"
         }
@@ -117,7 +112,7 @@
           name: "Weather Watcher",
           img: "img/project-9.jpg",
           description:
-          "Web application showing your local weather. Tools, technics and APIs: JavaScript, Ajax, Sass, Google Maps API, FreeCodeCamp Weather API",
+          "The web application swowing local weather. App detects the location of the user and requests the data from the weather API. Tools: ES2015, AJAX, SASS, Google Maps API.",
           demoLink: "https://olbesp.github.io/weather-watcher/",
           gitHubLink: "https://github.com/olbesp/weather-watcher"
         }
