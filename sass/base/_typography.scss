@@ -7,11 +7,16 @@ body {
 }
 
 .heading-primary {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   color: $color-white;
   text-transform: uppercase;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+
+  @include respond(phone) {
+    //text-align: center;
+    text-shadow: 2px 2px 1rem rgba($color-black, 1);
+  }
 
   &--main {
     display: block;
@@ -46,7 +51,7 @@ body {
     animation: moveInRight 1s ease-out;
 
     @include respond(phone) {
-      width: 70%;
+      width: 100%;
       letter-spacing: .5rem;
       font-size: 1.5rem;
     }

@@ -81,11 +81,14 @@ body {
   color: #777; }
 
 .heading-primary {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   color: #fff;
   text-transform: uppercase;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary {
+      text-shadow: 2px 2px 1rem black; } }
   .heading-primary--main {
     display: block;
     font-size: 5rem;
@@ -113,7 +116,7 @@ body {
     animation: moveInRight 1s ease-out; }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
-        width: 70%;
+        width: 100%;
         letter-spacing: .5rem;
         font-size: 1.5rem; } }
 
@@ -407,10 +410,10 @@ body {
     background-size: cover;
     background-position: right;
     background-attachment: fixed; }
-    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+    @media only screen and (min-width: 37.5em) {
       .header__background-filter {
         background-image: linear-gradient(to right bottom, rgba(69, 140, 193, 0.5), rgba(255, 168, 30, 0.3)), url(../img/hero-filter.jpg); } }
-  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+  @media only screen and (min-width: 37.5em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(69, 140, 193, 0.5), rgba(255, 168, 30, 0.3)), url(../img/hero.jpg); } }
   .header__text-box {
@@ -418,6 +421,11 @@ body {
     top: 30%;
     left: 5%;
     text-align: left; }
+    @media only screen and (max-width: 37.5em) {
+      .header__text-box {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center; } }
 
 .footer {
   background-color: #333;
