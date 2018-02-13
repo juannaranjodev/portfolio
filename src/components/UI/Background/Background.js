@@ -1,18 +1,14 @@
 import React from 'react';
 
 import BackgroundImage from '../../../assets/background.jpeg';
+import styles from './Background.css';
 
 const background = () => {
-  const styles = {
-    position: 'relative',
-    backgroundImage: `url(${BackgroundImage})`,
-    height: '100vh',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed'
+  const componentStyle = {
+    backgroundImage: `url(${BackgroundImage})`
   };
 
-  return <div style={styles}></div>;
+  return <div className={styles.Background} style={componentStyle}></div>;
 }
 
 export default background;

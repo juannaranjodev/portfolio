@@ -1,0 +1,15 @@
+.Background {
+  opacity: 0;
+  background-color: '#232323';
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  animation: fadeIn 4s 4s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
