@@ -25,6 +25,7 @@ class Home extends Component {
           name={homeHeaders.name}
           role={homeHeaders.role}
           message={homeHeaders.messages[Math.floor(Math.random() * homeHeaders.messages.length)]} />
+        
       </div>
     );
   }

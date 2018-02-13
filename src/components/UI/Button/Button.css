@@ -1,0 +1,41 @@
+.Button,
+.Button:link,
+.Button:visited {
+  position: relative;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: bold;
+  transition: all .2s;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .2);
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.Button:hover {
+  transform: translateY(-0.3rem);
+}
+
+.Button:active {
+  outline: none;
+  transform: translateY(-0.1rem);
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .2);
+}
+
+.Button:focus { outline: none; }
+
+.Info,
+.Info:link,
+.Info:visited { background-color: #27adfa; }
+.Info:hover { background-color: #1050ff; }
+.Info:active { background-color: #00238b; }
+
+.Action,
+.Action:link,
+.Action:visited { background-color: #f38406; }
+.Action:hover { background-color: #ff5c10; }
+.Action:active { background-color: #b62a00; }
