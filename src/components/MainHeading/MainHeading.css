@@ -1,0 +1,90 @@
+.MainHeading {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  text-transform: uppercase;
+  color: white;
+}
+
+.Name {
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 1.5rem;
+  animation: moveInLeft 1s ease-out;
+}
+
+.Role {
+  opacity: 0;
+  font-size: 3rem;
+  font-weight: 300;
+  animation: fadeIn .8s .75s forwards;
+}
+
+.Message {
+  width: 60rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: .75rem;
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+  80% {
+    transform: translateX(.2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+  80% {
+    transform: translateX(-.2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  80% {
+    transform: translateY(-.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+}
