@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import styles from './Home.css';
+import Background from '../../components/UI/Background/Background';
 
 class Home extends Component {
   state = {
@@ -9,10 +10,8 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.Home}>
         <Background />
-        <Heading />
-        <Button />
       </div>
     );
   }
