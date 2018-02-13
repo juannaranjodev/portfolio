@@ -2,6 +2,7 @@
   position: absolute;
   top: 30%;
   left: 5%;
+  z-index: 20;
   text-transform: uppercase;
   color: white;
 }
@@ -10,13 +11,13 @@
   font-size: 5rem;
   font-weight: 400;
   letter-spacing: 1.5rem;
-  animation: moveInLeft 1s ease-out;
+  animation: moveInLeft 2s ease-out;
 }
 
 .Role {
   opacity: 0;
   font-size: 3rem;
-  animation: fadeIn .8s .75s forwards;
+  animation: fadeIn 1.2s .75s forwards;
 }
 
 .Message {
@@ -24,7 +25,7 @@
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: .75rem;
-  animation: moveInRight 1s ease-out;
+  animation: moveInRight 2s ease-out;
 }
 
 @keyframes moveInLeft {
@@ -52,20 +53,6 @@
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-  80% {
-    transform: translateY(-.5rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
