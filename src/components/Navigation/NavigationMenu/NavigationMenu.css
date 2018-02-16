@@ -1,7 +1,15 @@
 .NavigationMenu {
   color: white;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .NavigationMenu {
+    display: block;
+  }
 }
 
 .NavigationMenu ul {
   list-style: none;
+  display: flex;
 }
