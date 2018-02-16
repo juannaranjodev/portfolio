@@ -1,11 +1,11 @@
 import React from 'react';
 
 import styles from './Logo.css';
-import LogoImage from '../../assets/images/logo-white.png';
+import LogoWhite from '../../assets/images/logo-white.png';
 
 const logo = () => (
   <div className={styles.Logo}>
-    <img src={LogoImage} alt="Logo" />
+    <img src={LogoWhite} alt="Logo" />
   </div>
 );
 
