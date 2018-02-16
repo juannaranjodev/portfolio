@@ -1,31 +1,48 @@
 .MainHeading {
   position: absolute;
-  top: 30%;
-  left: 5%;
+  height: 100vh;
+  width: 100%;
   z-index: 20;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   color: white;
+  text-align: center;
 }
 
 .Name {
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 1.5rem;
+  margin: 2rem;
   animation: moveInLeft 2s ease-out;
 }
 
 .Role {
   opacity: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   animation: fadeIn 1.2s .75s forwards;
 }
 
 .Message {
-  width: 60rem;
-  font-size: 2rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
   font-weight: 700;
   letter-spacing: .75rem;
   animation: moveInRight 2s ease-out;
+}
+
+@media (min-width: 500px) {
+  .Name { margin: 2rem; }
+  .Message { margin: 0 10%; }
+}
+
+@media (min-width: 768px) {
+  .Name { font-size: 3.5rem; }
+  .Role { font-size: 3rem; }
+  .Message { font-size: 2rem; }
 }
 
 @keyframes moveInLeft {

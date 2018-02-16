@@ -1,4 +1,6 @@
 .Home {
+  position: relative;
   background-color: #232323;
   height: 100vh;
+  width: 100%;
 }
