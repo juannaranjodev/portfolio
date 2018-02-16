@@ -3,7 +3,6 @@
   height: 100vh;
   width: 100%;
   z-index: 20;
-  margin-top: 5rem;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -17,7 +16,7 @@
   font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 1.5rem;
-  margin: 2rem;
+  margin: 1rem;
   animation: moveInLeft 2s ease-out;
 }
 
@@ -36,14 +35,14 @@
 }
 
 @media (min-width: 500px) {
-  .Name { margin: 2rem; }
+  .Name { margin: 1rem; }
   .Message { margin: 0 10%; }
 }
 
 @media (min-width: 768px) {
   .Name { font-size: 3.5rem; }
-  .Role { font-size: 3rem; }
-  .Message { font-size: 2rem; }
+  .Role { font-size: 2.5rem; }
+  .Message { font-size: 1.5rem; }
 }
 
 @keyframes moveInLeft {
