@@ -37,8 +37,8 @@
 .Info,
 .Info:link,
 .Info:visited { background-color: #27adfa; }
-.Info:hover { background-color: #1050ff; }
-.Info:active { background-color: #00238b; }
+.Info:hover { background-color: #1093eb; }
+.Info:active { background-color: #0973b1; }
 
 .Action,
 .Action:link,

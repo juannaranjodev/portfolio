@@ -18,6 +18,6 @@ body {
 }
 
 ::selection {
-  background-color: orangered;
+  background-color: #f38406;
   color: white;
 }
