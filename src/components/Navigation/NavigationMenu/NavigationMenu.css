@@ -1,6 +1,7 @@
 .NavigationMenu {
   color: white;
   display: none;
+  animation: moveInRight 2s;
 }
 
 @media (min-width: 768px) {
@@ -12,4 +13,10 @@
 .NavigationMenu ul {
   list-style: none;
   display: flex;
+}
+
+@keyframes moveInRight {
+  0% { transform: translateX(300%); }
+  80% { transform: translateX(-10%); }
+  100% { transform: translateX(0);}
 }

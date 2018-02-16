@@ -1,4 +1,11 @@
 .Logo,
 .Logo img {
   height: 100%;
+  animation: moveInTop 3s;
+}
+
+@keyframes moveInTop {
+  0% { transform: translateY(-150%); }
+  70% { transform: translateY(20%); }
+  100% { transform: translateY(0); }
 }
