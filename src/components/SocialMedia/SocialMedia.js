@@ -14,6 +14,7 @@ const socialMedia = () => {
     return (
       <li key={index}>
         <a href={profile.link}
+          style={{animationDelay: `${index + 0.5}s`}}
           target="_blank"
           rel="noopener noreferrer">
           <FontAwesomeIcon icon={profile.icon} />

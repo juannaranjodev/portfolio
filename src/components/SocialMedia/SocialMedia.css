@@ -10,7 +10,7 @@
   align-items: center;
   padding: 0 2rem;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .SocialMedia ul {
@@ -20,7 +20,33 @@
 
 .SocialMedia a {
   display: inline-block;
-  margin: 0 2rem;
+  margin-left: 2rem;
   font-size: 2rem;
   color: inherit;
+  transition: all .3s;
+  animation: moveInBottom .75s ease-out backwards;
+}
+
+.SocialMedia a:hover {
+  filter: invert(90%);
+}
+
+@media (min-width: 500px) {
+  .SocialMedia a {
+    font-size: 3rem;
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  80% {
+    transform: translateY(-.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
