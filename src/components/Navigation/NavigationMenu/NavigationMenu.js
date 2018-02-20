@@ -13,6 +13,9 @@ const navigationMenu = () => (
         About Me
       </NavigationMenuItem>
       <NavigationMenuItem pageLink="/">
+        Portfolio
+      </NavigationMenuItem>
+      <NavigationMenuItem pageLink="/">
         Contacts
       </NavigationMenuItem>
     </ul>
