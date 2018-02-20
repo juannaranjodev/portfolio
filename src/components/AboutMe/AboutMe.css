@@ -1,24 +1,17 @@
 .AboutMe {
   display: flex;
+  flex-flow: column;
+  justify-content: center;
   height: 100vh;
   background-color: #232323;
   color: #d1d1d1;
   padding: 5rem;
 }
 
-.AboutMe section {
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
-}
-
 @media (min-width: 1000px) {
   .AboutMe {
     padding: 6rem 0;
-  }
-
-  .AboutMe section {
-    width: 50%;
+    flex-flow: row;
   }
 }
 

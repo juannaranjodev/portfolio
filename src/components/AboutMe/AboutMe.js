@@ -4,8 +4,7 @@ import styles from './AboutMe.css';
 
 const aboutMe = (props) => (
   <div className={styles.AboutMe}>
-    <section>Tech</section>
-    <section>Message</section>
+    {props.children}
   </div>
 );  
 
