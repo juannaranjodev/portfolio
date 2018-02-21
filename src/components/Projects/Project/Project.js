@@ -1,9 +1,10 @@
 import React from 'react';
 
 import styles from './Project.css';
+import Modal from '../../UI/Modal/Modal';
 
 const project = (props) => (
-  <div>
+  <div className={styles.Project}>
     
   </div>
 );
