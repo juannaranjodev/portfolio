@@ -14,6 +14,29 @@
     width: 90%;
     height: 3px;
     background-color: white;
+    transition: all .3s;
+}
+
+.Open div:first-of-type{
+    transform: translateY(10px) rotate(140deg);
+}
+
+.Open div:nth-of-type(2){
+    transform: translateX(15px);
+    opacity: 0;
+}
+
+.Open div:nth-of-type(3){
+    transform: translateY(-10px) rotate(-140deg);
+}
+
+.Close:hover div:first-of-type{
+    transform: translateY(-3px);
+}
+
+
+.Close:hover div:nth-of-type(3){
+    transform: translateY(3px);
 }
 
 @media (min-width: 1000px) {

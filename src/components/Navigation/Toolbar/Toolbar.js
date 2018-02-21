@@ -8,7 +8,7 @@ import NavigationMenu from '../NavigationMenu/NavigationMenu';
 const toolbar = (props) => (
   <header className={styles.Toolbar}>
     <Logo />
-    <DrawerToggle clicked={props.drawerToggleClicked} />
+    <DrawerToggle clicked={props.drawerToggleClicked} open={props.open} close={props.closed}/>
     <nav className={styles.DesktopOnly}>
       <NavigationMenu />
     </nav>
