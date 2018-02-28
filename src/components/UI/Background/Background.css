@@ -11,6 +11,122 @@
   animation: fadeIn 4s 1s forwards;
 }
 
+.Container {
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Head {
+  background-color: #c28964;
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 55%;
+}
+
+.LeftEar {
+  background-color: #c28964;
+  position: absolute;
+  width: 13%;
+  height:35%;
+  top: 25%;
+  left: -8%;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 70%;
+  border-bottom-left-radius: 60%;
+  transform: rotate(-10deg);
+}
+
+.RightEar {
+  background-color: #c28964;
+  position: absolute;
+  width: 11%;
+  height:35%;
+  top: 22%;
+  right: -8%;
+  border-top-left-radius: 70%;
+  border-top-right-radius: 20%;
+  border-bottom-right-radius: 90%;
+}
+
+.TopHair {
+  background-color: black;
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  top: -30%;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.TopHair div {
+  position: absolute;
+  background-color: black;
+  height: 40%;
+  width: 15%;
+  border-top-left-radius: 100%;
+  transform: rotate(30deg) skewY(130deg);
+}
+.TopHair div::after,
+.TopHair div::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 100%;
+}
+
+.TopHair div:first-of-type { left: 20%; top: -10%; }
+.TopHair div:first-of-type::before { left: -50%; top: -25%; }
+.TopHair div:first-of-type::after { right: -50%; top: 25%; }
+.TopHair div:nth-of-type(2) { left: 50%; top: -15%; }
+.TopHair div:nth-of-type(2)::before { left: -60%; top: -35%; }
+.TopHair div:nth-of-type(2)::after { right: -55%; top: 45%; }
+.TopHair div:nth-of-type(3) { left: 77%; top: 0; }
+.TopHair div:nth-of-type(3)::before { left: -60%; top: -50%; }
+.TopHair div:nth-of-type(3)::after { right: -60%; top: 90%; }
+
+.TopHair::after {
+  background-color: black;
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  left: 35%;
+  width: 30%;
+  height: 70%;
+  transform: rotate(-17deg) skew(60deg);
+}
+
+.SideHairLeft {
+  background-image: linear-gradient(black, rgba(0,0,0,0));
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 40%;
+  border-bottom-right-radius: 100%;
+}
+
+.SideHairRight {
+  background-image: linear-gradient(black, rgba(0,0,0,0));
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 5%;
+  height: 35%;
+  border-bottom-left-radius: 100%;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: .7; }
