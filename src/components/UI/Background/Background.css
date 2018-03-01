@@ -135,6 +135,31 @@
   align-items: center;
 }
 
+.Eyes::before,
+.Eyes::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 3px solid black; 
+}
+
+.Eyes::before {
+  left: -10%;
+  width: 45%;
+  transform: rotate(2deg) skew(-30deg);
+  border-radius: 100% 0 0 0;
+}
+
+.Eyes::after {
+  right: -5%;
+  width: 35%;
+  border-radius: 0 100% 0 0;
+  transform: rotate(2deg) skew(30deg);
+}
+
+/* .RightEye::before { transform: rotate(5deg) translateY(-20%); }
+.LeftEye::before { transform: rotate(-2deg) translateY(20%); } */
+
 
 .LeftEye,
 .RightEye {
@@ -158,24 +183,10 @@
   position: absolute;
   top: -200%;
   background-color: #b3774f;
-  overflow: hidden;
   width: 200%;
   height: 200%;
   animation: closeEyes 8s 2s infinite ease-out;
 }
-
-/* .LeftEye::before,
-.RightEye::before {
-  content: "";
-  width: 40%;
-  position: absolute;
-  top: -10%;
-  border-radius: 100% 100% 0 0;
-  border: 3px solid black; 
-} */
-
-/* .RightEye::before { transform: rotate(5deg) translateY(-20%); }
-.LeftEye::before { transform: rotate(-2deg) translateY(20%); } */
 
 .LeftEye div,
 .RightEye div {
@@ -185,10 +196,6 @@
   background-color: #3d1d08;
   display: flex;
   align-items: center;
-}
-
-.Background:hover .Container .Head {
-  background-color: red;
 }
 
 .LeftEye div::before,
