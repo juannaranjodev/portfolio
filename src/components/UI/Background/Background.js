@@ -17,6 +17,10 @@ const background = () => {
             <div className={styles.SideHairLeft}></div>
             <div className={styles.SideHairRight}></div>
           </div>
+          <div className={styles.Eyes}>
+            <div className={styles.LeftEye}><div></div></div>
+            <div className={styles.RightEye}><div></div></div>
+          </div>
           <div className={styles.LeftEar}></div>
           <div className={styles.RightEar}></div>
         </div>
