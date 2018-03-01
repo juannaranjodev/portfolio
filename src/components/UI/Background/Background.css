@@ -208,6 +208,32 @@
   margin-left: 5%;
 }
 
+.Nose {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  width: 20%;
+  height: 10%;
+  background: none;
+  border-radius: 50%;
+  border-bottom: solid 4px black;
+}
+
+.Nose::before {
+  position: absolute;
+  content: "";
+  top: -310%;
+  left: 20%;
+  height: 400%;
+  width: 70%;
+  background-image: 
+    linear-gradient(to bottom, 
+    #c28964 2%, transparent),
+    linear-gradient(90deg,
+    #c28964, #ebad83, #c28964);
+  transform: rotate(-3deg);
+}
+
 .Mouth {
   position: absolute;
   top: 61%;
