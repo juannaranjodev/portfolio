@@ -208,6 +208,18 @@
   margin-left: 5%;
 }
 
+.Mouth {
+  position: absolute;
+  top: 61%;
+  left: 35%;
+  width: 42%;
+  height: 17%;
+  background: none;
+  border-radius: 50%;
+  border-bottom: solid 4px black;
+  transform: rotate(5deg);
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: .7; }

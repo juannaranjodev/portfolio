@@ -23,6 +23,7 @@ const background = () => {
           </div>
           <div className={styles.LeftEar}></div>
           <div className={styles.RightEar}></div>
+          <div className={styles.Mouth}></div>
         </div>
       </div>
     </div>
