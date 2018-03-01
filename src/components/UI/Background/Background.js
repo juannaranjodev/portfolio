@@ -27,6 +27,7 @@ const background = () => {
           <div className={styles.Mouth}></div>
         </div>
         <div className={styles.Neck}></div>
+        <div className={styles.Clothes}></div>
       </div>
     </div>
   );
