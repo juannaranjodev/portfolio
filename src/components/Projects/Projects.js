@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import styles from './Projects.css';
 import axios from 'axios';
 import Project from './Project/Project';
+import Spinner from '../UI/Spinner/Spinner';
 
 class Projects extends Component {
   state = {
@@ -27,7 +28,7 @@ class Projects extends Component {
 
   render() {
 
-    let projectsUI = <div>Loading...</div>
+    let projectsUI = <Spinner />
     if (this.state.projects) {
       projectsUI = this.state.projects
         .filter(project => project.image)
