@@ -4,10 +4,13 @@ import styles from './Projects.css';
 import axios from 'axios';
 import Project from './Project/Project';
 import Spinner from '../UI/Spinner/Spinner';
+import Modal from '../UI/Modal/Modal';
 
 class Projects extends Component {
   state = {
-    projects: null
+    projects: null,
+    showModal: false,
+    modalContent: null
   }
 
   getProjects = () => {
@@ -22,6 +25,20 @@ class Projects extends Component {
       });
   }
 
+  showModalHandler = (e) => {
+    if (this.state.projects) {
+      this.state.projects.forEach(project => {
+        if (e.target.id === project.id) {
+          this.setState({ modalContent: project, showModal: true });
+        }
+      });
+    }
+  }
+
+  closeModalHandler = () => {
+    this.setState({ showModal: false });
+  }
+
   componentDidMount() {
     this.getProjects();
   }
@@ -33,14 +50,15 @@ class Projects extends Component {
       projectsUI = this.state.projects
         .filter(project => project.image)
         .map(project => (
-          <Project key={project.id} title={project.title} img={project.image} />
+          <Project id={project.id} key={project.id} title={project.title} img={project.image} />
         )
       );
     }
 
     return (
-      <div className={styles.Projects}>
+      <div className={styles.Projects} onClick={this.showModalHandler}>
         <div className={styles.Container}>
+          <Modal show={this.state.showModal} modalClosed={this.closeModalHandler} content={this.state.modalContent} />
           {projectsUI}
         </div>
       </div>

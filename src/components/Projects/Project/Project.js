@@ -5,7 +5,7 @@ import styles from './Project.css';
 
 const project = (props) => (
   <div className={styles.Project}>
-    <img src={props.img} alt={props.title} />
+    <img id={props.id} src={props.img} alt={props.title} />
   </div>
 );
 
