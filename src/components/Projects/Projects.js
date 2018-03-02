@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import styles from './Projects.css';
 import axios from 'axios';
-// import Project from './Project/Project';
+import Project from './Project/Project';
 
 class Projects extends Component {
   state = {
@@ -31,12 +31,17 @@ class Projects extends Component {
     if (this.state.projects) {
       projectsUI = this.state.projects
         .filter(project => project.image)
-        .map(project => <div key={project.id}>{project.title}</div>);
+        .map(project => (
+          <Project key={project.id} title={project.title} img={project.image} />
+        )
+      );
     }
 
     return (
       <div className={styles.Projects}>
-        {projectsUI}
+        <div className={styles.Container}>
+          {projectsUI}
+        </div>
       </div>
     );
   }
