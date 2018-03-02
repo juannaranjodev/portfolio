@@ -5,6 +5,7 @@ import axios from 'axios';
 import Project from './Project/Project';
 import Spinner from '../UI/Spinner/Spinner';
 import Modal from '../UI/Modal/Modal';
+import Aux from '../../hoc/Aux';
 
 class Projects extends Component {
   state = {
@@ -36,7 +37,7 @@ class Projects extends Component {
   }
 
   closeModalHandler = () => {
-    this.setState({ showModal: false });
+    this.setState({ showModal: false, modalContent: null });
   }
 
   componentDidMount() {
@@ -55,10 +56,30 @@ class Projects extends Component {
       );
     }
 
+    let projectDescription = <div></div>;
+    if (this.state.modalContent) {
+      const project = this.state.modalContent;
+      projectDescription = (
+        <Aux>
+          <header>{project.title}</header>
+          <figure>
+            <img src={project.image} alt={project.title} />
+            <figcaption>{project.description}</figcaption>
+          </figure>
+          <footer>
+            <a href={project.links.code}>Code</a>
+            <a href={project.links.app}>Link</a>
+          </footer>
+        </Aux>
+      );
+    }
+
     return (
       <div className={styles.Projects} onClick={this.showModalHandler}>
         <div className={styles.Container}>
-          <Modal show={this.state.showModal} modalClosed={this.closeModalHandler} content={this.state.modalContent} />
+          <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
+            {projectDescription}
+          </Modal>
           {projectsUI}
         </div>
       </div>
