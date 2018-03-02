@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import styles from './Projects.css';
-import Project from './Project/Project';
+import axios from 'axios';
+// import Project from './Project/Project';
 
-const projects = (props) => (
-  <div className={styles.Projects}>
-    <Project />
-  </div>
-);
+class Projects extends Component {
+  render() {
+    return (
+      <div className={styles.Projects}>
+      </div>
+    );
+  }
+}
 
-export default projects;
+export default Projects;
