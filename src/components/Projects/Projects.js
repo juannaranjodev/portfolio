@@ -72,6 +72,13 @@ class Projects extends Component {
             <img src={project.image} alt={project.title} />
             <figcaption>{project.description}</figcaption>
           </figure>
+          <ul className={styles.ProjectTools}>
+            {
+              project.tools.map((tool, index) => {
+                return <li key={index}>{tool}</li>
+              })
+            }
+          </ul>
           <footer className={styles.ProjectFooter}>
             <Button href={project.links.code} color="Action">Code</Button>
             <Button href={project.links.app} color="Action">Link</Button>
