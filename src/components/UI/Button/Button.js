@@ -2,12 +2,23 @@ import React from 'react';
 
 import styles from './Button.css';
 
-const button = (props) => (
-  <button
-    onClick={props.clicked}
-    className={[styles.Button, styles[props.type]].join(' ')}>
-    {props.children}
-  </button>
-);
+const button = (props) => {
+  let button = (
+    <a href={props.href} className={[styles.Button, styles[props.color]].join(' ')}>
+      {props.children}
+    </a>
+  );
+  if (props.type === 'button') {
+    button = (
+      <button
+        onClick={props.clicked}
+        className={[styles.Button, styles[props.color]].join(' ')}>
+        {props.children}
+      </button>
+    );
+  }
+  return button;
+}
+  
 
 export default button;

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
 import styles from './Projects.css';
+import ButtonStyle from '../UI/Button/Button.css';
 import axios from 'axios';
 import Project from './Project/Project';
 import Spinner from '../UI/Spinner/Spinner';
 import Modal from '../UI/Modal/Modal';
+import Button from '../UI/Button/Button';
 
 class Projects extends Component {
   state = {
@@ -71,8 +73,8 @@ class Projects extends Component {
             <figcaption>{project.description}</figcaption>
           </figure>
           <footer className={styles.ProjectFooter}>
-            <a href={project.links.code}>Code</a>
-            <a href={project.links.app}>Link</a>
+            <Button href={project.links.code} color="Action">Code</Button>
+            <Button href={project.links.app} color="Action">Link</Button>
           </footer>
         </div>
       );
