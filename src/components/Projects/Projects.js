@@ -5,7 +5,6 @@ import axios from 'axios';
 import Project from './Project/Project';
 import Spinner from '../UI/Spinner/Spinner';
 import Modal from '../UI/Modal/Modal';
-import Aux from '../../hoc/Aux';
 
 class Projects extends Component {
   state = {
@@ -60,17 +59,22 @@ class Projects extends Component {
     if (this.state.modalContent) {
       const project = this.state.modalContent;
       projectDescription = (
-        <Aux>
-          <header>{project.title}</header>
-          <figure>
+        <div className={styles.ProjectModal}>
+          <header className={styles.ProjectHeader}>
+            <h3>{project.title}</h3>
+            <div className={styles.CloseBtn}>
+              X
+            </div>
+          </header>
+          <figure className={styles.ProjectDescription}>
             <img src={project.image} alt={project.title} />
             <figcaption>{project.description}</figcaption>
           </figure>
-          <footer>
+          <footer className={styles.ProjectFooter}>
             <a href={project.links.code}>Code</a>
             <a href={project.links.app}>Link</a>
           </footer>
-        </Aux>
+        </div>
       );
     }
 

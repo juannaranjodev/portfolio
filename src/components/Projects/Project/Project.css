@@ -1,5 +1,4 @@
 .Project {
-  text-align: center;
   width: 100%;
   cursor: pointer;
   overflow: hidden;
@@ -12,13 +11,13 @@
 
 @media (min-width: 450px) {
   .Project {
-    width: 45%;
+    width: 50%;
   }
 }
 
 @media (min-width: 768px) {
   .Project {
-    width: 50%;
+    width: 25%;
   }
   
   .Project img {
