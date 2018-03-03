@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import styles from './Projects.css';
-import ButtonStyle from '../UI/Button/Button.css';
 import axios from 'axios';
 import Project from './Project/Project';
 import Spinner from '../UI/Spinner/Spinner';

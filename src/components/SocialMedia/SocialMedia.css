@@ -28,7 +28,7 @@
 }
 
 .SocialMedia a:hover {
-  filter: invert(90%);
+  color: #f38406;
 }
 
 @media (min-width: 500px) {
