@@ -58,16 +58,14 @@
 }
 
 .CloseBtn {
-  width: 2rem;
-  height: 2rem;
-
+  font-size: 3.5rem;
 }
 
-/* .CloseBtn div {
-  border: 1px solid #464646;
+.CloseBtn:hover {
+  color: #b62a00;
+  cursor: pointer;
 }
 
-.CloseBtn  */
 
 .ProjectDescription {
   width: 90%;

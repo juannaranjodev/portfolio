@@ -64,8 +64,8 @@ class Projects extends Component {
         <div className={styles.ProjectModal}>
           <header className={styles.ProjectHeader}>
             <h3>{project.title}</h3>
-            <div className={styles.CloseBtn}>
-              X
+            <div className={styles.CloseBtn} onClick={this.closeModalHandler}>
+              &times;
             </div>
           </header>
           <figure className={styles.ProjectDescription}>
