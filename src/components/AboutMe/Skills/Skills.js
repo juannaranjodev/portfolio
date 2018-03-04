@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import styles from './Skills.css';
 import axios from 'axios';
+import Skill from './Skill/Skill';
+import Spinner from '../../UI/Spinner/Spinner';
 
 class Skills extends Component {
   state = {
@@ -24,9 +26,15 @@ class Skills extends Component {
   }
 
   render() {
+    let skills = <Spinner />;
+    if (this.state.skills) {
+      skills = this.state.skills.map((skill, index) => {
+        return <Skill key={index} title={skill.title} delayProgress={index ? Math.sqrt(index) : index} value={skill.value} />
+      });
+    }
     return (
       <div className={styles.Skills}>
-        <div className={styles.ProgressBar}></div>
+        {skills}
       </div>
     );
   }
