@@ -6,6 +6,7 @@ import Project from './Project/Project';
 import Spinner from '../UI/Spinner/Spinner';
 import Modal from '../UI/Modal/Modal';
 import Button from '../UI/Button/Button';
+import Container from '../../hoc/Container/Container';
 
 class Projects extends Component {
   state = {
@@ -88,12 +89,12 @@ class Projects extends Component {
 
     return (
       <div className={styles.Projects} onClick={this.showModalHandler}>
-        <div className={styles.Container}>
+        <Container>
           <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
             {projectDescription}
           </Modal>
           {projectsUI}
-        </div>
+        </Container>
       </div>
     );
   }
