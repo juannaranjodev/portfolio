@@ -8,8 +8,8 @@ import Skills from './Skills/Skills';
 const aboutMe = (props) => (
   <div className={styles.AboutMe}>
     <Container>
-    <Skills />
-    <Person />
+      <Skills />
+      <Person />
     </Container>
   </div>
 );  

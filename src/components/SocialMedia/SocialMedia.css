@@ -4,7 +4,7 @@
   left: 0;
   z-index: 30;
   width: 100%;
-  height: 5rem;
+  height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,6 +34,12 @@
 @media (min-width: 500px) {
   .SocialMedia a {
     font-size: 3rem;
+  }
+}
+
+@media (min-height: 500px) {
+  .SocialMedia {
+    height: 10vh;
   }
 }
 
