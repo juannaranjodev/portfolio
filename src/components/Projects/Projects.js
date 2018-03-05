@@ -7,6 +7,7 @@ import Spinner from '../UI/Spinner/Spinner';
 import Modal from '../UI/Modal/Modal';
 import Button from '../UI/Button/Button';
 import Container from '../../hoc/Container/Container';
+import PageHeader from '../UI/PageHeader/PageHeader';
 
 class Projects extends Component {
   state = {
@@ -97,6 +98,7 @@ class Projects extends Component {
           <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
             {projectDescription}
           </Modal>
+          <PageHeader pageHeader="My featured works" />
           {projectsUI}
         </Container>
       </div>

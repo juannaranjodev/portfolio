@@ -1,0 +1,29 @@
+.PageHeader {
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  margin: 3rem 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  transition: all .2s;
+  color: #458cc1; 
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
+}
+
+@media (min-width: 600px) {
+  .PageHeader {
+    font-size: 2rem; 
+  } 
+}
+  
+@media (min-width: 1000px) {
+  .PageHeader {
+    font-size: 2.5rem; 
+  } 
+}
+
+.PageHeader:hover {
+  transform: skewY(2deg);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4); 
+}

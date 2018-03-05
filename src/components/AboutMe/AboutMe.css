@@ -12,6 +12,7 @@
   .AboutMe {
     padding: 6rem 0;
     flex-flow: row;
+    align-items: center;
   }
 }
 
