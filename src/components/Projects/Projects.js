@@ -52,9 +52,13 @@ class Projects extends Component {
       projectsUI = this.state.projects
         .filter(project => project.image)
         .map(project => (
-          <Project id={project.id} key={project.id} title={project.title} img={project.image} />
-        )
-      );
+            <Project id={project.id} 
+              key={project.id} 
+              title={project.title} 
+              img={project.image}
+            />
+          )
+        );
     }
 
     let projectDescription = <div></div>;

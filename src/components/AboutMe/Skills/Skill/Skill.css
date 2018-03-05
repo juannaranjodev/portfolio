@@ -3,7 +3,8 @@
   margin: 1rem 0;
   padding: .1rem;
   font-size: 1.25rem;
-  
+  border-radius: 1rem;
+  border: 1px solid #444;
 }
 
 .Skill {
