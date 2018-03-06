@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../../hoc/Aux';
+import styles from './Layout.css';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
 import SocialMedia from '../SocialMedia/SocialMedia';
@@ -22,7 +22,7 @@ class Layout extends Component {
 
   render() {
     return (
-      <Aux>
+      <div className={styles.Layout}>
         <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} open={this.state.showSideDrawer}
           closed={this.sideDrawerClosedHandler} />
         <SideDrawer
@@ -31,7 +31,7 @@ class Layout extends Component {
         />
         <main>{this.props.children}</main>
         <SocialMedia />
-      </Aux>
+      </div>
     );
   }
 }
