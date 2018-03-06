@@ -1,0 +1,15 @@
+.SkillsBoard {
+  width: 90%;
+  margin: 0 auto;
+  /* temp */
+  height: 50vh;
+  /*  */
+  border-radius: 2rem;
+  border: 1px solid #181818;
+  background-image: linear-gradient(90deg, #181818, #505050 45%, #5a5a5a, #505050 55%, #181818);
+  box-shadow: 0 1rem 1rem rgba(0,0,0,.4);
+}
+
+@media (min-width: 1000px) {
+  .SkillsBoard { width: 50%; }
+}

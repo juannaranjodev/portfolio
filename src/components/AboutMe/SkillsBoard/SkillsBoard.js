@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './Skills.css';
+import styles from './SkillsBoard.css';
 import axios from 'axios';
 import Skill from './Skill/Skill';
 import Spinner from '../../UI/Spinner/Spinner';
@@ -33,8 +33,8 @@ class Skills extends Component {
       });
     }
     return (
-      <div className={styles.Skills}>
-        {skills}
+      <div className={styles.SkillsBoard}>
+        
       </div>
     );
   }
