@@ -1,6 +1,7 @@
 .SkillsBoard {
   width: 90%;
   margin: 0 auto;
+  position: relative;
   /* temp */
   height: 50vh;
   /*  */

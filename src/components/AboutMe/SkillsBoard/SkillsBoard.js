@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 import styles from './SkillsBoard.css';
 import axios from 'axios';
-import Skill from './Skill/Skill';
+import Skrews from '../../UI/Skrews/Skrews';
+import SkillIndex from './SkillIndex/SkillIndex';
 import Spinner from '../../UI/Spinner/Spinner';
 
-class Skills extends Component {
+class SkillsBoard extends Component {
   state = {
     skills: null,
     error: false
@@ -29,15 +30,15 @@ class Skills extends Component {
     let skills = <Spinner />;
     if (this.state.skills) {
       skills = this.state.skills.map((skill, index) => {
-        return <Skill key={index} title={skill.title} delayProgress={index ? Math.sqrt(index) : index} value={skill.value} />
+        return <SkillIndex key={index} title={skill.title} delayProgress={index ? Math.sqrt(index) : index} value={skill.value} />
       });
     }
     return (
       <div className={styles.SkillsBoard}>
-        
+        <Skrews />
       </div>
     );
   }
 }
 
-export default Skills;
+export default SkillsBoard;

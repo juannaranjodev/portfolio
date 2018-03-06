@@ -1,14 +1,14 @@
 import React from 'react';
 
-import styles from './Skill.css';
+import styles from './SkillIndex.css';
 
-const skill = (props) => (
+const skillIndex = (props) => (
   <div className={styles.SkillContainer}>
-    <div className={styles.Skill} style={{
+    <div className={styles.SkillIndex} style={{
       width: `${props.value}%`,
       animationDelay: `${props.delayProgress}s`
     }}>{props.title}</div>
   </div>
 );
 
-export default skill;
+export default skillIndex;
