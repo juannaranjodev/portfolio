@@ -30,12 +30,13 @@ class SkillsBoard extends Component {
     let skills = <Spinner />;
     if (this.state.skills) {
       skills = this.state.skills.map((skill, index) => {
-        return <SkillIndex key={index} title={skill.title} delayProgress={index ? Math.sqrt(index) : index} value={skill.value} />
+        return <SkillIndex key={index} title={skill.title} value={skill.value} />
       });
     }
     return (
       <div className={styles.SkillsBoard}>
         <Skrews />
+        {skills}
       </div>
     );
   }
