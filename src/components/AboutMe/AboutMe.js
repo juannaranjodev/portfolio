@@ -9,7 +9,7 @@ import PageHeader from '../UI/PageHeader/PageHeader';
 const aboutMe = (props) => (
   <div className={styles.AboutMe}>
     <Container>
-      <PageHeader pageHeader="Few words about me" />
+      <PageHeader title="Few words about me" />
       <Skills />
       <Person />
     </Container>

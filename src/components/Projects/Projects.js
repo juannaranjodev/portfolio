@@ -98,7 +98,7 @@ class Projects extends Component {
           <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
             {projectDescription}
           </Modal>
-          <PageHeader pageHeader="My featured works" />
+          <PageHeader title="My featured works" />
           {projectsUI}
         </Container>
       </div>
