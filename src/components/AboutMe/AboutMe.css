@@ -2,14 +2,11 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  min-height: 100vh;
   color: #d1d1d1;
-  padding: 5rem 0;
 }
 
 @media (min-width: 1000px) {
   .AboutMe {
-    padding: 6rem 0;
     flex-flow: row;
     align-items: center;
   }

@@ -1,5 +1,5 @@
 .Person {
-  padding: 0 2rem;
+  padding: 3rem 2rem;
 }
 
 .Person section:not(:last-child) {

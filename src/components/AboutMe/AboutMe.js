@@ -7,13 +7,13 @@ import Skills from './Skills/Skills';
 import PageHeader from '../UI/PageHeader/PageHeader';
 
 const aboutMe = (props) => (
-  <div className={styles.AboutMe}>
-    <Container>
-      <PageHeader title="Few words about me" />
+  <Container>
+    <PageHeader title="Few words about me" />
+    <div className={styles.AboutMe}>
       <Skills />
       <Person />
-    </Container>
-  </div>
+    </div>
+  </Container>
 );  
 
 export default aboutMe;
