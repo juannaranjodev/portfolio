@@ -1,13 +1,11 @@
 .AboutMe {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
   color: #d1d1d1;
 }
 
 @media (min-width: 1000px) {
   .AboutMe {
-    flex-flow: row;
+    display: flex;
+    flex-direction: row;
     align-items: center;
   }
 }

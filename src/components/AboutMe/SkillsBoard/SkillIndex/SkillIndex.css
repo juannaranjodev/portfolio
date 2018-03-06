@@ -3,9 +3,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25%;
-  padding: 2rem;
+  width: 50%;
+  padding: 2rem 0;
   text-align: center;
+}
+
+@media (min-width: 500px) {
+  .SkillIndex {
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .SkillIndex {
+    width: 25%;
+  }
 }
 
 .Indicator {

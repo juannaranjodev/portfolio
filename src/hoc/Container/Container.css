@@ -4,10 +4,7 @@
   margin-top: 15vh;
   padding: 0 2rem;
   overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   box-shadow: 0 -1rem 1rem rgba(0,0,0,.3) inset, 0 1rem 1rem rgba(0,0,0,.3) inset;
 }
 
@@ -30,5 +27,14 @@
   .Container {
     height: 80vh;
     margin-top: 10vh;
+  }
+}
+
+@media (min-width: 1000px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
