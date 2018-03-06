@@ -1,6 +1,15 @@
 .Home {
-  position: relative;
-  background-color: #232323;
-  height: 100vh;
+  height: 70vh;
   width: 100%;
+  margin-top: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1000px) {
+  .Home {
+    height: 80vh;
+    margin-top: 10vh;
+  }
 }

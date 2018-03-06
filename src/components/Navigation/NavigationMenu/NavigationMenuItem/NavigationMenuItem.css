@@ -11,9 +11,9 @@
   }
 }
 
-.NavigationMenuItem a,
-.NavigationMenuItem a:link,
-.NavigationMenuItem a:visited {
+.NavButton,
+.NavButton:link,
+.NavButton:visited {
   display: inline-block;
   color: white;
   padding: 1rem;
@@ -21,19 +21,24 @@
   transition: all .3s;
 }
 
-.NavigationMenuItem a:hover {
-  color: #0693d4;
+.NavButton:hover {
+  color: #27adfa;
 }
 
-.NavigationMenuItem a.active {
+.Active {
   color: white;
-  background-color: #0693d4;
+  background-color: #27adfa;
   box-shadow: 0 1rem 1.5rem rgba(0,0,0,.4);
 }
 
-.NavigationMenuItem a.active:hover{
+.Active:hover{
+  color: white;
   transform: rotate(3deg) scale(1.1);
+  background-color: #1093eb;
   box-shadow: 0 1.5rem 2.5rem rgba(0,0,0,.3);
 }
-
-
+.Active:active {
+  transform: rotate(3deg) scale(1);
+  background-color: #0973b1;
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,.4);
+}

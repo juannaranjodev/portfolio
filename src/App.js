@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Layout from './components/Layout/Layout';
-// import Home from './containers/Home/Home';
-import AboutMe from './components/AboutMe/AboutMe';
+import Home from './containers/Home/Home';
+// import AboutMe from './components/AboutMe/AboutMe';
 // import Projects from './components/Projects/Projects';
 
 import fontawesome from '@fortawesome/fontawesome';
@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div>
         <Layout>
-          <AboutMe />
+          <Home />
         </Layout>
       </div>
     );
