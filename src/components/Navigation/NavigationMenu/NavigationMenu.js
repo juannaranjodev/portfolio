@@ -5,16 +5,16 @@ import NavigationMenuItem from './NavigationMenuItem/NavigationMenuItem';
 
 const navigationMenu = () => (
   <ul className={styles.NavigationMenu}>
-    <NavigationMenuItem pageLink="/" active>
+    <NavigationMenuItem path="/home">
       Home
     </NavigationMenuItem>
-    <NavigationMenuItem pageLink="/">
+    <NavigationMenuItem path="/aboutme">
       About Me
     </NavigationMenuItem>
-    <NavigationMenuItem pageLink="/">
+    <NavigationMenuItem path="/portfolio">
       Portfolio
     </NavigationMenuItem>
-    <NavigationMenuItem pageLink="/">
+    <NavigationMenuItem path="/contacts">
       Contacts
     </NavigationMenuItem>
   </ul>

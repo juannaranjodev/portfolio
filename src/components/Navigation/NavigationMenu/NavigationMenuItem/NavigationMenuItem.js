@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import styles from './NavigationMenuItem.css';
 
@@ -9,11 +10,11 @@ const navigationMenuItem = (props) => {
   }
   return (
     <li className={styles.NavigationMenuItem}>
-      <a
+      <NavLink
         className={classes.join(' ')}
-        href={props.pageLink}>
+        to={props.path}>
         {props.children}
-      </a>
+      </NavLink>
     </li>
   );
 };
