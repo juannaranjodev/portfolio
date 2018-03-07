@@ -4,10 +4,99 @@
   position: relative;
 }
 
+.Person {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  border: 1px solid red;
+  height: 22rem;
+  width: 60%;
+}
+
+.Person__head {
+  position: relative;
+  width: 25%;
+  height: 6rem;
+  border-radius: 50%;
+  background-image: radial-gradient(#dbae8a, #eba272);
+  margin: 0 auto;
+}
+
+.Person__head__hair {}
+.Person__eyes{
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 80%;
+  height: 12%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Person__eyes::after {
+  position: absolute;
+  top: -50%;
+  content: "";
+  width: 100%;
+  height: 30%;
+  background-image: linear-gradient(90deg, #000 35%, transparent 35%, transparent 65%, #000 65%);
+}
+
+.Eye {
+  position: relative;
+  width: 33%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.Eye::after {
+  position: absolute;
+  top: -100%;
+  left: -25%;
+  content: "";
+  width: 150%;
+  height: 100%;
+  background-color: #eba272;
+  animation: closeEyes 5s 2s infinite ease-out;
+}
+
+.Eye__apple {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: #1b0c00;
+}
+
+.Eye__apple::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 40%;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.Person__head__ear_left {}
+.Person__head__ear_right {}
+
+.Person__body {}
+.Person__shoulder_left {}
+.Person__shoulder_right {}
+.Person__arm_left {}
+.Person__arm_right {}
+.Person__leg_left {}
+.Person__leg_right {}
+
 .Table {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -71,4 +160,11 @@
   .Container {
     width: 25%;
   }
+}
+
+@keyframes closeEyes {
+  0% { top: -100%; }
+  2% { top: 0%; }
+  3% { top: -100% }
+  100% { top: -100% }
 }
