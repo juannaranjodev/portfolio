@@ -4,14 +4,15 @@ import { NavLink } from 'react-router-dom';
 import styles from './NavigationMenuItem.css';
 
 const navigationMenuItem = (props) => {
-  let classes = [styles.NavButton];
-  if (props.active) {
-    classes.push(styles.Active)
-  }
+  // let classes = [styles.NavButton];
+  // if (props.active) {
+  //   classes.push(styles.Active)
+  // }
   return (
     <li className={styles.NavigationMenuItem}>
       <NavLink
-        className={classes.join(' ')}
+        className={styles.NavButton}
+        activeClassName={styles.Active}
         to={props.path}>
         {props.children}
       </NavLink>
