@@ -9,8 +9,7 @@ const mainHeading = (props) => (
     <h1 className={styles.Name}>{props.name}</h1>
     <h5 className={styles.Message}>{props.message}</h5>
     <Button
-      type="button"
-      clicked={() => alert('Hi')}
+      href="/portfolio"
       color="Info">
       Projects
     </Button>
