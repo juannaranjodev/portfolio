@@ -1,0 +1,23 @@
+.Description {
+  padding: 3rem 2rem;
+}
+
+.Description section:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.Description h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.Description p {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+@media (min-width: 1000px) {
+  .Description {
+    width: 25%;
+  }
+}

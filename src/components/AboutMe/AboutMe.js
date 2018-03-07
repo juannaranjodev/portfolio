@@ -2,8 +2,9 @@ import React from 'react';
 
 import styles from './AboutMe.css';
 import Container from '../../hoc/Container/Container';
-import Person from './Person/Person';
+import Description from './Description/Description';
 import SkillsBoard from './SkillsBoard/SkillsBoard';
+import Person from './Person/Person';
 import PageHeader from '../UI/PageHeader/PageHeader';
 
 const aboutMe = (props) => (
@@ -11,6 +12,7 @@ const aboutMe = (props) => (
     <PageHeader title="Few words about me" />
     <div className={styles.AboutMe}>
       <SkillsBoard />
+      <Description />
       <Person />
     </div>
   </Container>
