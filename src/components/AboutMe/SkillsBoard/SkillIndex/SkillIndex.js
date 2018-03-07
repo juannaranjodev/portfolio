@@ -11,8 +11,9 @@ const skillIndex = (props) => {
     <div className={styles.SkillIndex}>
       <div className={styles.Indicator}>
         <div className={styles.Progress}>
-          <div className={styles.ProgressValue} style={{height: `calc(${props.value}% - 2rem)`}}></div>
-          <div className={styles.ProgressBar}></div>
+          <div className={styles.ProgressValue} style={{height: `${props.value}%`}}>
+            <div className={styles.ProgressBar}></div>
+          </div>
         </div>
       </div>
       <div className={styles.SkillTitle}>{props.title}</div>
