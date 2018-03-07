@@ -29,8 +29,10 @@ class SkillsBoard extends Component {
   render() {
     let skills = <Spinner />;
     if (this.state.skills) {
+      let decrement = 1;
       skills = this.state.skills.map((skill, index) => {
-        return <SkillIndex key={index} title={skill.title} value={skill.value} />
+        decrement -= 0.85;
+        return <SkillIndex key={index} title={skill.title} value={skill.value} animationDelay={index + decrement} />
       });
     }
     return (

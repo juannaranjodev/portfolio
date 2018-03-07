@@ -12,7 +12,7 @@ const skillIndex = (props) => {
       <div className={styles.Indicator}>
         <div className={styles.Progress}>
           <div className={styles.ProgressValue} style={{height: `${props.value}%`}}>
-            <div className={styles.ProgressBar}></div>
+            <div className={styles.ProgressBar} style={{animationDelay: `${props.animationDelay}s`}}></div>
           </div>
         </div>
       </div>
