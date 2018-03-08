@@ -8,8 +8,8 @@ const person = () => (
       <div className={styles.Person__head}>
         <div className={styles.Person__hair}>
           <div className={styles.Hair_top}></div>
-          <div className={styles.Hair_side}></div>
-          <div className={styles.Hair_side}></div>
+          <div className={styles.Hair_side_left}></div>
+          <div className={styles.Hair_side_right}></div>
         </div>
         <div className={styles.Person__eyes}>
           <div className={styles.Eye}>

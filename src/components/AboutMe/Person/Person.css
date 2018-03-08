@@ -1,5 +1,7 @@
 .Container {
   height: 300px;
+  width: 300px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -60,16 +62,24 @@
   background-color: #000;
 }
 
-.Hair_side {
+.Hair_side_left,
+.Hair_side_right {
   position: absolute;
   top: 100%;
   height: 100%;
   width: 10%;
-  background-image: linear-gradient(#000, transparent);
+  background-image: linear-gradient(-135deg,#000, transparent);
 }
 
-.Hair_side:first-of-type { left: 0; border-radius: 0 0 100% 0; }
-.Hair_side:nth-of-type(2) { right: 0; border-radius: 0 0 0 100%; }
+.Hair_side_left { 
+  left: 0;
+  border-radius: 0 0 100% 0;
+}
+
+.Hair_side_right {
+  right: 0;
+  border-radius: 0 0 0 100%;
+}
 
 .Person__eyes{
   position: absolute;
