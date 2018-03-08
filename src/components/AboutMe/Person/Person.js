@@ -6,7 +6,11 @@ const person = () => (
   <div className={styles.Container}>
     <div className={styles.Person}>
       <div className={styles.Person__head}>
-        <div className={styles.Person__hair}></div>
+        <div className={styles.Person__hair}>
+          <div className={styles.Hair_top}></div>
+          <div className={styles.Hair_side}></div>
+          <div className={styles.Hair_side}></div>
+        </div>
         <div className={styles.Person__eyes}>
           <div className={styles.Eye}>
             <div className={styles.Eye__apple}></div>
