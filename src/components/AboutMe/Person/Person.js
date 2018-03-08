@@ -30,6 +30,9 @@ const person = () => (
       <div className={styles.Person__shoe_right}></div>
     </div>
     <div className={styles.Table}>
+      <div className={styles.Cup}>
+        <div className={styles.Cup__steam}></div>
+      </div>
       <div className={styles.Laptop}>
         <div className={styles.Laptop__sticker}>JS</div>
       </div>
