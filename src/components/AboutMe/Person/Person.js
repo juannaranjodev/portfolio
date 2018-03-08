@@ -22,11 +22,8 @@ const person = () => (
         <div className={styles.Person__head__ear_left}></div>
         <div className={styles.Person__head__ear_right}></div>
       </div>
-      <div className={styles.Person__body}></div>
       <div className={styles.Person__shoulder_left}></div>
       <div className={styles.Person__shoulder_right}></div>
-      <div className={styles.Person__arm_left}></div>
-      <div className={styles.Person__arm_right}></div>
       <div className={styles.Person__leg_left}></div>
       <div className={styles.Person__leg_right}></div>
     </div>
