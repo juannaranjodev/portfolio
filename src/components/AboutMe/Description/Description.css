@@ -9,6 +9,7 @@
 .Description h3 {
   font-size: 2rem;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .Description p {
@@ -16,9 +17,15 @@
   text-align: justify;
 }
 
+@media (min-width: 768px) {
+  .Description {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 1000px) {
   .Description {
-    width: 50%;
-    margin: 0 auto;
+    width: 60%;
   }
 }
