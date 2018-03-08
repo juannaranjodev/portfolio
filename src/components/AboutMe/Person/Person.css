@@ -5,6 +5,41 @@
   position: relative;
 }
 
+.ArmChair {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 80%;
+}
+
+.ArmChair__top {
+  width: 85%;
+  margin: 0 auto;
+  height: 65%;
+  border-radius: 20% 20% 100% 100%;
+  background-image: radial-gradient(rgba(0,0,0,.5), transparent 60%), linear-gradient( 
+    #b69174 35%, #836046 40%, #836046 40%, #b69174 45%
+  );
+  box-shadow: 0 .2rem .1rem rgba(255,255,255,.7) inset,
+    .5rem 0 .5rem rgba(0,0,0,.4) inset,
+    -.5rem 0 .5rem rgba(0,0,0,.4) inset,
+    1rem 0 1.5rem rgba(0,0,0,.3),
+    -1rem 0 1.5rem rgba(0,0,0,.3);
+}
+.ArmChair__bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 7rem;
+  border-radius: 0 0 10% 10%;
+  background-image: linear-gradient(90deg, 
+    #b69174 15%, #221106 20%, #221106 20%, #836046 25%, 
+    #836046 75%, #221106 80%, #221106 80%, #b69174 85%
+  );
+  box-shadow: 0 1.5rem .5rem rgba(0,0,0,.4) inset, 0 -.5rem .5rem rgba(0,0,0,.5) inset;
+}
+
 .Person {
   position: absolute;
   bottom: 0;
@@ -170,11 +205,19 @@
   position: absolute;
   bottom: 2%;
   width: 15%;
-  height: 50%;
+  height: 7rem;
   background-image: linear-gradient(90deg, #07324b, #487691, #07324b);
 }
-.Person__leg_left { left: 28%; transform: rotate(-10deg); }
-.Person__leg_right { right: 28%; transform: rotate(10deg); }
+.Person__leg_left {
+  left: 28%;
+  transform: rotate(-10deg);
+  box-shadow: 0 1rem .5rem rgba(0,0,0,.4) inset, .5rem 0 .5rem rgba(0,0,0,.4);
+}
+.Person__leg_right {
+  right: 28%;
+  transform: rotate(10deg);
+  box-shadow: 0 1rem .5rem rgba(0,0,0,.4) inset, -.5rem 0 .5rem rgba(0,0,0,.4);
+}
 
 .Person__shoe_left,
 .Person__shoe_right {
@@ -260,7 +303,6 @@
 }
 
 .Cup__steam::before {
-  /* top: -2.5%;  */
   border-right: 3px solid #555;
   animation: steam 7s infinite linear;
 }

@@ -4,6 +4,10 @@ import styles from './Person.css';
 
 const person = () => (
   <div className={styles.Container}>
+    <div className={styles.ArmChair}>
+      <div className={styles.ArmChair__top}></div>
+      <div className={styles.ArmChair__bottom}></div>
+    </div>
     <div className={styles.Person}>
       <div className={styles.Person__head}>
         <div className={styles.Person__hair}>
