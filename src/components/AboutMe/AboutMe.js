@@ -11,9 +11,9 @@ const aboutMe = (props) => (
   <Container>
     <PageHeader title="Few words about me" />
     <div className={styles.AboutMe}>
+      <Description /> 
+      <Person /> 
       <SkillsBoard />
-      <Description />
-      <Person />
     </div>
   </Container>
 );  

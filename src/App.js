@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-import './App.css';
+import styles from './App.css';
 import Layout from './components/Layout/Layout';
 import Home from './containers/Home/Home';
 import AboutMe from './components/AboutMe/AboutMe';
@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div className={styles.App}>
           <Layout>
             <Switch>
               <Route path="/home" component={Home} />
