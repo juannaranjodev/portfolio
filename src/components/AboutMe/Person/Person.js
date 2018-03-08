@@ -26,6 +26,8 @@ const person = () => (
       <div className={styles.Person__shoulder_right}></div>
       <div className={styles.Person__leg_left}></div>
       <div className={styles.Person__leg_right}></div>
+      <div className={styles.Person__shoe_left}></div>
+      <div className={styles.Person__shoe_right}></div>
     </div>
     <div className={styles.Table}>
       <div className={styles.Laptop}>
