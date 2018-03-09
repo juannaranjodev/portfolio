@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
-import styles from './SkillsBoard.css';
 import axios from 'axios';
-import Skrews from '../../UI/Skrews/Skrews';
+import Board from '../../UI/Board/Board';
 import SkillIndex from './SkillIndex/SkillIndex';
 import Spinner from '../../UI/Spinner/Spinner';
 
@@ -36,10 +35,9 @@ class SkillsBoard extends Component {
       });
     }
     return (
-      <div className={styles.SkillsBoard}>
-        <Skrews />
+      <Board>
         {skills}
-      </div>
+      </Board>
     );
   }
 }
