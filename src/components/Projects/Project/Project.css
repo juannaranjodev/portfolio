@@ -21,12 +21,12 @@
   }
   
   .Project img {
-    filter: grayscale(90%);
     transform: scale(1.05);
+    opacity: .4;
   }
   
   .Project img:hover {
-    filter: grayscale(0);
     transform: scale(1.02);
+    opacity: .6;
   }
 }

@@ -8,6 +8,7 @@ import Modal from '../UI/Modal/Modal';
 import Button from '../UI/Button/Button';
 import Container from '../../hoc/Container/Container';
 import PageHeader from '../UI/PageHeader/PageHeader';
+import Aux from '../../hoc/Aux';
 
 class Projects extends Component {
   state = {
@@ -93,15 +94,17 @@ class Projects extends Component {
     }
 
     return (
-      <div className={styles.Projects} onClick={this.showModalHandler}>
+      <Aux>
+        <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
+          {projectDescription}
+        </Modal>
         <Container>
-          <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
-            {projectDescription}
-          </Modal>
           <PageHeader title="My featured works" />
-          {projectsUI}
+          <div className={styles.Projects} onClick={this.showModalHandler}>
+            {projectsUI}
+          </div>
         </Container>
-      </div>
+      </Aux>
     );
   }
 }
