@@ -256,9 +256,6 @@
   left: 0;
   z-index: 1;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .Cup {
@@ -324,14 +321,13 @@
 .Laptop {
   position: absolute;
   bottom: 12rem;
+  left: 35%;
   height: 6rem;
   width: 30%;
   border-radius: .5rem;
   background-image: radial-gradient(#fff, transparent), linear-gradient(#d1d1d1, #777);
   box-shadow: 0 -.5rem .2rem rgba(0,0,0,.5) inset, 0 .1rem .1rem #fff inset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .Laptop__sticker {
@@ -340,6 +336,7 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;
+  margin: 2rem auto;
   color: #1d1d1d;
   font-weight: bold;
   background-color: #ece035;
