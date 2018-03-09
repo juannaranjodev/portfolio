@@ -1,31 +1,31 @@
-.Project {
+.ProjectBoard {
   width: 100%;
   cursor: pointer;
   overflow: hidden;
 }
 
-.Project img {
+.ProjectBoard img {
   width: 100%;
   transition: all .3s;
 }
 
 @media (min-width: 450px) {
-  .Project {
+  .ProjectBoard {
     width: 50%;
   }
 }
 
 @media (min-width: 768px) {
-  .Project {
+  .ProjectBoard {
     width: 25%;
   }
   
-  .Project img {
+  .ProjectBoard img {
     transform: scale(1.05);
     opacity: .4;
   }
   
-  .Project img:hover {
+  .ProjectBoard img:hover {
     transform: scale(1.02);
     opacity: .6;
   }

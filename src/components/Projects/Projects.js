@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import styles from './Projects.css';
 import axios from 'axios';
-import Project from './Project/Project';
+import ProjectBoard from './ProjectBoard/ProjectBoard';
 import Spinner from '../UI/Spinner/Spinner';
 import Modal from '../UI/Modal/Modal';
 import Button from '../UI/Button/Button';
@@ -54,7 +54,7 @@ class Projects extends Component {
       projectsUI = this.state.projects
         .filter(project => project.image)
         .map(project => (
-            <Project id={project.id} 
+            <ProjectBoard id={project.id} 
               key={project.id} 
               title={project.title} 
               img={project.image}
