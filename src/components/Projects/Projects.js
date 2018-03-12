@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import styles from './Projects.css';
 import axios from 'axios';
-import ProjectBoard from './ProjectBoard/ProjectBoard';
+import ProjectPreview from './ProjectPreview/ProjectPreview';
 import Spinner from '../UI/Spinner/Spinner';
 import Modal from '../UI/Modal/Modal';
 import Button from '../UI/Button/Button';
@@ -32,7 +32,7 @@ class Projects extends Component {
   showModalHandler = (e) => {
     if (this.state.projects) {
       this.state.projects.forEach(project => {
-        if (e.target.id === project.id) {
+        if (e.target.parentNode.id === project.id) {
           this.setState({ modalContent: project, showModal: true });
         }
       });
@@ -62,13 +62,13 @@ class Projects extends Component {
       projectsPreview = this.state.projects
         .filter(project => project.image)
         .map(project => (
-            <ProjectBoard id={project.id} 
-              key={project.id} 
-              title={project.title} 
-              img={project.image}
-            />
-          )
-        );
+          <ProjectPreview id={project.id} 
+            key={project.id} 
+            title={project.title} 
+            img={project.image}
+          />
+        )
+      );
       portfolio = (
         <Aux>
           <Container>

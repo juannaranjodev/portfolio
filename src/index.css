@@ -21,3 +21,24 @@ body {
   background-color: #f38406;
   color: white;
 }
+
+:global .textShadow {
+  color: #d1d1d1;
+  text-shadow: 
+    0 1px 0px #0973b1,
+    1px 0 0px #1093eb,
+    1px 2px 1px #0973b1,
+    2px 1px 1px #1093eb,
+    2px 3px 2px #0973b1,
+    3px 2px 2px #1093eb,
+    3px 4px 2px #0973b1,
+    4px 3px 3px #1093eb,
+    4px 5px 3px #0973b1,
+    5px 4px 2px #1093eb,
+    5px 6px 2px #0973b1,
+    6px 5px 2px #1093eb,
+    6px 7px 1px #0973b1,
+    7px 6px 1px #1093eb,
+    7px 8px 0px #0973b1,
+    8px 7px 0px #1093eb;
+}
