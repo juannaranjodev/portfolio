@@ -20,6 +20,7 @@
 }
 
 .Message {
+  margin-bottom: 1rem;
   font-size: 1.25rem;
   line-height: 2rem;
   font-weight: 700;
@@ -29,7 +30,7 @@
 
 @media (min-width: 500px) {
   .Name { margin: 1rem; }
-  .Message { margin: 0 10%; }
+  .Message { margin: 1rem 10%; }
 }
 
 @media (min-width: 768px) {

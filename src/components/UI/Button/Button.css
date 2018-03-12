@@ -4,7 +4,6 @@
   position: relative;
   display: inline-block;
   padding: 1.5rem 4rem;
-  margin: 1.5rem 0;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.2rem;
@@ -16,10 +15,6 @@
   cursor: pointer;
   color: white;
   animation: moveInBottom .75s .75s ease-out backwards;
-}
-
-@media (min-width: 768px) {
-  .Button { font-size: 2rem; }
 }
 
 .Button:hover {

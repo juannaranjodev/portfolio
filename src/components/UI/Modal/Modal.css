@@ -13,6 +13,7 @@
 @media (min-width: 600px) {
   .Modal {
     width: 500px;
+    height: 500px;
     left: calc(50% - 250px);
   }
 }

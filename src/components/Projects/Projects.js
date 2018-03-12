@@ -5,7 +5,8 @@ import axios from 'axios';
 import ProjectPreview from './ProjectPreview/ProjectPreview';
 import Spinner from '../UI/Spinner/Spinner';
 import Modal from '../UI/Modal/Modal';
-import Button from '../UI/Button/Button';
+import ProjectModal from './ProjectModal/ProjectModal';
+// import Button from '../UI/Button/Button';
 import Container from '../../hoc/Container/Container';
 import PageHeader from '../UI/PageHeader/PageHeader';
 import Aux from '../../hoc/Aux';
@@ -81,34 +82,16 @@ class Projects extends Component {
       );
     }
 
-    
     if (this.state.modalContent) {
       const project = this.state.modalContent;
-      projectModal = (
-        <div className={styles.ProjectModal}>
-          <header className={styles.ProjectHeader}>
-            <h3>{project.title}</h3>
-            <div className={styles.CloseBtn} onClick={this.closeModalHandler}>
-              &times;
-            </div>
-          </header>
-          <figure className={styles.ProjectDescription}>
-            <img src={project.image} alt={project.title} />
-            <figcaption>{project.description}</figcaption>
-          </figure>
-          <ul className={styles.ProjectTools}>
-            {
-              project.tools.map((tool, index) => {
-                return <li key={index}>{tool}</li>
-              })
-            }
-          </ul>
-          <footer className={styles.ProjectFooter}>
-            <Button href={project.links.code} color="Action">Code</Button>
-            <Button href={project.links.app} color="Action">Link</Button>
-          </footer>
-        </div>
-      );
+      projectModal = <ProjectModal 
+        title={project.title} 
+        image={project.image}
+        description={project.description}
+        tools={project.tools}
+        code={project.links.code}
+        app={project.links.app}
+        closeModal={this.closeModalHandler} />
     }
 
     return (

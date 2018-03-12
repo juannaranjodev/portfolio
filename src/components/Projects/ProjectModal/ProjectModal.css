@@ -1,0 +1,38 @@
+.ProjectModal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  color: #d1d1d1;
+  font-size: 2rem;
+}
+
+.ProjectModal__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProjectModal__tools {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 2rem;
+  background-color: rgba(0,0,0,.5);
+}
+
+.ProjectModal__tools li {
+  font-size: 2rem;
+}
+
+.CloseBtn {
+  font-size: 1.5rem;
+  margin: 0;
+}
