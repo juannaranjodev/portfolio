@@ -49,9 +49,17 @@ class Projects extends Component {
 
   render() {
 
-    let projectsUI = <Spinner />
+    let portfolio = <div style={{
+      display:'flex',
+      alignItems:'center', 
+      justifyContent:'center',
+      height: '100vh'
+    }}><Spinner /></div>;
+    let projectModal = <div></div>;
+    let projectsPreview;
+
     if (this.state.projects) {
-      projectsUI = this.state.projects
+      projectsPreview = this.state.projects
         .filter(project => project.image)
         .map(project => (
             <ProjectBoard id={project.id} 
@@ -61,12 +69,22 @@ class Projects extends Component {
             />
           )
         );
+      portfolio = (
+        <Aux>
+          <Container>
+            <PageHeader title="My featured works" />
+            <div className={styles.Projects} onClick={this.showModalHandler}>
+              {projectsPreview}
+            </div>
+          </Container>
+        </Aux>
+      );
     }
 
-    let projectDescription = <div></div>;
+    
     if (this.state.modalContent) {
       const project = this.state.modalContent;
-      projectDescription = (
+      projectModal = (
         <div className={styles.ProjectModal}>
           <header className={styles.ProjectHeader}>
             <h3>{project.title}</h3>
@@ -96,14 +114,9 @@ class Projects extends Component {
     return (
       <Aux>
         <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
-          {projectDescription}
+          {projectModal}
         </Modal>
-        <Container>
-          <PageHeader title="My featured works" />
-          <div className={styles.Projects} onClick={this.showModalHandler}>
-            {projectsUI}
-          </div>
-        </Container>
+        {portfolio}
       </Aux>
     );
   }
