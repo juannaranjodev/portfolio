@@ -15,10 +15,6 @@
   bottom: 0;
   width: 300px;
   height: 300px;
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
   animation: appearFromBottom 1s .5s backwards;
 }
 
@@ -27,6 +23,7 @@
   box-shadow: 1rem 0 1rem rgba(0,0,0,.7), -2rem 0 2rem rgba(0,0,0,.4) inset;
   position: absolute;
   top: 30%;
+  left: 30%;
   z-index: 10;
   width: 40%;
   height: 55%;
@@ -128,20 +125,17 @@
 
 .Eyes {
   position: absolute;
-  top: 25%;
+  top: 33%;
   left: 25%;
   height: 20%;
   width: 65%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .Eyes::before,
 .Eyes::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: -50%;
   border: 3px solid black; 
 }
 
@@ -175,15 +169,13 @@
 
 .Eyes__right { right: 0; }
 
-.Eyes__left::after,
-.Eyes__right::after {
-  content: "";
+.Eyes__eyelid {
   position: absolute;
-  top: -200%;
+  top: -100%;
   background-color: #b3774f;
-  width: 200%;
-  height: 200%;
-  animation: closeEyes 5s 2s infinite ease-out;
+  width: 100%;
+  height: 100%;
+  animation: closeEyes 5s infinite ease-out;
 }
 
 .Eyes__apple {
@@ -245,6 +237,7 @@
 .Neck {
   position: absolute;
   top: 75%;
+  left: 40%;
   z-index: 2;
   background-color: #c28964;
   box-shadow: 1rem 0 1rem rgba(0,0,0,.7), -2rem 0 2rem rgba(0,0,0,.4) inset;
@@ -267,13 +260,13 @@
 }
 
 @keyframes appearFromBottom {
-  from { transform: translateY(100vh); }
+  from { transform: translateY(100%); }
   to { transform: translateY(0); }
 }
 
 @keyframes closeEyes {
-  0% { top: -200%; }
-  2% { top: -50%; }
-  3% { top: -200% }
-  100% { top: -200% }
+  0% { top: -100%; }
+  2% { top: 0; }
+  3% { top: -100% }
+  100% { top: -100% }
 }

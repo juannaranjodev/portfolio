@@ -18,8 +18,14 @@ const background = () => {
             <div className={styles.Hair__side_right}></div>
           </div>
           <div className={styles.Eyes}>
-            <div className={styles.Eyes__left}><div className={styles.Eyes__apple}></div></div>
-            <div className={styles.Eyes__right}><div className={styles.Eyes__apple}></div></div>
+            <div className={styles.Eyes__left}>
+              <div className={styles.Eyes__eyelid}></div>
+              <div className={styles.Eyes__apple}></div>
+            </div>
+            <div className={styles.Eyes__right}>
+              <div className={styles.Eyes__eyelid}></div>
+              <div className={styles.Eyes__apple}></div>
+            </div>
           </div>
           <div className={styles.LeftEar}></div>
           <div className={styles.RightEar}></div>
