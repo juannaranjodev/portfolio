@@ -55,7 +55,7 @@
   border-radius: 70% 20% 90% 0;
 }
 
-.TopHair {
+.Hair__top {
   background-color: black;
   position: absolute;
   height: 30%;
@@ -68,7 +68,7 @@
   justify-content: space-between;
 }
 
-.TopHair div {
+.Hair__top div {
   position: absolute;
   background-color: black;
   height: 40%;
@@ -76,8 +76,8 @@
   border-top-left-radius: 100%;
   transform: rotate(30deg) skewY(130deg);
 }
-.TopHair div::after,
-.TopHair div::before {
+.Hair__top div::after,
+.Hair__top div::before {
   content: "";
   position: absolute;
   background-color: black;
@@ -86,17 +86,17 @@
   border-top-left-radius: 100%;
 }
 
-.TopHair div:first-of-type { left: 20%; top: -10%; }
-.TopHair div:first-of-type::before { left: -50%; top: -25%; }
-.TopHair div:first-of-type::after { right: -50%; top: 25%; }
-.TopHair div:nth-of-type(2) { left: 50%; top: -15%; }
-.TopHair div:nth-of-type(2)::before { left: -60%; top: -35%; }
-.TopHair div:nth-of-type(2)::after { right: -55%; top: 45%; }
-.TopHair div:nth-of-type(3) { left: 77%; top: 0; }
-.TopHair div:nth-of-type(3)::before { left: -60%; top: -50%; }
-.TopHair div:nth-of-type(3)::after { right: -60%; top: 90%; }
+.Hair__top div:first-of-type { left: 20%; top: -10%; }
+.Hair__top div:first-of-type::before { left: -50%; top: -25%; }
+.Hair__top div:first-of-type::after { right: -50%; top: 25%; }
+.Hair__top div:nth-of-type(2) { left: 50%; top: -15%; }
+.Hair__top div:nth-of-type(2)::before { left: -60%; top: -35%; }
+.Hair__top div:nth-of-type(2)::after { right: -55%; top: 45%; }
+.Hair__top div:nth-of-type(3) { left: 77%; top: 0; }
+.Hair__top div:nth-of-type(3)::before { left: -60%; top: -50%; }
+.Hair__top div:nth-of-type(3)::after { right: -60%; top: 90%; }
 
-.TopHair::after {
+.Hair__top::after {
   background-color: black;
   content: "";
   position: absolute;
@@ -107,7 +107,7 @@
   transform: rotate(-17deg) skew(60deg);
 }
 
-.SideHairLeft {
+.Hair__side_left {
   background-image: linear-gradient(black, rgba(0,0,0,0));
   content: "";
   position: absolute;
@@ -116,7 +116,7 @@
   border-bottom-right-radius: 100%;
 }
 
-.SideHairRight {
+.Hair__side_right {
   background-image: linear-gradient(black, rgba(0,0,0,0));
   content: "";
   position: absolute;
@@ -159,12 +159,8 @@
   transform: rotate(2deg) skew(30deg);
 }
 
-/* .RightEye::before { transform: rotate(5deg) translateY(-20%); }
-.LeftEye::before { transform: rotate(-2deg) translateY(20%); } */
-
-
-.LeftEye,
-.RightEye {
+.Eyes__left,
+.Eyes__right {
   position: absolute;
   width: 30%;
   height: 30%;
@@ -177,10 +173,10 @@
   transition: all .5s;
 }
 
-.RightEye { right: 0; }
+.Eyes__right { right: 0; }
 
-.LeftEye::after,
-.RightEye::after {
+.Eyes__left::after,
+.Eyes__right::after {
   content: "";
   position: absolute;
   top: -200%;
@@ -190,8 +186,7 @@
   animation: closeEyes 5s 2s infinite ease-out;
 }
 
-.LeftEye div,
-.RightEye div {
+.Eyes__apple {
   border-radius: 50%;
   width: 50%;
   height: 140%;
@@ -200,8 +195,7 @@
   align-items: center;
 }
 
-.LeftEye div::before,
-.RightEye div::before {
+.Eyes__apple::before {
   content: "";
   width: 50%;
   height: 50%;
