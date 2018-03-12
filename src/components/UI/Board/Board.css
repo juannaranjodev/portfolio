@@ -1,11 +1,8 @@
 .Board {
-  width: 95%;
-  margin: 0 auto 2rem;
   position: relative;
   padding: 4rem;
   display: flex;
   flex-wrap: wrap;
-  border-radius: 2rem;
   border: 1px solid #181818;
   background-image: linear-gradient(90deg, #181818, #505050 45%, #5a5a5a, #505050 55%, #181818);
   box-shadow: 0 1rem 1rem rgba(0,0,0,.4);
