@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import styles from './Home.css';
-import Background from '../../components/UI/Background/Background';
+import Background from './Background/Background';
+import Character from '../../components/UI/Character/Character';
 import MainHeading from '../../components/MainHeading/MainHeading';
 
 class Home extends Component {
@@ -20,7 +21,9 @@ class Home extends Component {
     }
     return (
       <div className={styles.Home}>
-        <Background />
+        <Background>
+          <Character />
+        </Background>  
         <MainHeading
           name={homeHeaders.name}
           role={homeHeaders.role}
