@@ -31,3 +31,21 @@
 @media (min-width: 1000px) {
   .sunlight { left: 0; }
 }
+
+.city {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.house {
+  position: relative;
+  background-color: #232323;
+}
+
+.aerial {
+  position: absolute;
+  background-color: #232323;
+}
