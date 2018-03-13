@@ -4,7 +4,7 @@ import styles from './Background.css';
 
 const background = (props) => (
   <div className={styles.Background}>
-    {props.children}
+    <div className={styles.sunlight}></div>
   </div>
 );
 
