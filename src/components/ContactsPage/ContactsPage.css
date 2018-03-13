@@ -1,0 +1,10 @@
+.ContactsPage {
+  height: 100vh;
+  padding-top: 15vh;
+}
+
+@media (min-height: 500px) {
+  .ContactsPage {
+    padding-top: 10vh;
+  }
+}
