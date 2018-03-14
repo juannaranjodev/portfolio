@@ -1,11 +1,37 @@
-.Logo,
-.Logo img {
+.Logo {
+  position: relative;
   height: 100%;
-  animation: moveInTop 3s;
+  width: 4rem;
+  font-weight: bold;
+  color: #fff;
 }
 
-@keyframes moveInTop {
+.Logo__o {
+  position: absolute;
+  top: 10%;
+  font-size: 2.5rem;
+  animation: appearFromTop 1s .8s backwards;
+}
+
+.Logo__b {
+  position: absolute;
+  bottom: 35%;
+  right: 25%;
+  font-size: 1.5rem;
+  animation: appearFromLeft 1.3s backwards;
+}
+
+@keyframes appearFromTop {
   0% { transform: translateY(-150%); }
-  70% { transform: translateY(20%); }
+  40% { transform: translateY(0); }
+  60% { transform: translateY(-70%); }
+  75% { transform: translateY(0); }
+  85% { transform: translateY(-50%); }
+  95% { transform: translateY(0); }
   100% { transform: translateY(0); }
+}
+
+@keyframes appearFromLeft {
+  from { transform: translateX(-200%); }
+  to { transform: translateX(0); }
 }
