@@ -3,6 +3,7 @@
   color: white;
   text-align: center;
   z-index: 10;
+  text-shadow: 1px 0 #777;
 }
 
 .Name {
