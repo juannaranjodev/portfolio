@@ -36,9 +36,9 @@
 }
 
 @media (min-width: 768px) {
-  .Project {
+  /* .Project {
     width: 25%;
-  }
+  } */
   
   .Project__img {
     transform: scale(1.15);

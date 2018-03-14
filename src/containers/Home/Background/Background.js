@@ -21,7 +21,7 @@ const background = (props) => {
             width: `${random(4)}px`,
             height: aerialHeight,
             top: aerialTop,
-            left: `${random(100)}%`
+            left: `${random(95)}%`
           }}></div>
         </div>);
       widthReminder -= houseWidth;

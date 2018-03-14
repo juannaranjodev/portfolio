@@ -60,13 +60,27 @@ class PortfolioPage extends Component {
     let projectsPreview;
 
     if (this.state.projects) {
+
+      const setProjectWidth = () => {
+        if (window.innerWidth >= 768) {
+          const amountOfProjects = this.state.projects.length;
+          if (amountOfProjects % 4 === 0) {
+            return '25%';
+          } else if (amountOfProjects % 2 === 0) {
+            return '20%';
+          }
+          return '33%';
+        }
+        return false;
+      }
+
       projectsPreview = this.state.projects
-        .filter(project => project.image)
         .map(project => (
           <ProjectPreview id={project.id} 
             key={project.id} 
             title={project.title} 
             img={project.image}
+            width={setProjectWidth()}
           />
         )
       );
