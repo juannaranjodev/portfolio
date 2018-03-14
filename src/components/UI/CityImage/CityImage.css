@@ -21,7 +21,6 @@
 
 @media (min-width: 500px) {
   .sun { left: -50%; }
-  /* .moon { left: -50} */
 }
 
 @media (min-width: 768px) {
@@ -50,4 +49,11 @@
 .aerial {
   position: absolute;
   background-color: #232323;
+}
+
+.night { background-color: #050505; }
+
+.flat {
+  display: inline-block;
+  border: 1px solid #050505;
 }
