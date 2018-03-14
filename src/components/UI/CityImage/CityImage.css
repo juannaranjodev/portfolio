@@ -1,0 +1,39 @@
+.sunlight {
+  position: absolute;
+  bottom: -8%;
+  left: -150%;
+  width: 60rem;
+  height: 60rem;
+  border-radius: 100%;
+  background-image: radial-gradient(#fff 7%, #fffac8 30%, transparent 70%);
+}
+
+@media (min-width: 500px) {
+  .sunlight { left: -50%; }
+}
+
+@media (min-width: 768px) {
+  .sunlight { left: -20%; }
+}
+
+@media (min-width: 1000px) {
+  .sunlight { left: 0; }
+}
+
+.city {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.house {
+  position: relative;
+  background-color: #232323;
+}
+
+.aerial {
+  position: absolute;
+  background-color: #232323;
+}
