@@ -22,8 +22,8 @@ const projectModal = (props) => (
       }
     </ul>
     <footer className={styles.ProjectModal__footer}>
-      <Button href={props.code} color="Info">Code</Button>
-      <Button href={props.app} color="Info">Link</Button>
+      <Button href={props.code} newtab color="Info">Code</Button>
+      <Button href={props.app} newtab color="Info">Link</Button>
     </footer>
   </div>
 );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './Projects.css';
+import styles from './PortfolioPage.css';
 import axios from 'axios';
 import ProjectPreview from './ProjectPreview/ProjectPreview';
 import Spinner from '../UI/Spinner/Spinner';
@@ -11,7 +11,7 @@ import Container from '../../hoc/Container/Container';
 import PageHeader from '../UI/PageHeader/PageHeader';
 import Aux from '../../hoc/Aux';
 
-class Projects extends Component {
+class PortfolioPage extends Component {
   state = {
     projects: null,
     showModal: false,
@@ -105,4 +105,4 @@ class Projects extends Component {
   }
 }
 
-export default Projects;
+export default PortfolioPage;

@@ -5,7 +5,7 @@ import styles from './App.css';
 import Layout from './components/Layout/Layout';
 import Home from './containers/Home/Home';
 import AboutMe from './components/AboutMe/AboutMe';
-import Projects from './components/Projects/Projects';
+import PortfolioPage from './components/PortfolioPage/PortfolioPage';
 
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
@@ -21,7 +21,7 @@ class App extends Component {
             <Switch>
               <Route path="/home" component={Home} />
               <Route path="/aboutme" component={AboutMe} />
-              <Route path="/portfolio" component={Projects} />
+              <Route path="/portfolio" component={PortfolioPage} />
               <Route path="/contacts" component={Home} />
               <Redirect from="/" to="/home" />
             </Switch>

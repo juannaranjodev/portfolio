@@ -4,7 +4,11 @@ import styles from './Button.css';
 
 const button = (props) => {
   let button = (
-    <a href={props.href} className={[styles.Button, styles[props.color]].join(' ')}>
+    <a href={props.href} 
+      target={props.newtab && "_blank"} 
+      rel={props.newtab && "noopener noreferrer"} 
+      className={[styles.Button, styles[props.color]].join(' ')}
+    >
       {props.children}
     </a>
   );
@@ -12,7 +16,8 @@ const button = (props) => {
     button = (
       <button
         onClick={props.clicked}
-        className={[styles.Button, styles[props.color]].join(' ')}>
+        className={[styles.Button, styles[props.color]].join(' ')}
+      >
         {props.children}
       </button>
     );
