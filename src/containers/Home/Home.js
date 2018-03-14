@@ -6,34 +6,46 @@ import CityImage from '../../components/UI/CityImage/CityImage';
 import Character from '../../components/UI/Character/Character';
 import MainHeading from '../../components/MainHeading/MainHeading';
 
-const homePage = () => {
-  const homeHeaders = {
-    name: 'Oleksii Bespalko',
-    role: 'Front-end Developer',
-    messages: [
-      'A simple guy, who wants to create really cool things',
-      'The builder of user interfaces and web applications'
-    ]
+class HomePage extends Component {
+  state = {
+    time: null
   }
 
-  const checkDayTime = () => {
+  checkDayTime = () => {
     const time = new Date();
-    return time.getHours() > 5 && time.getHours() < 20 ? 'day' : 'night';
+    this.setState({
+      time: time.getHours() > 5 && time.getHours() < 20 ? 'day' : 'night'
+    });
   }
 
-  return (
-    <div className={styles.Home}>
-      <Background time={checkDayTime()}>
-        <CityImage />
-        <Character />
-      </Background>  
-      <MainHeading
-        name={homeHeaders.name}
-        role={homeHeaders.role}
-        message={homeHeaders.messages[Math.floor(Math.random() * homeHeaders.messages.length)]}
-      />
-    </div>
-  );
+  componentDidMount() {
+    this.checkDayTime();
+  }
+
+  render() {
+    const homeHeaders = {
+      name: 'Oleksii Bespalko',
+      role: 'Front-end Developer',
+      messages: [
+        'A simple guy, who wants to create really cool things',
+        'The builder of user interfaces and web applications'
+      ]
+    }
+
+    return (
+      <div className={styles.Home}>
+        <Background time={this.state.time}>
+          <CityImage time={this.state.time} />
+          <Character />
+        </Background>
+        <MainHeading
+          name={homeHeaders.name}
+          role={homeHeaders.role}
+          message={homeHeaders.messages[Math.floor(Math.random() * homeHeaders.messages.length)]}
+        />
+      </div>
+    );
+  }
 }
 
-export default homePage;
+export default HomePage;

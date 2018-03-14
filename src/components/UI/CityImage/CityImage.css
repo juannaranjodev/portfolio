@@ -1,4 +1,4 @@
-.sunlight {
+.light {
   position: absolute;
   bottom: -8%;
   left: -150%;
@@ -9,15 +9,15 @@
 }
 
 @media (min-width: 500px) {
-  .sunlight { left: -50%; }
+  .light { left: -50%; }
 }
 
 @media (min-width: 768px) {
-  .sunlight { left: -20%; }
+  .light { left: -20%; }
 }
 
 @media (min-width: 1000px) {
-  .sunlight { left: 0; }
+  .light { left: 0; }
 }
 
 .city {

@@ -30,7 +30,7 @@ const cityImage = (props) => {
 
   return (
     <Aux>
-      <div className={styles.sunlight}></div>
+      <div className={styles.light}></div>
       <div className={styles.city}>
         {createCity()}
       </div>
