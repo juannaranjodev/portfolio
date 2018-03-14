@@ -6,6 +6,12 @@ import Aux from '../../../hoc/Aux';
 const random = limit => Math.floor(Math.random() * limit);
 
 const cityImage = (props) => {
+
+  let styleOfLight = styles.sun;
+  if (props.time === 'night') {
+    styleOfLight = styles.moon;
+  }
+
   const createCity = () => {
     let houses = [];
     let widthReminder = window.innerWidth;
@@ -30,7 +36,7 @@ const cityImage = (props) => {
 
   return (
     <Aux>
-      <div className={styles.light}></div>
+      <div className={styleOfLight}></div>
       <div className={styles.city}>
         {createCity()}
       </div>
