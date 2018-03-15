@@ -17,7 +17,7 @@ class SkillsBoard extends Component {
       this.setState({ skills: response.data });
     })
     .catch(error => {
-      this.setState({ error: true });
+      // this.setState({ error: true });
     });
   }
 
