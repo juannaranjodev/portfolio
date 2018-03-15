@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './CityImage.css';
-import Aux from '../../../hoc/Aux';
+import Aux from '../../hoc/Aux/Aux';
 
 const random = limit => Math.floor(Math.random() * limit);
 

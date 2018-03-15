@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Character.css';
+import styles from './FaceImage.css';
 
 const character = () => (
   <div className={styles.Container}>

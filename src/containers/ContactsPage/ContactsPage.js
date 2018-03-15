@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './ContactsPage.css';
-import PageHeader from '../UI/PageHeader/PageHeader';
+import PageHeader from '../../components/PageHeader/PageHeader';
 
 const contactsPage = () => (
   <div className={styles.ContactsPage}>

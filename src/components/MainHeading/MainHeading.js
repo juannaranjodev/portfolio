@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './MainHeading.css';
-import Button from '../../components/UI/Button/Button';
+import Button from '../UI/Button/Button';
 
 const mainHeading = (props) => (
   <div className={styles.MainHeading}>

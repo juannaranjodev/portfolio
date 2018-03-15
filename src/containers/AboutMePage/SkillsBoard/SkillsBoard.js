@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import axios from 'axios';
-import Board from '../../UI/Board/Board';
+import Board from '../../../components/UI/Board/Board';
 import SkillIndex from './SkillIndex/SkillIndex';
-import Spinner from '../../UI/Spinner/Spinner';
+import Spinner from '../../../components/UI/Spinner/Spinner';
 
 class SkillsBoard extends Component {
   state = {

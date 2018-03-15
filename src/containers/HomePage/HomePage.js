@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import styles from './Home.css';
-import Background from './Background/Background';
-import CityImage from '../../components/UI/CityImage/CityImage';
-import Character from '../../components/UI/Character/Character';
+import styles from './HomePage.css';
+import Background from '../../components/UI/Background/Background';
+import CityImage from '../../components/CityImage/CityImage';
+import FaceImage from '../../components/FaceImage/FaceImage';
 import MainHeading from '../../components/MainHeading/MainHeading';
 
 class HomePage extends Component {
@@ -36,7 +36,7 @@ class HomePage extends Component {
       <div className={styles.Home}>
         <Background time={this.state.time}>
           <CityImage time={this.state.time} />
-          <Character />
+          <FaceImage />
         </Background>
         <MainHeading
           name={homeHeaders.name}

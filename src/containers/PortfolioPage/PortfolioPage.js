@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 
 import styles from './PortfolioPage.css';
 import axios from 'axios';
-import ProjectPreview from './ProjectPreview/ProjectPreview';
-import Spinner from '../UI/Spinner/Spinner';
-import Modal from '../UI/Modal/Modal';
-import ProjectModal from './ProjectModal/ProjectModal';
-import Button from '../UI/Button/Button';
+import ProjectPreview from '../../components/ProjectPreview/ProjectPreview';
+import Spinner from '../../components/UI/Spinner/Spinner';
+import Modal from '../../components/UI/Modal/Modal';
+import ProjectModal from '../../components/ProjectModal/ProjectModal';
+import Button from '../../components/UI/Button/Button';
 import Container from '../../hoc/Container/Container';
-import PageHeader from '../UI/PageHeader/PageHeader';
-import Aux from '../../hoc/Aux';
+import PageHeader from '../../components/PageHeader/PageHeader';
+import Aux from '../../hoc/Aux/Aux';
 
 class PortfolioPage extends Component {
   state = {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Person.css';
+import styles from './DeveloperImage.css';
 
 const person = () => (
   <div className={styles.Container}>
