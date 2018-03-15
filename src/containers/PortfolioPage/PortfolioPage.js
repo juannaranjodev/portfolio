@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import styles from './PortfolioPage.css';
 import axios from 'axios';
+import Background from '../../components/UI/Background/Background';
 import ProjectPreview from '../../components/ProjectPreview/ProjectPreview';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
@@ -129,7 +130,9 @@ class PortfolioPage extends Component {
         <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
           {projectModal}
         </Modal>
-        {portfolio}
+        <Background time={this.props.time}>
+          {portfolio}
+        </Background>
       </Aux>
     );
   }

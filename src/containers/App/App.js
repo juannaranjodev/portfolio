@@ -36,8 +36,8 @@ class App extends Component {
             <Switch>
               <Route path="/home" render={() => <HomePage time={this.state.time} />} />
               <Route path="/aboutme" render={() => <AboutMePage time={this.state.time} />} />
-              <Route path="/portfolio" component={PortfolioPage} />
-              <Route path="/contacts" component={ContactsPage} />
+              <Route path="/portfolio" render={() => <PortfolioPage time={this.state.time} />} />
+              <Route path="/contacts" render={() => <ContactsPage time={this.state.time} />} />
               <Redirect from="/" to="/home" />
             </Switch>
           </Layout>
