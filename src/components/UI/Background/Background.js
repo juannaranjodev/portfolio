@@ -4,6 +4,7 @@ import styles from './Background.css';
 
 const background = (props) => (
   <div className={[styles.Background, styles[props.time]].join(' ')}>
+    <div className={props.time === 'day' ? styles.sun : styles.moon}></div>
     {props.children}
   </div>
 );

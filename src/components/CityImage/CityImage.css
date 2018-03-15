@@ -1,38 +1,3 @@
-.sun {
-  position: absolute;
-  bottom: -8%;
-  left: -150%;
-  width: 60rem;
-  height: 60rem;
-  border-radius: 100%;
-  background-image: radial-gradient(#fff 7%, #fffac8 30%, transparent 70%);
-}
-
-.moon {
-  position: absolute;
-  bottom: 50%;
-  left: -100%;
-  width: 15rem;
-  height: 15rem;
-  border-radius: 100%;
-  border-left: 1rem solid #fff;
-  transform: rotate(10deg);
-}
-
-@media (min-width: 500px) {
-  .sun { left: -50%; }
-}
-
-@media (min-width: 768px) {
-  .sun { left: -20%; }
-  .moon { left: 5%;}
-}
-
-@media (min-width: 1000px) {
-  .sun { left: 0; }
-  .moon { left: 10%; }
-}
-
 .city {
   position: absolute;
   bottom: 0;

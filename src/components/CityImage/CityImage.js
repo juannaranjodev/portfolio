@@ -1,17 +1,14 @@
 import React from 'react';
 
 import styles from './CityImage.css';
-import Aux from '../../hoc/Aux/Aux';
 
 const random = limit => Math.floor(Math.random() * limit);
 
 const cityImage = (props) => {
 
-  let styleOfLight = styles.sun;
   let styleOfHouse = styles.house;
   let styleOfAerial = styles.aerial;
   if (props.time === 'night') {
-    styleOfLight = styles.moon;
     styleOfHouse = [styles.house, styles[props.time]].join(' ');
     styleOfAerial = [styles.aerial, styles[props.time]].join(' ');
   }
@@ -65,12 +62,9 @@ const cityImage = (props) => {
   }
 
   return (
-    <Aux>
-      <div className={styleOfLight}></div>
-      <div className={styles.city}>
-        {createCity()}
-      </div>
-    </Aux>
+    <div className={styles.city}>
+      {createCity()}
+    </div>
   );
 }
 

@@ -1,26 +1,3 @@
-.Background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-}
-
-.day {
-  background-image: 
-    linear-gradient(transparent 60%, #e7b56a), 
-    linear-gradient(45deg, #84c2e6 50%, #0f6f9b);
-} 
-
-.night {
-  background-image: 
-    linear-gradient(transparent 60%, #570a5e), 
-    linear-gradient(45deg, #110429 50%, #060016);
-}
-
 .sun {
   position: absolute;
   bottom: -8%;
@@ -55,4 +32,3 @@
   .sun { left: 0; }
   .moon { left: 10%; }
 }
-
