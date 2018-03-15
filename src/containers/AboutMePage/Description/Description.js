@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Description.css';
 
-const description = () => {
+const description = (props) => {
   const content = {
     aboutMe: {
       header: 'Who I am',
@@ -13,9 +13,13 @@ const description = () => {
       text: 'I build and create web applications and responsive websites. Currently I work with JavaScript(ES6), React, HTML5, CSS3, Sass, AJAX, Bootstrap 4, Git & GitHub and Responsive web design.'
     }
   };
+  let classes = [styles.Description, styles.text_dark];
+  if (props.time === 'night') {
+    classes = [styles.Description, styles.text_light];
+  }
 
   return (
-    <div className={styles.Description}>
+    <div className={classes.join(' ')}>
       <section>
         <h3>{content.aboutMe.header}</h3>
         <p>{content.aboutMe.text}</p>

@@ -11,14 +11,12 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 const aboutMe = (props) => (
   <Background time={props.time}>
     <Container>
-     
       <PageHeader title="Few words about me" />
-      <div className={styles.AboutMe}>
-        <Description /> 
+      <div className={styles.AboutMePage}>
+        <Description time={props.time} /> 
         <DeveloperImage /> 
         <SkillsBoard />
       </div>
-     
     </Container>
   </Background>
 );  

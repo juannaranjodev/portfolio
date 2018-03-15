@@ -1,5 +1,7 @@
 .Description {
   padding: 3rem 2rem;
+  position: relative;
+  z-index: 10;
 }
 
 .Description section:not(:last-child) {
@@ -29,3 +31,6 @@
     width: 60%;
   }
 }
+
+.text_light { color: #d1d1d1; }
+.text_dark { color: #232323; }
