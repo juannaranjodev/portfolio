@@ -1,22 +1,19 @@
 .Logo {
   position: relative;
   height: 100%;
+  display: flex;
+  align-items: center;
   width: 4rem;
-  font-weight: bold;
   color: #fff;
+  font-family: 'Lalezar', cursive;
 }
 
 .Logo__o {
-  position: absolute;
-  top: 10%;
   font-size: 2rem;
   animation: appearFromTop 1s .8s backwards;
 }
 
 .Logo__b {
-  position: absolute;
-  bottom: 35%;
-  right: 40%;
   font-size: 1rem;
   animation: appearFromLeft 1.3s backwards;
 }
