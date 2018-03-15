@@ -14,15 +14,28 @@ import brands from '@fortawesome/fontawesome-free-brands';
 fontawesome.library.add(brands);
 
 class App extends Component {
-  
+  state = {
+    time: null
+  }
+
+  checkDayTime = () => {
+    const time = new Date();
+    this.setState({
+      time: time.getHours() > 5 && time.getHours() < 12 ? 'day' : 'night'
+    });
+  }
+
+  componentDidMount() {
+    this.checkDayTime();
+  }
   render() {
     return (
       <BrowserRouter>
         <div className={styles.App}>
           <Layout>
             <Switch>
-              <Route path="/home" component={HomePage} />
-              <Route path="/aboutme" component={AboutMePage} />
+              <Route path="/home" render={() => <HomePage time={this.state.time} />} />
+              <Route path="/aboutme" render={() => <AboutMePage time={this.state.time} />} />
               <Route path="/portfolio" component={PortfolioPage} />
               <Route path="/contacts" component={ContactsPage} />
               <Redirect from="/" to="/home" />

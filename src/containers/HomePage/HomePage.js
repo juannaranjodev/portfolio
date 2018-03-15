@@ -7,21 +7,6 @@ import FaceImage from '../../components/FaceImage/FaceImage';
 import MainHeading from '../../components/MainHeading/MainHeading';
 
 class HomePage extends Component {
-  state = {
-    time: null
-  }
-
-  checkDayTime = () => {
-    const time = new Date();
-    this.setState({
-      time: time.getHours() > 5 && time.getHours() < 20 ? 'day' : 'night'
-    });
-  }
-
-  componentDidMount() {
-    this.checkDayTime();
-  }
-
   render() {
     const homeHeaders = {
       name: 'Oleksii Bespalko',
@@ -34,8 +19,8 @@ class HomePage extends Component {
 
     return (
       <div className={styles.Home}>
-        <Background time={this.state.time}>
-          <CityImage time={this.state.time} />
+        <Background time={this.props.time}>
+          <CityImage time={this.props.time} />
           <FaceImage />
         </Background>
         <MainHeading
