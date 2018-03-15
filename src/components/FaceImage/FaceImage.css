@@ -42,7 +42,7 @@
 }
 
 .Hair__top {
-  background-color: black;
+  background-color: #0f0f0f;
   position: absolute;
   height: 30%;
   width: 100%;
@@ -55,7 +55,7 @@
 
 .Hair__top div {
   position: absolute;
-  background-color: black;
+  background-color: #0f0f0f;
   height: 40%;
   width: 15%;
   border-top-left-radius: 100%;
@@ -65,7 +65,7 @@
 .Hair__top div::before {
   content: "";
   position: absolute;
-  background-color: black;
+  background-color: #0f0f0f;
   height: 100%;
   width: 100%;
   border-top-left-radius: 100%;
@@ -82,7 +82,7 @@
 .Hair__top div:nth-of-type(3)::after { right: -60%; top: 90%; }
 
 .Hair__top::after {
-  background-color: black;
+  background-color: #0f0f0f;
   content: "";
   position: absolute;
   bottom: -25%;
@@ -93,7 +93,7 @@
 }
 
 .Hair__side_left {
-  background-image: linear-gradient(black, rgba(0,0,0,0));
+  background-image: linear-gradient(#0f0f0f, rgba(0,0,0,0));
   content: "";
   position: absolute;
   width: 10%;
@@ -102,7 +102,7 @@
 }
 
 .Hair__side_right {
-  background-image: linear-gradient(black, rgba(0,0,0,0));
+  background-image: linear-gradient(#0f0f0f, rgba(0,0,0,0));
   content: "";
   position: absolute;
   right: 0;
@@ -124,7 +124,7 @@
   content: "";
   position: absolute;
   top: -50%;
-  border: 3px solid black; 
+  border: 3px solid #0f0f0f; 
 }
 
 .Eyes::before {
@@ -192,7 +192,7 @@
   height: 10%;
   background: none;
   border-radius: 50%;
-  border-bottom: solid 4px black;
+  border-bottom: solid 4px #0f0f0f;
 }
 
 .Nose::before {
@@ -218,7 +218,7 @@
   height: 17%;
   background: none;
   border-radius: 50%;
-  border-bottom: solid 4px black;
+  border-bottom: solid 4px #0f0f0f;
   transform: rotate(5deg);
 }
 
@@ -242,7 +242,7 @@
   z-index: 1;
   width: 70%;
   height: 30%;
-  background-color: black;
+  background-color: #0f0f0f;
   border-radius: 100% 100% 0 0;
   box-shadow: -2rem 0 2rem rgba(0,0,0,.4) inset;
 }
