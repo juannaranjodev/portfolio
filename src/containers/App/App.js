@@ -14,6 +14,7 @@ import brands from '@fortawesome/fontawesome-free-brands';
 fontawesome.library.add(brands);
 
 class App extends Component {
+  
   render() {
     return (
       <BrowserRouter>

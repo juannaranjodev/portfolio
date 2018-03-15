@@ -43,11 +43,18 @@ const cityImage = (props) => {
       houses.push(
         <div key={houses.length} className={styleOfHouse} style={{ width: houseWidth, height: houseHeight }}>
           <div className={styleOfAerial} style={{
-            width: `${random(4)}px`,
+            width: `${random(3) + 1}px`,
             height: aerialHeight,
             top: -aerialHeight,
             left: `${random(95)}%`
-          }}></div>
+          }}>
+            {
+              props.time === 'night' &&
+              ((houseHeight >= 140 && aerialHeight >= 43) || 
+              (houseHeight >= 180 && aerialHeight >= 14)) ?
+              <div className={styles.signal} style={{animationDelay: `${Math.random() * 1}s`}}></div> : null
+            }
+          </div>
           {
             props.time === 'night' ? buildFlats(houseWidth, houseHeight) : null
           }
