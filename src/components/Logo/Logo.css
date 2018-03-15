@@ -9,16 +9,21 @@
 .Logo__o {
   position: absolute;
   top: 10%;
-  font-size: 2.5rem;
+  font-size: 2rem;
   animation: appearFromTop 1s .8s backwards;
 }
 
 .Logo__b {
   position: absolute;
   bottom: 35%;
-  right: 25%;
-  font-size: 1.5rem;
+  right: 40%;
+  font-size: 1rem;
   animation: appearFromLeft 1.3s backwards;
+}
+
+@media (min-height: 500px) {
+  .Logo__o { font-size: 2.5rem; }
+  .Logo__b { font-size: 1.5rem; }
 }
 
 @keyframes appearFromTop {

@@ -29,7 +29,7 @@ class Layout extends Component {
           open={this.state.showSideDrawer}
           closed={this.sideDrawerClosedHandler}
         />
-        <main>{this.props.children}</main>
+        <main className={styles.content}>{this.props.children}</main>
         <SocialMedia />
       </div>
     );

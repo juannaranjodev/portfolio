@@ -1,9 +1,9 @@
 .Background {
   position: absolute;
-  top: 0;
+  top: 10vh;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -43,6 +43,7 @@
 }
 
 @media (min-width: 500px) {
+  .Background { top: 10vh; height: 80vh; }
   .sun { left: -50%; }
 }
 

@@ -1,10 +1,6 @@
 .SocialMedia {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 30;
   width: 100%;
-  height: 15vh;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,15 +27,9 @@
   color: #f38406;
 }
 
-@media (min-width: 500px) {
+@media (min-height: 500px) {
   .SocialMedia a {
     font-size: 3rem;
-  }
-}
-
-@media (min-height: 500px) {
-  .SocialMedia {
-    height: 10vh;
   }
 }
 
