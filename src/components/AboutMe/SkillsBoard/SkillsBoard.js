@@ -17,7 +17,7 @@ class SkillsBoard extends Component {
       this.setState({ skills: response.data });
     })
     .catch(error => {
-      this.setState({ error: true })
+      this.setState({ error: true });
     });
   }
 
@@ -26,19 +26,19 @@ class SkillsBoard extends Component {
   }
 
   render() {
-    let skills = <Spinner />;
+    let skillsData = null;
+    if (!this.state.error) {
+      skillsData = <Board><Spinner /></Board>;
+    }
     if (this.state.skills) {
       let decrement = 1;
-      skills = this.state.skills.map((skill, index) => {
+      const skills = this.state.skills.map((skill, index) => {
         decrement -= 0.85;
         return <SkillIndex key={index} title={skill.title} value={skill.value} animationDelay={index + decrement} />
       });
+      skillsData = <Board>{skills}</Board>;
     }
-    return (
-      <Board>
-        {skills}
-      </Board>
-    );
+    return skillsData;
   }
 }
 

@@ -6,7 +6,7 @@ import ProjectPreview from './ProjectPreview/ProjectPreview';
 import Spinner from '../UI/Spinner/Spinner';
 import Modal from '../UI/Modal/Modal';
 import ProjectModal from './ProjectModal/ProjectModal';
-// import Button from '../UI/Button/Button';
+import Button from '../UI/Button/Button';
 import Container from '../../hoc/Container/Container';
 import PageHeader from '../UI/PageHeader/PageHeader';
 import Aux from '../../hoc/Aux';
@@ -15,7 +15,8 @@ class PortfolioPage extends Component {
   state = {
     projects: null,
     showModal: false,
-    modalContent: null
+    modalContent: null,
+    error: false
   }
 
   getProjects = () => {
@@ -26,7 +27,7 @@ class PortfolioPage extends Component {
         console.log(this.state.projects);
       })
       .catch(error => {
-        console.log(error);
+        this.setState({ error: true });
       });
   }
 
@@ -49,13 +50,28 @@ class PortfolioPage extends Component {
   }
 
   render() {
+    let portfolio = (
+      <p style={{
+        marginTop: '7rem',
+        width: '40%', 
+        color: '#fff',
+        fontSize: '2rem'
+      }}>
+        There is some problem with data, sorry. 
+        Also you can see my projects on GitHub:
+        <Button href="https://github.com/olbesp" color="Action"> https://github.com/olbesp</Button>
+      </p>
+    );
 
-    let portfolio = <div style={{
-      display:'flex',
-      alignItems:'center', 
-      justifyContent:'center',
-      height: '100vh'
-    }}><Spinner /></div>;
+    if (!this.state.error) {
+      portfolio = <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh'
+      }}><Spinner /></div>; 
+    }
+
     let projectModal = <div></div>;
     let projectsPreview;
 
