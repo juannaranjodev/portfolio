@@ -21,22 +21,35 @@ class AboutMePage extends Component {
   }
 
   render() {
-    return (
-      <Background time={this.props.time}>
-        <Container>
-          <RoomImage toggleWindow={this.toggleWindow} openedWindow={this.state.openedWindow}>
-            <PageHeader title="Few words about me" />
-            <div className={styles.AboutMePage}>
-              <Description time={this.props.time} />
-              <DeveloperImage />
-            </div>
-          </RoomImage>
-          
-            <SkillsBoard />
-          
-        </Container>
-      </Background>
+
+    let aboutMePage = (
+      <Container>
+        <PageHeader title="Few words about me" />
+        <div className={styles.AboutMePage}>
+          <Description time="night" />
+          <DeveloperImage background="noWall" />
+        </div>
+        <SkillsBoard />
+      </Container>
     );
+    
+    if (window.innerWidth >= 1000) {
+      aboutMePage = (
+        <Background time={this.props.time}>
+          <Container>
+            <RoomImage toggleWindow={this.toggleWindow} openedWindow={this.state.openedWindow}>
+              <PageHeader title="Few words about me" />
+              <div className={styles.AboutMePage}>
+                <Description time={this.props.time} />
+                <DeveloperImage background="withWall" />
+              </div>
+            </RoomImage>
+            <SkillsBoard />
+          </Container>
+        </Background>
+      );
+    }
+    return aboutMePage;
   }
 }
 

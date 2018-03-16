@@ -2,8 +2,8 @@ import React from 'react';
 
 import styles from './DeveloperImage.css';
 
-const person = () => (
-  <div className={styles.Container}>
+const developerImage = (props) => (
+  <div className={[styles.Container, styles[props.background]].join(' ')}>
     <div className={styles.ArmChair}>
       <div className={styles.ArmChair__top}></div>
       <div className={styles.ArmChair__bottom}></div>
@@ -49,4 +49,4 @@ const person = () => (
   </div>
 );
 
-export default person;
+export default developerImage;
