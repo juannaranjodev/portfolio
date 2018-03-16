@@ -37,7 +37,15 @@ const roomImage = (props) => {
               </div>
             </div>
           </div>
-          <div className={styles.wall__center_bottom}></div>
+          <div className={styles.wall__center_bottom}>
+            <div className={styles.flower}>
+              <div className={styles.flower__pot}>
+                <div className={styles.flower__tree}></div>
+                <div className={styles.flower__pot_top}></div>
+                <div className={styles.flower__pot_bottom}></div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className={styles.wall__side}></div>
       </div>  

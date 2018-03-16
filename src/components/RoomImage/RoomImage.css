@@ -108,3 +108,39 @@
   transform: rotate(90deg);
   bottom: -3%;
 }
+
+.flower {
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  width: 10%;
+  height: 30rem;
+  /* border: 1px solid red; */
+}
+
+.flower__tree {}
+.flower__pot {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 35%;
+}
+
+.flower__pot_top {
+  width: 100%;
+  height: 85%;
+  border-radius: 0 0 30% 30%;
+  background-color: #fff;
+  box-shadow: -1rem 0 .5rem rgba(0,0,0,.5), 0 -.5rem .5rem rgba(0,0,0,.3) inset;
+  background-image: linear-gradient(transparent 10%, #867878 10%, transparent 20%),
+    linear-gradient(90deg, #867878, transparent, #867878);
+}
+
+.flower__pot_bottom {
+  width: 100%;
+  height: 15%;
+  border-radius: 100% 100% 0 0;
+  background-color: #fff;
+  box-shadow: -1rem 0 .5rem rgba(0,0,0,.5), 0 .5rem .5rem rgba(0,0,0,.3) inset;
+  background-image: linear-gradient(90deg, #867878, transparent, #867878);
+}
