@@ -25,16 +25,6 @@
   border-left: 1rem solid #331704;
 }
 
-.leave {
-  position: absolute;
-  z-index: 10;
-  width: 5rem;
-  height: 3rem;
-  border-radius: 100% 100% 0 100%;
-  border: 1px solid #102c0f;
-  box-shadow: -5px 5px 5px rgba(0,0,0,.3);
-}
-
 .flower__pot {
   position: absolute;
   bottom: 0;

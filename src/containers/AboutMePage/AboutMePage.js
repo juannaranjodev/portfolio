@@ -39,7 +39,7 @@ class AboutMePage extends Component {
               <PageHeader title="Few words about me" />
               <Description time={this.props.time} />
               <DeveloperImage background="withWall" />
-              <FlowerImage />
+              <FlowerImage flowerTree={this.props.flowerTree} />
             </RoomImage>
             <SkillsBoard />
           </Container>
