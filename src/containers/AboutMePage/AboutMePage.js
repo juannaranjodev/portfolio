@@ -29,9 +29,11 @@ class AboutMePage extends Component {
             <div className={styles.AboutMePage}>
               <Description time={this.props.time} />
               <DeveloperImage />
-              <SkillsBoard />
             </div>
           </RoomImage>
+          
+            <SkillsBoard />
+          
         </Container>
       </Background>
     );
