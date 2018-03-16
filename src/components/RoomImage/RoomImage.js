@@ -10,9 +10,28 @@ const roomImage = (props) => {
         <div className={styles.wall__center}>
           <div className={styles.wall__center_top}></div>
           <div className={styles.windows}>
-            <div className={styles.windows__window}></div>
-            <div className={styles.windows__window}></div>
-            <div className={styles.windows__window}></div>
+            <div className={styles.windows__window}>
+              <div className={styles.window__border}>
+                <div className={styles.window__glass}></div>
+              </div>
+            </div>
+            <div className={styles.windows__window}>
+              <div className={styles.window__border}>
+                <div className={styles.window__glass}></div>
+              </div>
+            </div>
+            <div className={styles.windows__window}>
+              <div className={styles.window__border}>
+                <div className={styles.window__glass}></div>
+              </div>
+            </div>
+            <div className={styles.windows__window}>
+              <div id="opened" className={[styles.window__border, props.openedWindow ? styles.opened : null].join(' ')} 
+                onClick={props.toggleWindow}
+              >
+                <div className={styles.window__glass}></div>
+              </div>
+            </div>
           </div>
           <div className={styles.wall__center_bottom}></div>
         </div>
