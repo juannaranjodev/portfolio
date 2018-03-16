@@ -30,13 +30,13 @@
 }
 
 .wall__side {
-  width: 10%;
+  width: 5%;
   height: 100%;
 }
 
 .wall__center {
   display: flex;
-  width: 80%;
+  width: 90%;
   height: 100%;
   flex-direction: column;
   justify-content: space-between;

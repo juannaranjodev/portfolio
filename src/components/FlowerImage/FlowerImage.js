@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import styles from './FlowerImage.css';
 import { random } from '../../containers/App/App';
 
+
+
 class FlowerImage extends Component {
   
   shouldComponentUpdate() {
