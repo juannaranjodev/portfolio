@@ -13,6 +13,8 @@ import brands from '@fortawesome/fontawesome-free-brands';
 
 fontawesome.library.add(brands);
 
+export const random = limit => Math.floor(Math.random() * limit);
+
 class App extends Component {
   state = {
     time: null

@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './CityImage.css';
 
-const random = limit => Math.floor(Math.random() * limit);
+import {random} from '../../containers/App/App';
 
 const cityImage = (props) => {
 
