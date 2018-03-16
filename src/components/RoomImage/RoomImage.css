@@ -115,7 +115,6 @@
   left: 8%;
   width: 10%;
   height: 30rem;
-  border: 1px solid blue;
 }
 
 .flower__tree {
@@ -124,15 +123,27 @@
   z-index: 10;
   width: 100%;
   height: 65%;
-  border: 1px solid red;
+}
+
+.flower__tree::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 48%;
+  height: 80%;
+  width: 20%;
+  border-radius: 100% 100% 0 0;
+  border-left: 1rem solid #331704;
 }
 
 .leave {
   position: absolute;
+  z-index: 10;
   width: 5rem;
   height: 3rem;
   border-radius: 100% 100% 0 100%;
   border: 1px solid #102c0f;
+  box-shadow: -5px 5px 5px rgba(0,0,0,.3);
 }
 
 .flower__pot {
