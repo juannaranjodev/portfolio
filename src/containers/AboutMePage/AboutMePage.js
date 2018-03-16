@@ -6,6 +6,7 @@ import RoomImage from '../../components/RoomImage/RoomImage';
 import Description from './Description/Description';
 import SkillsBoard from './SkillsBoard/SkillsBoard';
 import DeveloperImage from '../../components/DeveloperImage/DeveloperImage';
+import FlowerImage from '../../components/FlowerImage/FlowerImage';
 import PageHeader from '../../components/PageHeader/PageHeader';
 
 class AboutMePage extends Component {
@@ -38,6 +39,7 @@ class AboutMePage extends Component {
               <PageHeader title="Few words about me" />
               <Description time={this.props.time} />
               <DeveloperImage background="withWall" />
+              <FlowerImage />
             </RoomImage>
             <SkillsBoard />
           </Container>
