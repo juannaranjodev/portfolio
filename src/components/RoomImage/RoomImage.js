@@ -12,16 +12,19 @@ const roomImage = (props) => {
           <div className={styles.windows}>
             <div className={styles.windows__window}>
               <div className={styles.window__border}>
+                <div className={styles.window__grip}></div>
                 <div className={styles.window__glass}></div>
               </div>
             </div>
             <div className={styles.windows__window}>
               <div className={styles.window__border}>
+                <div className={styles.window__grip}></div>
                 <div className={styles.window__glass}></div>
               </div>
             </div>
             <div className={styles.windows__window}>
               <div className={styles.window__border}>
+                <div className={styles.window__grip}></div>
                 <div className={styles.window__glass}></div>
               </div>
             </div>
@@ -29,6 +32,7 @@ const roomImage = (props) => {
               <div id="opened" className={[styles.window__border, props.openedWindow ? styles.opened : null].join(' ')} 
                 onClick={props.toggleWindow}
               >
+                <div className={styles.window__grip}></div>
                 <div className={styles.window__glass}></div>
               </div>
             </div>

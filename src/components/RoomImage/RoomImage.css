@@ -67,12 +67,28 @@
   perspective-origin: bottom;
 }
 
+.windows__window:last-of-type { cursor: pointer; }
+
 .window__border {
   height: 100%;
   width: 100%;
   border: 1.5rem solid #e2e2e2;
   box-shadow: -2px -2px 2px rgba(0,0,0,.2), 2px 2px 2px rgba(0,0,0,.2);
   transition: all .2s;
+}
+
+.window__grip {
+  position: absolute;
+  bottom: 1%;
+  left: 30%;
+  width: 30%;
+  height: 2%;
+  border-radius: 0 20% 20% 0;
+  background-image: linear-gradient(90deg, #aaa 5%, transparent 8%, #aaa), 
+    linear-gradient(#aaa, #fff, #aaa);
+  box-shadow: 2px 2px .5rem rgba(0,0,0,.3);
+  transition: all .3s;
+  transform-origin: right;
 }
 
 .window__glass {
@@ -86,4 +102,9 @@
 
 .opened {
   transform: rotateX(-50deg);
+}
+
+.opened .window__grip {
+  transform: rotate(90deg);
+  bottom: -3%;
 }
