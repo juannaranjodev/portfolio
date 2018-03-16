@@ -9,8 +9,10 @@ const mainHeading = (props) => (
     <h1 className={styles.Name}>{props.name}</h1>
     <h5 className={styles.Message}>{props.message}</h5>
     <Button
+      type="router-link"
       href="/portfolio"
-      color="Info">
+      color="Info"
+    >
       Projects
     </Button>
   </div>
