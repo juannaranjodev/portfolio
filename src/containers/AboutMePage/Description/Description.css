@@ -23,6 +23,7 @@
   .Description {
     width: 70%;
     margin: 0 auto;
+    border-radius: 2rem;
   }
 }
 
@@ -32,5 +33,12 @@
   }
 }
 
-.text_light { color: #d1d1d1; }
-.text_dark { color: #232323; }
+.text_light { 
+  color: #d1d1d1;
+  background-color: rgba(0,0,0,.6);
+}
+
+.text_dark { 
+  color: #232323;
+  background-color: rgba(255,255,255,.6);
+}

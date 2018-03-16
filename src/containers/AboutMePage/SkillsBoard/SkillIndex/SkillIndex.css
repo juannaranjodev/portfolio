@@ -5,6 +5,7 @@
   margin: 0 auto 1rem;
   text-align: center;
   text-transform: uppercase;
+  color: #fff;
 }
 
 @media (min-width: 500px) {
