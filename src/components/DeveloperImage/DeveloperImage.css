@@ -1,4 +1,4 @@
-.Container {
+.container {
   height: 300px;
   width: 300px;
   margin: 0 auto;
@@ -15,7 +15,7 @@
   position: relative;
 }
 
-.ArmChair {
+.armChair {
   position: absolute;
   bottom: 0;
   left: 25%;
@@ -23,7 +23,7 @@
   height: 80%;
 }
 
-.ArmChair__top {
+.armChair__top {
   width: 85%;
   margin: 0 auto;
   height: 65%;
@@ -33,11 +33,10 @@
   );
   box-shadow: 0 .2rem .1rem rgba(255,255,255,.7) inset,
     .5rem 0 .5rem rgba(0,0,0,.4) inset,
-    -.5rem 0 .5rem rgba(0,0,0,.4) inset,
-    1rem 0 1.5rem rgba(0,0,0,.3),
-    -1rem 0 1.5rem rgba(0,0,0,.3);
+    -.5rem 0 .5rem rgba(0,0,0,.4) inset;
 }
-.ArmChair__bottom {
+
+.armChair__bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -50,7 +49,7 @@
   box-shadow: 0 1.5rem .5rem rgba(0,0,0,.4) inset, 0 -.5rem .5rem rgba(0,0,0,.5) inset;
 }
 
-.Person {
+.person {
   position: absolute;
   bottom: 0;
   left: 20%;
@@ -58,7 +57,7 @@
   width: 60%;
 }
 
-.Person__head {
+.person__head {
   position: relative;
   width: 25%;
   height: 6rem;
@@ -67,7 +66,7 @@
   margin: 0 auto;
 }
 
-.Person__hair {
+.person__hair {
   position: absolute;
   top: -15%;
   width: 100%;
@@ -76,7 +75,7 @@
   background-color: #0f0f0f;
 }
 
-.Hair_top {
+.hair_top {
   position: absolute;
   top: -20%;
   left: 30%;
@@ -86,7 +85,7 @@
   transform: rotate(-45deg);
 }
 
-.Hair_top::before {
+.hair_top::before {
   position: absolute;
   top: -40%;
   left: -70%;
@@ -96,7 +95,7 @@
   background-color: #0f0f0f;
 }
 
-.Hair_top::after {
+.hair_top::after {
   position: absolute;
   top: 70%;
   right: -50%;
@@ -106,8 +105,8 @@
   background-color: #0f0f0f;
 }
 
-.Hair_side_left,
-.Hair_side_right {
+.hair_side_left,
+.hair_side_right {
   position: absolute;
   top: 100%;
   height: 100%;
@@ -115,17 +114,17 @@
   background-image: linear-gradient(-135deg,#0f0f0f, transparent);
 }
 
-.Hair_side_left { 
+.hair_side_left { 
   left: 0;
   border-radius: 0 0 100% 0;
 }
 
-.Hair_side_right {
+.hair_side_right {
   right: 0;
   border-radius: 0 0 0 100%;
 }
 
-.Person__eyes{
+.person__eyes{
   position: absolute;
   top: 50%;
   left: 10%;
@@ -135,7 +134,7 @@
   justify-content: space-between;
 }
 
-.Person__eyes::after {
+.person__eyes::after {
   position: absolute;
   top: -50%;
   content: "";
@@ -144,7 +143,7 @@
   background-image: linear-gradient(90deg, #0f0f0f 35%, transparent 35%, transparent 65%, #0f0f0f 65%);
 }
 
-.Eye {
+.eye {
   position: relative;
   width: 33%;
   height: 100%;
@@ -153,7 +152,7 @@
   background-color: white;
 }
 
-.Eye::after {
+.eye::after {
   position: absolute;
   top: -100%;
   left: -25%;
@@ -164,7 +163,7 @@
   animation: closeEyes 5s 2s infinite ease-out;
 }
 
-.Eye__apple {
+.eye__apple {
   position: absolute;
   top: 25%;
   left: 25%;
@@ -175,7 +174,7 @@
   animation: moveEyes 8s 1s infinite linear;
 }
 
-.Eye__apple::after {
+.eye__apple::after {
   position: absolute;
   content: "";
   width: 40%;
@@ -184,8 +183,8 @@
   border-radius: 50%;
 }
 
-.Person__head__ear_left,
-.Person__head__ear_right {
+.person__head__ear_left,
+.person__head__ear_right {
   position: absolute;
   top: 45%;
   height: 35%;
@@ -194,11 +193,11 @@
   background-color: #eba272;
 }
 
-.Person__head__ear_left { left: -10%; transform: rotate(-5deg); }
-.Person__head__ear_right { right: -10%; transform: rotate(5deg); }
+.person__head__ear_left { left: -10%; transform: rotate(-5deg); }
+.person__head__ear_right { right: -10%; transform: rotate(5deg); }
 
-.Person__shoulder_left,
-.Person__shoulder_right {
+.person__shoulder_left,
+.person__shoulder_right {
   position: absolute;
   width: 15%;
   height: 25%;
@@ -207,30 +206,31 @@
   box-shadow: 0 .2rem .2rem rgba(255,255,255,.7) inset;
 }
 
-.Person__shoulder_left { left: 20%; transform: rotate(-135deg); }
-.Person__shoulder_right { right: 20%; transform: rotate(135deg); }
+.person__shoulder_left { left: 20%; transform: rotate(-135deg); }
+.person__shoulder_right { right: 20%; transform: rotate(135deg); }
 
-.Person__leg_left,
-.Person__leg_right {
+.person__leg_left,
+.person__leg_right {
   position: absolute;
   bottom: 2%;
   width: 15%;
   height: 7rem;
   background-image: linear-gradient(90deg, #07324b, #487691, #07324b);
 }
-.Person__leg_left {
+.person__leg_left {
   left: 28%;
   transform: rotate(-10deg);
   box-shadow: 0 1rem .5rem rgba(0,0,0,.4) inset, .5rem 0 .5rem rgba(0,0,0,.4);
 }
-.Person__leg_right {
+
+.person__leg_right {
   right: 28%;
   transform: rotate(10deg);
   box-shadow: 0 1rem .5rem rgba(0,0,0,.4) inset, -.5rem 0 .5rem rgba(0,0,0,.4);
 }
 
-.Person__shoe_left,
-.Person__shoe_right {
+.person__shoe_left,
+.person__shoe_right {
   position: absolute;
   bottom: 0;
   width: 18%;
@@ -240,10 +240,10 @@
   box-shadow: 0 .5rem .5rem rgba(0,0,0,.4);
 }
 
-.Person__shoe_left::before,
-.Person__shoe_right:before,
-.Person__shoe_left::after,
-.Person__shoe_right:after {
+.person__shoe_left::before,
+.person__shoe_right:before,
+.person__shoe_left::after,
+.person__shoe_right:after {
   position: absolute;
   top: 10%;
   left: 25%;
@@ -254,13 +254,13 @@
   background-color: #d1d1d1;
 }
 
-.Person__shoe_left::after,
-.Person__shoe_right:after { top: 30%; }
+.person__shoe_left::after,
+.person__shoe_right:after { top: 30%; }
 
-.Person__shoe_left { left: 30%; }
-.Person__shoe_right { right: 30%; }
+.person__shoe_left { left: 30%; }
+.person__shoe_right { right: 30%; }
 
-.Table {
+.table {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -268,7 +268,7 @@
   width: 100%;
 }
 
-.Cup {
+.cup {
   position: absolute;
   bottom: 12rem;
   left: 10%;
@@ -279,7 +279,7 @@
   linear-gradient(90deg, #a14900, #ec9d27, #a14900);
 }
 
-.Cup::after {
+.cup::after {
   position: absolute;
   content: "";
   top: 10%;
@@ -292,15 +292,15 @@
   border-bottom: 4px solid #a14900;
 }
 
-.Cup__steam {
+.cup__steam {
   position: absolute;
   top: -220%;
   height: 6rem;
   width: 3rem;
 }
 
-.Cup__steam::before,
-.Cup__steam::after {
+.cup__steam::before,
+.cup__steam::after {
   position: absolute;
   content: "";
   left: 0;
@@ -309,26 +309,18 @@
   border-radius: 100%;
 }
 
-.Cup__steam::before {
+.cup__steam::before {
   border-right: 3px solid #555;
   animation: steam 7s infinite linear;
 }
 
-.Cup__steam::after {
+.cup__steam::after {
   bottom: 0;
   border-left: 3px solid #555;
   animation: steam 7s infinite linear;
 }
 
-@keyframes steam {
-  0% { transform: rotateY(0deg) skewY(0deg); }
-  25% { transform: rotateY(90deg) skewY(30deg); }
-  50% { transform: rotateY(180deg) skewY(0deg); }
-  75% { transform: rotateY(270deg) skewY(-30deg); }
-  100% { transform: rotateY(360deg) skewY(0deg); }
-}
-
-.Laptop {
+.laptop {
   position: absolute;
   bottom: 12rem;
   left: 35%;
@@ -340,7 +332,7 @@
   margin: 0 auto;
 }
 
-.Laptop__sticker {
+.laptop__sticker {
   width: 2.5rem;
   height: 2.5rem;
   display: flex;
@@ -354,7 +346,7 @@
   box-shadow: -1px 1px 1px rgba(0,0,0,.2);
 }
 
-.Table__top {
+.table__top {
   position: absolute;
   bottom: 7rem;
   height: 5rem;
@@ -365,7 +357,7 @@
   box-shadow: 0 .1rem .1rem rgba(255,255,255,.2) inset;
 }
 
-.Table__bottom {
+.table__bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -373,7 +365,7 @@
   justify-content: space-between;
 }
 
-.Table__leg {
+.table__leg {
   width: 10%;
   height: 7rem;
   background-color: #77320a;
@@ -382,7 +374,7 @@
 }
 
 @media (min-width: 1000px) {
-  .Container {
+  .container {
     width: 25%;
   }
 }
@@ -402,5 +394,12 @@
   55% { left: 40%; }
   60% { left: 25%; }
   100% { left: 25%; }
+}
 
+@keyframes steam {
+  0% { transform: rotateY(0deg) skewY(0deg); }
+  25% { transform: rotateY(90deg) skewY(30deg); }
+  50% { transform: rotateY(180deg) skewY(0deg); }
+  75% { transform: rotateY(270deg) skewY(-30deg); }
+  100% { transform: rotateY(360deg) skewY(0deg); }
 }
