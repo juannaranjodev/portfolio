@@ -17,8 +17,6 @@
   top: -50%;
   left: 0;
   text-align: center;
-  /* color: #d1d1d1; */
-
   font-weight: bold;
   font-size: 2rem;
   transition: all .5s;
@@ -30,21 +28,35 @@
 }
 
 @media (min-width: 450px) {
-  .Project {
-    width: 50%;
-  }
+  .Project { width: 50%; }
 }
 
-@media (min-width: 768px) {
-  /* .Project {
-    width: 25%;
-  } */
-  
-  .Project__img {
-    transform: scale(1.15);
-  }
-  
-  .Project:hover .Project__img {
-    transform: scale(1.02);
-  }
+@media (min-width: 768px) {  
+  .Project__img { transform: scale(1.15); }
+  .Project:hover .Project__img { transform: scale(1.02); }
+}
+
+.fromTop { animation: appearFromTop 1.5s 1s backwards; }
+.fromBottom { animation: appearFromBottom 1.5s 1s backwards; }
+.fromLeft { animation: appearFromLeft 1.5s 1s backwards; }
+.fromRight { animation: appearFromRight 1.5s 1s backwards; }
+
+@keyframes appearFromTop {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes appearFromBottom {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes appearFromLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes appearFromRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
