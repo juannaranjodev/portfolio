@@ -33,7 +33,7 @@ class AboutMePage extends Component {
     
     if (window.innerWidth >= 1000 && window.innerHeight >= 768) {
       aboutMePage = (
-        <Background time={this.props.time}>
+        <Background time={this.props.time} stars={this.props.stars}>
           <Container>
             <RoomImage toggleWindow={this.toggleWindow} openedWindow={this.state.openedWindow}>
               <PageHeader title="Few words about me" />

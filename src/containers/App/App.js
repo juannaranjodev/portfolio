@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import styles from './App.css';
+import backgroundStyles from '../../components/UI/Background/Background.css';
 import cityImageStyles from '../../components/CityImage/CityImage.css';
 import flowerImageStyles from '../../components/FlowerImage/FlowerImage.css';
 
@@ -21,6 +22,7 @@ export const random = limit => Math.floor(Math.random() * limit);
 class App extends Component {
   state = {
     time: null,
+    stars: null,
     city: null,
     flowerTree: null
   }
@@ -30,6 +32,23 @@ class App extends Component {
     this.setState({
       time: time.getHours() > 5 && time.getHours() < 20 ? 'day' : 'night'
     });
+  }
+
+  createStars = () => {
+    const stars = [];
+    for (let i = 0; i < random(5) + 10; i++) {
+      stars.push(
+        <div 
+          className={backgroundStyles.star}
+          style={{
+            top: `${random(60)}%`,
+            left: `${random(100)}%`
+          }}
+        >
+        </div>
+      )
+    }
+    this.setState({ stars });
   }
 
   buildCity = () => {
@@ -116,6 +135,9 @@ class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState.time !== this.state.time) {
       this.buildCity();
+      if (this.state.time === 'night') {
+        this.createStars();
+      }
     }
   }
 
@@ -125,9 +147,9 @@ class App extends Component {
         <div className={styles.App}>
           <Layout>
             <Switch>
-              <Route path="/home" render={() => <HomePage time={this.state.time} city={this.state.city} />} />
-              <Route path="/aboutme" render={() => <AboutMePage time={this.state.time} flowerTree={this.state.flowerTree} />} />
-              <Route path="/portfolio" render={() => <PortfolioPage time={this.state.time} />} />
+              <Route path="/home" render={() => <HomePage stars={this.state.stars} time={this.state.time} city={this.state.city} />} />
+              <Route path="/aboutme" render={() => <AboutMePage stars={this.state.stars} time={this.state.time} flowerTree={this.state.flowerTree} />} />
+              <Route path="/portfolio" render={() => <PortfolioPage stars={this.state.stars} time={this.state.time} />} />
               <Route path="/contacts" render={() => <ContactsPage time={this.state.time} />} />
               <Redirect from="/" to="/home" />
             </Switch>

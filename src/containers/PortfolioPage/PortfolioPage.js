@@ -133,7 +133,7 @@ class PortfolioPage extends Component {
         <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
           {projectModal}
         </Modal>
-        <Background time={this.props.time}>
+        <Background time={this.props.time} stars={this.props.stars}>
           {portfolio}
         </Background>
       </Aux>

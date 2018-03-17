@@ -19,7 +19,7 @@ class HomePage extends Component {
 
     return (
       <div className={styles.HomePage}>
-        <Background time={this.props.time}>
+        <Background time={this.props.time} stars={this.props.stars}>
           <CityImage city={this.props.city} time={this.props.time} />
           <FaceImage />
         </Background>
