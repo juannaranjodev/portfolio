@@ -14,20 +14,20 @@ const projectModal = (props) => (
     </div>
     <div className={styles.ProjectModal__data}>
       <header className={styles.data__header}>
-        <h3>{props.title}</h3>
-        <div className={styles.CloseBtn} onClick={props.closeModal}>
-          <Button type="button" color="Action">Close</Button>
+        <h3 className={styles.data__header__title}>{props.title}</h3>
+        <div className={styles.data__header__closeButton} onClick={props.closeModal}>
+          &times;
         </div>
       </header>
-      <div className={styles.ProjectModal__description}>{props.description}</div>
-      <ul className={styles.ProjectModal__tools}>
-        { props.tools.map((tool, index) => <li key={index}>{tool}</li>) }
+      <div className={styles.data__description}>{props.description}</div>
+      <ul className={styles.data__toolBox}>
+        {props.tools.map((tool, index) => <li className={styles.toolBox__tool} key={index}>{tool}</li>) }
       </ul>
+      <footer className={styles.data__footer}>
+        <Button href={props.code} newtab color="Info">Code</Button>
+        <Button href={props.app} newtab color="Info">Link</Button>
+      </footer>
     </div>
-    <footer className={styles.ProjectModal__footer}>
-      <Button href={props.code} newtab color="Info">Code</Button>
-      <Button href={props.app} newtab color="Info">Link</Button>
-    </footer>
   </div>
 );
 

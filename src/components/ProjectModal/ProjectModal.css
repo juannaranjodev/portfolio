@@ -2,37 +2,76 @@
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  background-color: #d1d1d1;
+}
+
+.ProjectModal__image {
+  width: 30%;
+  height: 100%;
   background-size: cover;
   background-position: center;
-  padding: 2rem;
-  color: #d1d1d1;
-  font-size: 2rem;
 }
 
-.ProjectModal__header {
-  width: 100%;
+.ProjectModal__data {
+  width: 70%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
-.ProjectModal__tools {
+.data__header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 2rem;
-  background-color: rgba(0,0,0,.5);
+  align-items: center;
+  padding-left: 2rem;
 }
 
-.ProjectModal__tools li {
+.data__header__title {
   font-size: 2rem;
 }
 
-.CloseBtn {
+.data__header__closeButton {
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 3rem;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.data__header__closeButton:hover {
+  background-color: #aaa;
+  color: #fff;
+}
+
+.data__description {
+  padding:2rem;
   font-size: 1.5rem;
-  margin: 0;
+}
+
+.data__toolBox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  list-style: none;
+}
+
+.toolBox__tool {
+  padding: 1rem;
+  margin: .5rem;
+  font-size: 1.5rem;
+  background-color: #aaa;
+  color: #fff;
+}
+
+.data__footer {
+  width: 100%;
+}
+
+.data__footer * {
+  width: 50%;
+  text-align: center;
 }
