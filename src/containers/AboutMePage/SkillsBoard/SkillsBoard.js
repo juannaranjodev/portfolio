@@ -36,10 +36,8 @@ class SkillsBoard extends Component {
       skillsData = <Board><Spinner /></Board>;
     }
     if (this.state.skills) {
-      let decrement = 1;
       const skills = this.state.skills.map((skill, index) => {
-        decrement -= 0.85;
-        return <SkillIndex key={index} title={skill.title} value={skill.value} animationDelay={index + decrement} />
+        return <SkillIndex key={index} title={skill.title} value={skill.value} animationDelay={index / 10} />
       });
       skillsData = <Board>{skills}</Board>;
     }
