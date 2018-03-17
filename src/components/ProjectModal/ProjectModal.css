@@ -7,15 +7,14 @@
 }
 
 .ProjectModal__image {
-  width: 30%;
-  height: 100%;
+  width: 100%;
+  height: 25%;
   background-size: cover;
   background-position: center;
 }
 
 .ProjectModal__data {
-  width: 70%;
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,7 +29,7 @@
 }
 
 .data__header__title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .data__header__closeButton {
@@ -49,7 +48,7 @@
 
 .data__description {
   padding:2rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .data__toolBox {
@@ -60,9 +59,9 @@
 }
 
 .toolBox__tool {
-  padding: 1rem;
+  padding: .5rem;
   margin: .5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: #aaa;
   color: #fff;
 }
@@ -74,4 +73,12 @@
 .data__footer * {
   width: 50%;
   text-align: center;
+}
+
+@media (min-width: 600px) and (min-height: 600px) {
+  .ProjectModal__image { width: 30%; height: 100%; }
+  .ProjectModal__data { width: 70%; height: 100%; }
+  .data__header__title { font-size: 2rem; }
+  .data__description { font-size: 1.5rem; }
+  .toolBox__tool { font-size: 1.5rem; }
 }
