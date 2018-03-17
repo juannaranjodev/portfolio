@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import styles from './ProjectPreview.css';
 import { random } from '../../containers/App/App';
 
-const projectPreview = (props) => {
-  let width = null;
-  if (props.width) {
-    width = props.width;
+class ProjectPreview extends Component {
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.width !== this.props.width;
   }
-  const animatedClasses = ['fromTop', 'fromBottom', 'fromLeft', 'fromRight'];
-  return (
-    <figure className={[styles.Project, styles[animatedClasses[random(animatedClasses.length)]]].join(' ')} id={props.id} style={{ width }}>
-      <img className={styles.Project__img} src={props.img} alt={props.title} />
-      <figcaption className={[styles.Project__title, 'textShadow'].join(' ')}>{props.title}</figcaption>
-    </figure>
-  );
+
+  render() {
+
+    let width = null;
+    if (this.props.width) {
+      width = this.props.width;
+    }
+    const animatedClasses = ['fromTop', 'fromBottom', 'fromLeft', 'fromRight'];
+
+    return (
+      <figure 
+        className={[styles.Project, styles[animatedClasses[random(animatedClasses.length)]]].join(' ')} 
+        id={this.props.id}
+        style={{ width }}
+      >
+        <img className={styles.Project__img} src={this.props.img} alt={this.props.title} />
+        <figcaption className={[styles.Project__title, 'textShadow'].join(' ')}>{this.props.title}</figcaption>
+      </figure>
+    );
+  }
 }
 
-
-export default projectPreview;
+export default ProjectPreview;
