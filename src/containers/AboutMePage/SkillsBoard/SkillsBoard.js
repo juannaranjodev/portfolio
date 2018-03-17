@@ -17,7 +17,7 @@ class SkillsBoard extends Component {
       this.setState({ skills: response.data });
     })
     .catch(error => {
-      // this.setState({ error: true });
+      this.setState({ error: true });
     });
   }
 
@@ -25,7 +25,12 @@ class SkillsBoard extends Component {
     this.getData();
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState.skills !== this.state.skills || nextState.error !== this.state.error;
+  }
+
   render() {
+    console.log('skilboard render');
     let skillsData = null;
     if (!this.state.error) {
       skillsData = <Board><Spinner /></Board>;
