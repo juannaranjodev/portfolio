@@ -24,6 +24,7 @@ class HomePage extends Component {
           <FaceImage />
         </Background>
         <MainHeading
+          time={this.props.time}
           name={homeHeaders.name}
           role={homeHeaders.role}
           message={homeHeaders.messages[Math.floor(Math.random() * homeHeaders.messages.length)]}
