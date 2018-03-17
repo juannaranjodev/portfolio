@@ -81,6 +81,9 @@ class PortfolioPage extends Component {
       const setProjectWidth = () => {
         if (window.innerWidth >= 768) {
           const amountOfProjects = this.state.projects.length;
+          if (window.innerWidth < window.innerHeight) {
+            return '50%';
+          }
           if (amountOfProjects % 4 === 0) {
             return '25%';
           } else if (amountOfProjects % 2 === 0) {
