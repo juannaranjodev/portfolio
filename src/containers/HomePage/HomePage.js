@@ -20,7 +20,7 @@ class HomePage extends Component {
     return (
       <div className={styles.HomePage}>
         <Background time={this.props.time}>
-          <CityImage time={this.props.time} />
+          <CityImage city={this.props.city} time={this.props.time} />
           <FaceImage />
         </Background>
         <MainHeading

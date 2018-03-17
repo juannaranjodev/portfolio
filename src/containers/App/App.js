@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import styles from './App.css';
+import cityImageStyles from '../../components/CityImage/CityImage.css';
+import flowerImageStyles from '../../components/FlowerImage/FlowerImage.css';
+
 import Layout from '../../hoc/Layout/Layout';
 import HomePage from '../HomePage/HomePage';
 import AboutMePage from '../AboutMePage/AboutMePage';
@@ -18,6 +21,7 @@ export const random = limit => Math.floor(Math.random() * limit);
 class App extends Component {
   state = {
     time: null,
+    city: null,
     flowerTree: null
   }
 
@@ -26,6 +30,60 @@ class App extends Component {
     this.setState({
       time: time.getHours() > 5 && time.getHours() < 20 ? 'day' : 'night'
     });
+  }
+
+  buildCity = () => {
+    let styleOfHouse = cityImageStyles.house;
+    let styleOfAerial = cityImageStyles.aerial;
+    if (this.state.time === 'night') {
+      styleOfHouse = [cityImageStyles.house, cityImageStyles[this.state.time]].join(' ');
+      styleOfAerial = [cityImageStyles.aerial, cityImageStyles[this.state.time]].join(' ');
+    }
+
+    const buildFlats = (houseWidth, houseHeight) => {
+      let flats = [];
+      let limit = houseWidth * houseHeight;
+      let flatSize = houseWidth / (random(3) + 5);
+      while (limit > 0) {
+        flats.push(
+          <span className={cityImageStyles.flat} key={flats.length} style={{
+            width: flatSize,
+            height: flatSize,
+            backgroundColor: `${['#fff', '#050505'][random(2)]}`
+          }}></span>
+        );
+        limit -= flatSize * flatSize;
+      }
+      return flats;
+    }
+    const city = [];
+    let widthReminder = window.innerWidth;
+    while (widthReminder > 0) {
+      let houseWidth = random(10) + 30;
+      let houseHeight = random(150) + random(50);
+      let aerialHeight = random(houseHeight / 3);
+      city.push(
+        <div key={city.length} className={styleOfHouse} style={{ width: houseWidth, height: houseHeight }}>
+          <div className={styleOfAerial} style={{
+            width: `${random(3) + 1}px`,
+            height: aerialHeight,
+            top: -aerialHeight,
+            left: `${random(95)}%`
+          }}>
+            {
+              this.state.time === 'night' &&
+                ((houseHeight >= 140 && aerialHeight >= 43) ||
+                  (houseHeight >= 180 && aerialHeight >= 14)) ?
+                <div className={cityImageStyles.signal} style={{ animationDelay: `${Math.random() * 1}s` }}></div> : null
+            }
+          </div>
+          {
+            this.state.time === 'night' ? buildFlats(houseWidth, houseHeight) : null
+          }
+        </div>);
+      widthReminder -= houseWidth;
+    }
+    this.setState({ city });
   }
 
   createFlowerTree = () => {
@@ -38,14 +96,7 @@ class App extends Component {
     ];
     for (let i = 0; i < random(20) + 90; i++) {
       flowerTree.push(
-        <div key={flowerTree.length} style={{
-          position: 'absolute',
-          zIndex: '10',
-          width: '5rem',
-          height: '3rem',
-          borderRadius: '100% 100% 0 100%',
-          border: '1px solid #102c0f',
-          boxShadow: '-5px 5px 5px rgba(0, 0, 0, .3)',
+        <div key={flowerTree.length} className={flowerImageStyles.leave} style={{
           top: `${-50 + random(150)}%`,
           left: `${-50 + random(150)}%`,
           backgroundColor: huesOfGreen[random(huesOfGreen.length)],
@@ -58,7 +109,14 @@ class App extends Component {
 
   componentDidMount() {
     this.checkDayTime();
+    
     this.createFlowerTree();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.time !== this.state.time) {
+      this.buildCity();
+    }
   }
 
   render() {
@@ -67,7 +125,7 @@ class App extends Component {
         <div className={styles.App}>
           <Layout>
             <Switch>
-              <Route path="/home" render={() => <HomePage time={this.state.time} />} />
+              <Route path="/home" render={() => <HomePage time={this.state.time} city={this.state.city} />} />
               <Route path="/aboutme" render={() => <AboutMePage time={this.state.time} flowerTree={this.state.flowerTree} />} />
               <Route path="/portfolio" render={() => <PortfolioPage time={this.state.time} />} />
               <Route path="/contacts" render={() => <ContactsPage time={this.state.time} />} />
@@ -81,3 +139,6 @@ class App extends Component {
 }
 
 export default App;
+
+
+
