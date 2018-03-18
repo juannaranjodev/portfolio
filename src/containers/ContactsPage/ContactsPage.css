@@ -4,6 +4,9 @@
   text-align: center;
 }
 
+.light { color: #fff; }
+.dark { color: #232323; }
+
 .message {
   position: relative;
   z-index: 5;

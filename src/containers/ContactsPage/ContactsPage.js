@@ -10,13 +10,13 @@ const contactsPage = (props) => (
     <Background time={props.time} stars={props.stars}>
 
     <PageHeader title="Let's connect" />
-      <p className={styles.message}>
+      <p className={[styles.message, props.time === 'night' ? styles.light : styles.dark].join(' ')}>
         If you find my works interesting and
         if I can help you or your team in your project,
         or even if you want to ask a question, send me an email.
         I will reply you within two hours.
     </p>
-      <form className={styles.form} method="GET">
+      <form className={[styles.form, props.time === 'night' ? styles.light : styles.dark].join(' ')} method="GET">
         <input className={styles.form__inputField} type="text" name="name" placeholder="Your Name *" required />
         <input className={styles.form__inputField} type="email" name="email" placeholder="Your Email *" required />
         <textarea className={styles.form__messageField} name="message" placeholder="Your Message *" required />
