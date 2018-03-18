@@ -23,6 +23,10 @@ const button = (props) => {
     button = <Link to={props.href} className={classes}>{props.children}</Link>;
   }
 
+  if (props.type === 'submit') {
+    button = <button type="input" className={classes}>{props.children}</button>;
+  }
+
   return button;
 }
   

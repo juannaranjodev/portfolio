@@ -17,10 +17,11 @@ const contactsPage = (props) => (
         I will reply you within two hours.
     </p>
       <form className={styles.form} method="GET">
-        <input className={styles.form__inputField} type="text" placeholder="Your Name" required />
-        <input className={styles.form__inputField} type="email" placeholder="Your Email" required />
-        <textarea className={styles.form__messageField} placeholder="Your Message" required />
-        <Button color="Action">Submit</Button>
+        <input className={styles.form__inputField} type="text" name="name" placeholder="Your Name *" required />
+        <input className={styles.form__inputField} type="email" name="email" placeholder="Your Email *" required />
+        <textarea className={styles.form__messageField} name="message" placeholder="Your Message *" required />
+        <p className={styles.instruction}>* &mdash; required</p>
+        <Button type="submit" color="Action">Submit</Button>
       </form>
     </Background>
   </div>
