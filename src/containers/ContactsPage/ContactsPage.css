@@ -27,18 +27,29 @@
   margin: .5rem 0;
   font-family: inherit;
   font-size: 1.2rem;
+  border: none;
+  outline: none; 
 }
 
 .form__inputField {
   display: block;  
   height: 1.5rem;
   width: 100%;
+  background-color: rgba(255,255,255,.3);
 }
+
+::placeholder { color: #232323; }
 
 .form__messageField {
   display: block;
   height: 4rem;  
   width: 100%;
+  background-color: rgba(255,255,255,.3);
+}
+
+.form__inputField:focus,
+.form__messageField:focus {
+  box-shadow: 0 -3px #ff6e0e inset;
 }
 
 .instruction {
