@@ -38,7 +38,7 @@ class App extends Component {
     const stars = [];
     for (let i = 0; i < random(5) + 10; i++) {
       stars.push(
-        <div 
+        <div key={stars.length}
           className={backgroundStyles.star}
           style={{
             top: `${random(60)}%`,
