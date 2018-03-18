@@ -27,9 +27,10 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1000px) and (min-height: 768px) {
   .Description {
-    width: 60%;
+    width: 50%;
+    margin-left: 2rem;
   }
 }
 

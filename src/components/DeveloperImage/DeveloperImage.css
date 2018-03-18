@@ -8,7 +8,7 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
 }
 
 .noWall {
@@ -271,7 +271,7 @@
 .cup {
   position: absolute;
   bottom: 12rem;
-  left: 10%;
+  right: 10%;
   height: 3rem;
   width: 10%;
   border-radius: 0 0 20% 20%;
@@ -283,12 +283,12 @@
   position: absolute;
   content: "";
   top: 10%;
-  right: -30%;
+  left: -30%;
   width: 35%;
   height: 70%;
-  border-radius: 0 20% 100% 0;
+  border-radius: 20% 0 0 100%;
   border-top: 4px solid #a14900;
-  border-right: 4px solid #a14900;
+  border-left: 4px solid #a14900;
   border-bottom: 4px solid #a14900;
 }
 
