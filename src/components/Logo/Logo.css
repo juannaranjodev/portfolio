@@ -8,29 +8,28 @@
   font-family: 'Lalezar', cursive;
 }
 
-.Logo__o {
+.Logo__firstname {
   font-size: 2rem;
-  animation: appearFromTop 1s .8s backwards;
+  /* animation: appearFromTop 1s .8s backwards; */
 }
 
-.Logo__b {
+.Logo__lastname {
   font-size: 1rem;
   animation: appearFromLeft 1.3s backwards;
 }
 
-@media (min-height: 500px) {
-  .Logo__o { font-size: 2.5rem; }
-  .Logo__b { font-size: 1.5rem; }
+.letter {
+  animation: type .2s backwards;
 }
 
-@keyframes appearFromTop {
-  0% { transform: translateY(-150%); }
-  40% { transform: translateY(0); }
-  60% { transform: translateY(-70%); }
-  75% { transform: translateY(0); }
-  85% { transform: translateY(-50%); }
-  95% { transform: translateY(0); }
-  100% { transform: translateY(0); }
+@media (min-height: 500px) {
+  .Logo__firstname { font-size: 2.5rem; }
+  .Logo__lastname { font-size: 1.5rem; }
+}
+
+@keyframes type {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes appearFromLeft {
