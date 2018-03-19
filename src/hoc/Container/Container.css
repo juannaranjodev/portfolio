@@ -8,7 +8,7 @@
 }
 
 .Container::-webkit-scrollbar-track {
-	-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.3) inset;
+	box-shadow: 0 0 6px rgba(0,0,0,0.3) inset;
 	background-color: #636363;
 }
 
@@ -18,6 +18,6 @@
 }
 
 .Container::-webkit-scrollbar-thumb {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #e05f09;
 }

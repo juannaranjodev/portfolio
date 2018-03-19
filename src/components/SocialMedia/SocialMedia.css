@@ -20,7 +20,7 @@
   font-size: 2rem;
   color: inherit;
   transition: all .3s;
-  animation: moveInBottom .75s ease-out backwards;
+  animation: appearFromBottom .75s ease-out backwards;
 }
 
 .SocialMedia a:hover {
@@ -33,7 +33,7 @@
   }
 }
 
-@keyframes moveInBottom {
+@keyframes appearFromBottom {
   0% {
     opacity: 0;
     transform: translateY(3rem);

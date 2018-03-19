@@ -1,5 +1,4 @@
 .Button,
-.Button:link,
 .Button:visited {
   position: relative;
   display: inline-block;
@@ -10,7 +9,7 @@
   border: none;
   cursor: pointer;
   color: white;
-  animation: moveInBottom .75s .75s ease-out backwards;
+  animation: appearFromBottom .75s .75s ease-out backwards;
 }
 
 .large { 
@@ -19,12 +18,14 @@
   font-weight: bold; 
   box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .2);
 }
+
 .medium { 
   padding: 1rem 2rem; 
   font-size: 1.2rem; 
   font-weight: bold; 
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
 }
+
 .small { 
   padding: .5rem 1rem; 
   font-size: 1rem; 
@@ -45,18 +46,16 @@
 .Button:focus { outline: none; }
 
 .blue,
-.blue:link,
 .blue:visited { background-color: #27adfa; }
 .blue:hover { background-color: #1093eb; }
 .blue:active { background-color: #0973b1; }
 
 .orange,
-.orange:link,
 .orange:visited { background-color: #f38406; }
 .orange:hover { background-color: #ff5c10; }
 .orange:active { background-color: #b62a00; }
 
-@keyframes moveInBottom {
+@keyframes appearFromBottom {
   0% {
     opacity: 0;
     transform: translateY(3rem);

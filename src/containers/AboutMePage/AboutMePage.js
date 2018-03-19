@@ -22,6 +22,7 @@ class AboutMePage extends Component {
   }
 
   render() {
+    console.log('render about');
     return (
       <Media query="(min-width: 1000px) and (min-height: 768px)">
         {matches => matches ? (

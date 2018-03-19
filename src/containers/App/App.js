@@ -147,10 +147,18 @@ class App extends Component {
         <div className={styles.App}>
           <Layout>
             <Switch>
-              <Route path="/home" render={() => <HomePage stars={this.state.stars} time={this.state.time} city={this.state.city} />} />
-              <Route path="/aboutme" render={() => <AboutMePage stars={this.state.stars} time={this.state.time} flowerTree={this.state.flowerTree} />} />
-              <Route path="/portfolio" render={() => <PortfolioPage stars={this.state.stars} time={this.state.time} />} />
-              <Route path="/contacts" render={() => <ContactsPage time={this.state.time} stars={this.state.stars} />} />
+              <Route path="/home" render={() => {
+                return <HomePage stars={this.state.stars} time={this.state.time} city={this.state.city} />}
+              } />
+              <Route path="/aboutme" render={() => {
+                return <AboutMePage stars={this.state.stars} time={this.state.time} flowerTree={this.state.flowerTree} />}
+              } />
+              <Route path="/portfolio" render={() => {
+                return <PortfolioPage stars={this.state.stars} time={this.state.time} />} 
+              }/>
+              <Route path="/contacts" render={() => {
+                return <ContactsPage time={this.state.time} stars={this.state.stars} />}
+              } />
               <Redirect from="/" to="/home" />
             </Switch>
           </Layout>

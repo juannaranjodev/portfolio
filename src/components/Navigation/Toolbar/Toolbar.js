@@ -9,7 +9,7 @@ const toolbar = (props) => (
   <header className={styles.Toolbar}>
     <Logo />
     <DrawerToggle clicked={props.drawerToggleClicked} open={props.open} close={props.closed}/>
-    <nav className={styles.DesktopOnly}>
+    <nav className={styles.desktopOnly}>
       <NavigationMenu />
     </nav>
   </header>

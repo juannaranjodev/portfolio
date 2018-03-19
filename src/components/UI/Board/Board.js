@@ -4,14 +4,14 @@ import styles from './Board.css';
 
 const board = (props) => (
   <div className={styles.Board}>
-    <div className={styles.Skrews}>
-      <div className={styles.Skrews__row}>
-        <div className={styles.Skrew}>+</div>
-        <div className={styles.Skrew}>+</div>
+    <div className={styles.skrews}>
+      <div className={styles.skrews__line}>
+        <div className={styles.skrews__line__skrew}>+</div>
+        <div className={styles.skrews__line__skrew}>+</div>
       </div>
-      <div className={styles.Skrews__row}>
-        <div className={styles.Skrew}>+</div>
-        <div className={styles.Skrew}>+</div>
+      <div className={styles.skrews__line}>
+        <div className={styles.skrews__line__skrew}>+</div>
+        <div className={styles.skrews__line__skrew}>+</div>
       </div>
     </div>
     {props.children}

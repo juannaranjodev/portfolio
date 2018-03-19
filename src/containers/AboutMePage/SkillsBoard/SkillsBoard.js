@@ -30,7 +30,6 @@ class SkillsBoard extends Component {
   }
 
   render() {
-    console.log('skilboard render');
     let skillsData = null;
     if (!this.state.error) {
       skillsData = <Board><Spinner /></Board>;

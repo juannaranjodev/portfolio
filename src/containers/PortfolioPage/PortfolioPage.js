@@ -25,7 +25,6 @@ class PortfolioPage extends Component {
       .then(response => {
         const projects = response.data;
         this.setState({ projects });
-        console.log(this.state.projects);
       })
       .catch(error => {
         this.setState({ error: true });
@@ -60,7 +59,7 @@ class PortfolioPage extends Component {
       }}>
         There is some problem with data, sorry. 
         Also you can see my projects on GitHub:
-        <Button href="https://github.com/olbesp" color="Action"> https://github.com/olbesp</Button>
+        <Button href="https://github.com/olbesp" size="small" color="orange"> https://github.com/olbesp</Button>
       </p>
     );
 

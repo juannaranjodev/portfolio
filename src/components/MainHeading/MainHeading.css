@@ -8,41 +8,41 @@
 
 .dark { color: #232323; }
 
-.Name {
+.MainHeading__name {
   font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 1.5rem;
   margin: 1rem;
-  animation: moveInLeft 2s ease-out;
+  animation: appearFromLeft 2s ease-out;
 }
 
-.Role {
+.MainHeading__role {
   opacity: 0;
   font-size: 2rem;
   animation: fadeIn 1.2s .75s forwards;
 }
 
-.Message {
+.MainHeading__message {
   margin-bottom: 1rem;
   font-size: 1.25rem;
   line-height: 2rem;
   font-weight: 700;
   letter-spacing: .75rem;
-  animation: moveInRight 2s ease-out;
+  animation: appearFromRight 2s ease-out;
 }
 
 @media (min-width: 500px) {
-  .Name { margin: 1rem; }
-  .Message { margin: 1rem 10%; }
+  .MainHeading__name { margin: 1rem; }
+  .MainHeading__message { margin: 1rem 10%; }
 }
 
 @media (min-width: 768px) {
-  .Name { font-size: 3.5rem; }
-  .Role { font-size: 2.5rem; }
-  .Message { font-size: 1.5rem; }
+  .MainHeading__name { font-size: 3.5rem; }
+  .MainHeading__role { font-size: 2.5rem; }
+  .MainHeading__message { font-size: 1.5rem; }
 }
 
-@keyframes moveInLeft {
+@keyframes appearFromLeft {
   0% {
     opacity: 0;
     transform: translateX(-3rem);
@@ -56,7 +56,7 @@
   }
 }
 
-@keyframes moveInRight {
+@keyframes appearFromRight {
   0% {
     opacity: 0;
     transform: translateX(3rem);
@@ -73,9 +73,4 @@
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-@keyframes moveOut {
-  from { transform: translateY(0); }
-  to { opacity: 0; transform: translateY(80%); }
 }

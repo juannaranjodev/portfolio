@@ -24,7 +24,7 @@ class ProjectPreview extends Component {
         style={{ width }}
       >
         <img className={styles.Project__img} src={this.props.img} alt={this.props.title} />
-        <figcaption className={[styles.Project__title, 'textShadow'].join(' ')}>{this.props.title}</figcaption>
+        <figcaption className={styles.Project__title}>{this.props.title}</figcaption>
       </figure>
     );
   }

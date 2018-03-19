@@ -10,7 +10,7 @@ class CityImage extends Component {
 
   render() {
     return (
-      <div className={styles.city}>
+      <div className={styles.CityImage}>
         {this.props.city}
       </div>
     );

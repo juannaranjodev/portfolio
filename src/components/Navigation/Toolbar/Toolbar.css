@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 999px) {
-  .DesktopOnly {
+  .desktopOnly {
     display: none;
   }
 }

@@ -4,14 +4,14 @@ import styles from './SkillIndex.css';
 
 const skillIndex = (props) => (
   <div className={styles.SkillIndex}>
-    <div className={styles.Indicator}>
-      <div className={styles.Progress}>
-        <div className={styles.ProgressValue} style={{height: `${props.value}%`}}>
-          <div className={styles.ProgressBar} style={{animationDelay: `${props.animationDelay}s`}}></div>
+    <div className={styles.indicator}>
+      <div className={styles.progress}>
+        <div className={styles.progressValue} style={{height: `${props.value}%`}}>
+          <div className={styles.progressBar} style={{animationDelay: `${props.animationDelay}s`}}></div>
         </div>
       </div>
     </div>
-    <div className={styles.SkillTitle}>{props.title}</div>
+    <div>{props.title}</div>
   </div>
 );
 

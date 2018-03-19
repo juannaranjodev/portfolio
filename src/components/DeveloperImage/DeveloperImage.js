@@ -10,7 +10,7 @@ class DeveloperImage extends Component {
 
   render() {
     return (
-      <div className={[styles.container, styles[this.props.background]].join(' ')}>
+      <div className={[styles.DeveloperImage, styles[this.props.background]].join(' ')}>
         <div className={styles.armChair}>
           <div className={styles.armChair__top}></div>
           <div className={styles.armChair__bottom}></div>

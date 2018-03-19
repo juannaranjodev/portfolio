@@ -3,8 +3,6 @@ import React from 'react';
 import styles from './ProjectModal.css';
 import Button from '../UI/Button/Button';
 
-
-
 const projectModal = (props) => (
   <div className={styles.ProjectModal}>
     <div 

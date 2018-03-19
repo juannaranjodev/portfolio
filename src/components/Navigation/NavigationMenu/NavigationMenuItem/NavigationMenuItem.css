@@ -11,9 +11,8 @@
   }
 }
 
-.NavButton,
-.NavButton:link,
-.NavButton:visited {
+.nav__button,
+.nav__button:visited {
   display: inline-block;
   color: white;
   padding: 1rem;
@@ -21,23 +20,23 @@
   transition: all .3s;
 }
 
-.NavButton:hover {
+.nav__button:hover {
   color: #27adfa;
 }
 
-.Active {
+.active {
   color: white;
   background-color: #27adfa;
   box-shadow: 0 1rem 1.5rem rgba(0,0,0,.4);
 }
 
-.Active:hover{
+.active:hover{
   color: white;
   transform: rotate(3deg) scale(1.1);
   background-color: #1093eb;
   box-shadow: 0 1.5rem 2.5rem rgba(0,0,0,.3);
 }
-.Active:active {
+.active:active {
   transform: rotate(3deg) scale(1);
   background-color: #0973b1;
   box-shadow: 0 1rem 1.5rem rgba(0,0,0,.4);

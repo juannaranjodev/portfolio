@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import styles from './HomePage.css';
 import Background from '../../components/UI/Background/Background';
 import CityImage from '../../components/CityImage/CityImage';
-import FaceImage from '../../components/FaceImage/FaceImage';
+import PersonImage from '../../components/PersonImage/PersonImage';
 import MainHeading from '../../components/MainHeading/MainHeading';
 
 class HomePage extends Component {
@@ -21,7 +21,7 @@ class HomePage extends Component {
       <div className={styles.HomePage}>
         <Background time={this.props.time} stars={this.props.stars}>
           <CityImage city={this.props.city} time={this.props.time} />
-          <FaceImage />
+          <PersonImage />
         </Background>
         <MainHeading
           time={this.props.time}

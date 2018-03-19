@@ -5,9 +5,9 @@ import Button from '../UI/Button/Button';
 
 const mainHeading = (props) => (
   <div className={[styles.MainHeading, styles[props.time === 'night' ? 'light' : 'dark']].join(' ')}>
-    <h3 className={styles.Role}>{props.role}</h3>
-    <h1 className={styles.Name}>{props.name}</h1>
-    <h5 className={styles.Message}>{props.message}</h5>
+    <h3 className={styles.MainHeading__role}>{props.role}</h3>
+    <h1 className={styles.MainHeading__name}>{props.name}</h1>
+    <h5 className={styles.MainHeading__message}>{props.message}</h5>
     <Button
       type="router-link"
       href="/portfolio"

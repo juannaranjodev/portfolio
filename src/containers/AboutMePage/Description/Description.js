@@ -31,13 +31,11 @@ const description = (props) => {
         We'll keep projects on-track and under control.`
     }
   };
-  let classes = [styles.Description, styles.text_dark];
-  if (props.time === 'night') {
-    classes = [styles.Description, styles.text_light];
-  }
 
+  const classes = [styles.Description, props.time === 'night' ? styles.light : styles.dark].join(' ');
+  
   return (
-    <div className={classes.join(' ')}>
+    <div className={classes}>
       <section>
         <h3>{content.aboutMe.header}</h3>
         <p>{content.aboutMe.text}</p>
