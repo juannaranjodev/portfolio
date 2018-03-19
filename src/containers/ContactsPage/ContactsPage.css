@@ -7,7 +7,7 @@
 .light { color: #fff; }
 .dark { color: #232323; }
 
-.message {
+.ContactsPage__message {
   position: relative;
   z-index: 5;
   width: 90%;
@@ -15,7 +15,7 @@
   font-size: 1.2rem;
 }
 
-.form {
+.ContactsPage__form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -25,59 +25,22 @@
   z-index: 5;
 }
 
-.form * {
-  padding: 1rem;
-  margin: .5rem 0;
-  font-family: inherit;
-  font-size: 1.2rem;
-  border: none;
-  outline: none; 
-}
-
-.form__inputField {
-  display: block;  
-  height: 1.5rem;
-  width: 47%;
-  background-color: rgba(255,255,255,.3);
-}
-
-::placeholder { color: #232323; }
-
-.form__messageField {
-  display: block;
-  height: 4rem;  
-  width: 100%;
-  background-color: rgba(255,255,255,.3);
-}
-
-.form__inputField:focus,
-.form__messageField:focus {
-  box-shadow: 0 -3px #ff6e0e inset;
-}
-
-.instruction {
+.ContactsPage__form__instruction {
   margin: 0;
   padding: 0;
   font-size: 1rem;
   text-align: left;
 }
 
-@media (min-height: 450px) {
-  .form__inputField { height: 3rem; }
-  .form__messageField { height: 5rem; }
-}
-
 @media (min-width: 500px) and (min-height: 500px) {
-  .form { width: 70%; }
-  .form * { margin: 1rem 0; }
+  .ContactsPage__form { width: 70%; }
 }
 
 @media (min-height: 600px) {
-  .message { font-size: 1.5rem; }
+  .ContactsPage__message { font-size: 1.5rem; }
 }
 
 @media (min-width: 700px) {
-  .message { width: 50%; }
-  .form { width: 50%; }
-  .form * { font-size: 1.5rem; }
+  .ContactsPage__message { width: 50%; }
+  .ContactsPage__form { width: 50%; }
 }

@@ -1,0 +1,39 @@
+.Input {
+  padding: 1rem;
+  margin: .5rem 0;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  outline: none; 
+}
+
+.Input:focus { box-shadow: 0 -3px #ff6e0e inset; }
+
+::placeholder { color: #232323; }
+
+.inputField {
+  display: block;  
+  height: 1.5rem;
+  width: 47%;
+  background-color: rgba(255,255,255,.3);
+}
+
+.messageField {
+  display: block;
+  height: 4rem;  
+  width: 100%;
+  background-color: rgba(255,255,255,.3);
+}
+
+@media (min-height: 450px) {
+  .inputField { height: 3rem; }
+  .messageField { height: 5rem; }
+}
+
+@media (min-width: 500px) and (min-height: 500px) {
+  .Input { margin: 1rem 0; }
+}
+
+@media (min-width: 700px) {
+  .Input { font-size: 1.5rem; }
+}
