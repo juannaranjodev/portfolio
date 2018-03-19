@@ -4,15 +4,27 @@ import styles from './Input.css';
 
 const input = (props) => {
   let inputElement = null;
-  switch (props.inputType) {
+  switch (props.elementType) {
     case ('input'):
-      inputElement = <input className={[styles.Input, styles.inputField].join(' ')} {...props} />;
+      inputElement = <input
+        onChange={props.changed} 
+        className={[styles.Input, styles.inputField].join(' ')}
+        {...props.elementConfig} 
+        value={props.value} />;
       break;
     case ('textarea'):
-      inputElement = <textarea className={[styles.Input, styles.messageField].join(' ')} {...props} />;
+      inputElement = <textarea 
+        onChange={props.changed}
+        className={[styles.Input, styles.messageField].join(' ')} 
+        {...props.elementConfig}
+        value={props.value} />;
       break;
     default:
-      inputElement = <input className={[styles.Input, styles.inputField].join(' ')} {...props} />;
+      inputElement = <input 
+        onChange={props.changed}
+        className={[styles.Input, styles.inputField].join(' ')} 
+        {...props.elementConfig}
+        value={props.value} />;
   }
   return inputElement;
 };
