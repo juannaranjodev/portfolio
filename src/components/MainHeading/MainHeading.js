@@ -11,7 +11,8 @@ const mainHeading = (props) => (
     <Button
       type="router-link"
       href="/portfolio"
-      color="Info"
+      color="blue"
+      size="large"
     >
       Projects
     </Button>

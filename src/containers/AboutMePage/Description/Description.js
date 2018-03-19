@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styles from './Description.css';
+import Button from '../../../components/UI/Button/Button';
 
 const description = (props) => {
   const content = {
@@ -14,8 +15,7 @@ const description = (props) => {
         And what about my personaity?
         I like knowledge, and I strongly believe self learning and constant growth enrich every single life.
         I like to create beautiful things and it's the main reason why I do what I do.
-        I understand the challenges of remote work, but if you really love what you do there are no challenges which you could not overcome.
-        Drop me a line, if you have interesting business ideas to work on.`
+        I understand the challenges of remote work, but if you really love what you do there are no challenges which you could not overcome.`
     },
     aboutTools: {
       header: 'What I use',
@@ -41,6 +41,7 @@ const description = (props) => {
       <section>
         <h3>{content.aboutMe.header}</h3>
         <p>{content.aboutMe.text}</p>
+        <p><Button type="router-link" size="small" href="/contacts" color="orange">Drop me a line</Button>, if you have interesting business ideas to work on.</p>
       </section>
       <section>
         <h3>{content.aboutTools.header}</h3>

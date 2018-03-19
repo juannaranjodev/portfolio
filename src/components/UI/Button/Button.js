@@ -4,7 +4,7 @@ import styles from './Button.css';
 import { Link } from 'react-router-dom';
 
 const button = (props) => {
-  const classes = [styles.Button, styles[props.color]].join(' ');
+  const classes = [styles.Button, styles[props.size], styles[props.color]].join(' ');
   let button = (
     <a href={props.href} 
       target={props.newtab && "_blank"} 

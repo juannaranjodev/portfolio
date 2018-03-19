@@ -21,7 +21,7 @@ const contactsPage = (props) => (
         <input className={styles.form__inputField} type="email" name="email" placeholder="Your Email *" required />
         <textarea className={styles.form__messageField} name="message" placeholder="Your Message *" required />
         <p className={styles.instruction}>* &mdash; required</p>
-        <Button type="submit" color="Action">Submit</Button>
+        <Button type="submit" size="large" color="orange">Submit</Button>
       </form>
     </Background>
   </div>
