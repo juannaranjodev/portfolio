@@ -18,7 +18,9 @@ const contactsPage = (props) => (
     </p>
       <form className={[styles.form, props.time === 'night' ? styles.light : styles.dark].join(' ')} method="GET">
         <input className={styles.form__inputField} type="text" name="name" placeholder="Your Name *" required />
+        <input className={styles.form__inputField} type="text" name="company" placeholder="Company Name" />
         <input className={styles.form__inputField} type="email" name="email" placeholder="Your Email *" required />
+        <input className={styles.form__inputField} type="text" name="phone" placeholder="Phone Number" />
         <textarea className={styles.form__messageField} name="message" placeholder="Your Message *" required />
         <p className={styles.instruction}>* &mdash; required</p>
         <Button type="submit" size="large" color="orange">Submit</Button>
