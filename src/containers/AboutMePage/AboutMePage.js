@@ -8,6 +8,7 @@ import SkillsBoard from './SkillsBoard/SkillsBoard';
 import DeveloperImage from '../../components/DeveloperImage/DeveloperImage';
 import FlowerImage from '../../components/FlowerImage/FlowerImage';
 import PageHeader from '../../components/PageHeader/PageHeader';
+import Media from 'react-media';
 
 class AboutMePage extends Component {
   state = {
@@ -21,32 +22,30 @@ class AboutMePage extends Component {
   }
 
   render() {
-
-    let aboutMePage = (
-      <Container>
-        <PageHeader title="Few words about me" />
-        <Description time="night" />
-        <DeveloperImage background="noWall" />
-        <SkillsBoard />
-      </Container>
-    );
-    
-    if (window.innerWidth >= 1000 && window.innerHeight >= 768) {
-      aboutMePage = (
-        <Background time={this.props.time} stars={this.props.stars}>
+    return (
+      <Media query="(min-width: 1000px) and (min-height: 768px)">
+        {matches => matches ? (
+          <Background time={this.props.time} stars={this.props.stars}>
+            <Container>
+              <RoomImage toggleWindow={this.toggleWindow} openedWindow={this.state.openedWindow}>
+                <PageHeader title="Few words about me" />
+                <Description time={this.props.time} />
+                <DeveloperImage background="withWall" />
+                <FlowerImage flowerTree={this.props.flowerTree} />
+              </RoomImage>
+              <SkillsBoard />
+            </Container>
+          </Background>
+        ) : (
           <Container>
-            <RoomImage toggleWindow={this.toggleWindow} openedWindow={this.state.openedWindow}>
-              <PageHeader title="Few words about me" />
-              <Description time={this.props.time} />
-              <DeveloperImage background="withWall" />
-              <FlowerImage flowerTree={this.props.flowerTree} />
-            </RoomImage>
+            <PageHeader title="Few words about me" />
+            <Description time="night" />
+            <DeveloperImage background="noWall" />
             <SkillsBoard />
           </Container>
-        </Background>
-      );
-    }
-    return aboutMePage;
+        )}
+      </Media>
+    );
   }
 }
 
