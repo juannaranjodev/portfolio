@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import styles from './HomePage.css';
+import Media from 'react-media';
 import Background from '../../components/UI/Background/Background';
 import CityImage from '../../components/CityImage/CityImage';
 import PersonImage from '../../components/PersonImage/PersonImage';
@@ -18,18 +19,21 @@ class HomePage extends Component {
     }
 
     return (
-      <div className={styles.HomePage}>
-        <Background time={this.props.time} stars={this.props.stars}>
-          <CityImage city={this.props.city} time={this.props.time} />
-          <PersonImage />
-        </Background>
-        <MainHeading
-          time={this.props.time}
-          name={homeHeaders.name}
-          role={homeHeaders.role}
-          message={homeHeaders.messages[Math.floor(Math.random() * homeHeaders.messages.length)]}
-        />
-      </div>
+      
+          <div className={styles.HomePage}>
+            <Background time={this.props.time} stars={this.props.stars}>
+              <CityImage city={this.props.city} time={this.props.time} />
+              <Media query="(min-width: 768px)">
+                {matches => matches ? <PersonImage /> : null}
+              </Media>
+            </Background>
+            <MainHeading
+              time={this.props.time}
+              name={homeHeaders.name}
+              role={homeHeaders.role}
+              message={homeHeaders.messages[Math.floor(Math.random() * homeHeaders.messages.length)]}
+            />
+          </div>
     );
   }
 }
