@@ -32,6 +32,27 @@
   text-align: left;
 }
 
+.letter {
+  width:  100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 2px #0973b1;
+}
+
+.day {
+  color: #27adfa;
+  background-image: linear-gradient(#30c2ee, #ff9735);
+}
+
+.night {
+  color: #e9e9e9;
+  background-image: linear-gradient(#170125, #360241);
+}
+
 @media (min-width: 500px) and (min-height: 500px) {
   .ContactsPage__form { width: 70%; }
 }
