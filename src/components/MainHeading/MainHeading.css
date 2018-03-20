@@ -6,7 +6,14 @@
 
 .light { color: #fff; }
 
-.dark { color: #232323; }
+.dark { 
+  color: #fff;
+  text-shadow:
+    -1px -1px 0 #232323,  
+    1px -1px 0 #232323,
+    -1px 1px 0 #232323,
+    1px 1px 0 #232323;
+}
 
 .MainHeading__name {
   font-size: 2.5rem;

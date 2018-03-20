@@ -9,6 +9,7 @@
   border: none;
   cursor: pointer;
   color: white;
+  text-shadow: none;
   animation: appearFromBottom .75s .75s ease-out backwards;
 }
 
