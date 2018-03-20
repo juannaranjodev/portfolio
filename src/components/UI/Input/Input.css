@@ -4,13 +4,11 @@
   font-family: inherit;
   font-size: 1.2rem;
   border: none;
-  outline: none; 
+  outline: none;
   background-color: rgba(255,255,255,.3);
 }
 
 .Input:focus { box-shadow: 0 -3px #ff6e0e inset; }
-
-::placeholder { color: #232323; }
 
 .inputField {
   display: block;  

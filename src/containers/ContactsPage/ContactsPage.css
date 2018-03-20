@@ -4,8 +4,13 @@
   text-align: center;
 }
 
-.light { color: #fff; }
-.dark { color: #232323; }
+.light,
+.light *,
+.light *::placeholder { color: #fff; }
+
+.dark,
+.dark *:not(button),
+.dark *::placeholder { color: #232323; }
 
 .ContactsPage__message {
   position: relative;

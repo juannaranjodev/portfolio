@@ -93,7 +93,6 @@ class ContactsPage extends Component {
             If you find my works interesting and
             if I can help you or your team in your project,
             or even if you want to ask a question, send me an email.
-            I will reply you within two hours.
           </p>
           <form onSubmit={this.submitHandler} className={[styles.ContactsPage__form, this.props.time === 'night' ? styles.light : styles.dark].join(' ')} method="GET">
             {
