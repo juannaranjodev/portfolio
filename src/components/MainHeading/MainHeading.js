@@ -10,7 +10,7 @@ const mainHeading = (props) => (
     <h5 className={styles.MainHeading__message}>{props.message}</h5>
     <Button
       type="router-link"
-      href="/portfolio"
+      href="/works"
       color="blue"
       size="large"
     >

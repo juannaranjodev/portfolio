@@ -11,8 +11,8 @@ const navigationMenu = () => (
     <NavigationMenuItem path="/aboutme">
       About Me
     </NavigationMenuItem>
-    <NavigationMenuItem path="/portfolio">
-      Portfolio
+    <NavigationMenuItem path="/works">
+      Works
     </NavigationMenuItem>
     <NavigationMenuItem path="/contacts">
       Contacts

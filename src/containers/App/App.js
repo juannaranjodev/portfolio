@@ -143,7 +143,7 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div className={styles.App}>
           <Layout>
             <Switch>
@@ -153,7 +153,7 @@ class App extends Component {
               <Route path="/aboutme" render={() => {
                 return <AboutMePage stars={this.state.stars} time={this.state.time} flowerTree={this.state.flowerTree} />}
               } />
-              <Route path="/portfolio" render={() => {
+              <Route path="/works" render={() => {
                 return <PortfolioPage stars={this.state.stars} time={this.state.time} />} 
               }/>
               <Route path="/contacts" render={() => {
