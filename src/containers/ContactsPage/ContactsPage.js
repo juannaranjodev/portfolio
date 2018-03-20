@@ -49,6 +49,7 @@ class ContactsPage extends Component {
     for (let inputField in this.state.form) {
       userFormData[inputField] = this.state.form[inputField].value;
     }
+    userFormData.date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
     const mail = { userFormData }
     axios.post('https://mail-messages.firebaseio.com/mail.json', mail)
       .then(response => {
