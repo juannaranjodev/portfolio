@@ -19,7 +19,8 @@ const createInput = (tag, type, placeholder, required = true) => {
     validation: {
       required
     },
-    valid: false
+    valid: false,
+    touched: false
   };
 };
 
@@ -51,6 +52,7 @@ class ContactsPage extends Component {
     const userFormField = { ...userForm[inputField] };
     userFormField.value = e.target.value;
     userFormField.valid = this.checkValidity(userFormField.value, userFormField.validation);
+    userFormField.touched = true;
     userForm[inputField] = userFormField;
     this.setState({ form: userForm });
   }
@@ -110,6 +112,7 @@ class ContactsPage extends Component {
                   value={formElement.config.value} 
                   invalid={!formElement.config.valid}
                   shouldValidate={formElement.config.validation.required}
+                  touched={formElement.config.touched}
                 />
               ))
             }
