@@ -8,7 +8,7 @@ import Button from '../../components/UI/Button/Button';
 import Input from '../../components/UI/Input/Input';
 import Modal from '../../components/UI/Modal/Modal';
 
-const createInput = (placeholder, type = "text", tag = "input") => {
+const createInput = (tag, type, placeholder, required = true) => {
   return {
     elementType: tag,
     elementConfig: {
@@ -17,17 +17,18 @@ const createInput = (placeholder, type = "text", tag = "input") => {
     },
     value: '',
     validation: {
-      required: true
-    }
+      required
+    },
+    valid: false
   };
 };
 
 const emptyForm = {
-  name: createInput('Your Name *'),
-  company: createInput('Company Name'),
-  email: createInput('Your Email *', 'email'),
-  phone: createInput('Phone Number'),
-  message: createInput('Your Message *', null, 'textarea')
+  name: createInput('input', 'text', 'Your Name *'),
+  company: createInput('input', 'text', 'Company Name', false),
+  email: createInput('input', 'email', 'Your Email *'),
+  phone: createInput('input', 'tel', 'Phone Number', false),
+  message: createInput('textarea', null, 'Your Message *')
 };
 
 class ContactsPage extends Component {
@@ -37,12 +38,21 @@ class ContactsPage extends Component {
     error: false
   }
 
+  checkValidity(value, rules) {
+    let isValid = false;
+    if (rules.required) {
+      isValid = value.trim() !== '';
+    }
+    return isValid;
+  }
+
   inputChangedHandler = (e, inputField) => {
-    const updatedForm = { ...this.state.form };
-    const updatedFormElement = { ...updatedForm[inputField] };
-    updatedFormElement.value = e.target.value;
-    updatedForm[inputField] = updatedFormElement;
-    this.setState({ form: updatedForm });
+    const userForm = { ...this.state.form };
+    const userFormField = { ...userForm[inputField] };
+    userFormField.value = e.target.value;
+    userFormField.valid = this.checkValidity(userFormField.value, userFormField.validation);
+    userForm[inputField] = userFormField;
+    this.setState({ form: userForm });
   }
 
   submitHandler = (e) => {
@@ -98,6 +108,8 @@ class ContactsPage extends Component {
                   elementType={formElement.config.elementType}
                   elementConfig={formElement.config.elementConfig}
                   value={formElement.config.value} 
+                  invalid={!formElement.config.valid}
+                  shouldValidate={formElement.config.validation.required}
                 />
               ))
             }

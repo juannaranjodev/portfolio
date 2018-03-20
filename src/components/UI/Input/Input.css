@@ -5,9 +5,12 @@
   font-size: 1.2rem;
   border: none;
   outline: none; 
+  background-color: rgba(255,255,255,.3);
 }
 
 .Input:focus { box-shadow: 0 -3px #ff6e0e inset; }
+
+.invalid { border: 1px solid #a30a0a; }
 
 ::placeholder { color: #232323; }
 
@@ -15,14 +18,12 @@
   display: block;  
   height: 1.5rem;
   width: 47%;
-  background-color: rgba(255,255,255,.3);
 }
 
 .messageField {
   display: block;
   height: 4rem;  
   width: 100%;
-  background-color: rgba(255,255,255,.3);
 }
 
 @media (min-height: 450px) {
