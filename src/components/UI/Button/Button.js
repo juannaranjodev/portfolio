@@ -24,7 +24,7 @@ const button = (props) => {
   }
 
   if (props.type === 'submit') {
-    button = <button type="input" className={classes}>{props.children}</button>;
+    button = <button type="input" disabled={props.disabled} className={classes}>{props.children}</button>;
   }
 
   return button;

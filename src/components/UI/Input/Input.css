@@ -10,8 +10,6 @@
 
 .Input:focus { box-shadow: 0 -3px #ff6e0e inset; }
 
-.invalid { border: 1px solid #a30a0a; }
-
 ::placeholder { color: #232323; }
 
 .inputField {

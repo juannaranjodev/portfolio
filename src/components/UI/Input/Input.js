@@ -5,16 +5,13 @@ import styles from './Input.css';
 const input = (props) => {
   let inputElement = null;
   const classes = [styles.Input];
-  if (props.invalid && props.shouldValidate && props.touched) {
-    classes.push(styles.invalid);
-  }
   switch (props.elementType) {
     case ('input'):
       classes.push(styles.inputField);
       inputElement = <input
         onChange={props.changed} 
         className={classes.join(' ')}
-        {...props.elementConfig} 
+        {...props.elementConfig}
         value={props.value} />;
       break;
     case ('textarea'):

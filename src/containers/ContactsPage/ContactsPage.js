@@ -13,14 +13,10 @@ const createInput = (tag, type, placeholder, required = true) => {
     elementType: tag,
     elementConfig: {
       type,
-      placeholder
-    },
-    value: '',
-    validation: {
+      placeholder,
       required
     },
-    valid: false,
-    touched: false
+    value: ''
   };
 };
 
@@ -34,25 +30,15 @@ const emptyForm = {
 
 class ContactsPage extends Component {
   state = {
-    form: emptyForm, 
+    form: emptyForm,
     showModal: false,
     error: false
-  }
-
-  checkValidity(value, rules) {
-    let isValid = false;
-    if (rules.required) {
-      isValid = value.trim() !== '';
-    }
-    return isValid;
   }
 
   inputChangedHandler = (e, inputField) => {
     const userForm = { ...this.state.form };
     const userFormField = { ...userForm[inputField] };
     userFormField.value = e.target.value;
-    userFormField.valid = this.checkValidity(userFormField.value, userFormField.validation);
-    userFormField.touched = true;
     userForm[inputField] = userFormField;
     this.setState({ form: userForm });
   }
@@ -68,11 +54,14 @@ class ContactsPage extends Component {
       .then(response => {
         this.setState({ 
           form: emptyForm, 
-          showModal: true 
+          showModal: true
         });
       })
       .catch(error => {
-        this.setState({ error: true });
+        this.setState({ 
+          error: true, 
+          showModal: true 
+        });
       });
   }
 
@@ -91,7 +80,11 @@ class ContactsPage extends Component {
     return (
       <div className={styles.ContactsPage}>
         <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
-          <div className={[styles.letter, this.props.time === 'day' ? styles.day : styles.night].join(' ')}>Thank You!</div>
+          <div 
+            className={[styles.letter, this.props.time === 'day' ? styles.day : styles.night].join(' ')}
+          >
+            {this.state.error ? 'Something went wrong' : 'Thank You!'}
+          </div>
         </Modal>
         <Background time={this.props.time} stars={this.props.stars}>
 
@@ -109,10 +102,7 @@ class ContactsPage extends Component {
                   changed={(e) => this.inputChangedHandler(e, formElement.id)}
                   elementType={formElement.config.elementType}
                   elementConfig={formElement.config.elementConfig}
-                  value={formElement.config.value} 
-                  invalid={!formElement.config.valid}
-                  shouldValidate={formElement.config.validation.required}
-                  touched={formElement.config.touched}
+                  value={formElement.config.value}
                 />
               ))
             }
