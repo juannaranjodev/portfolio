@@ -1,3 +1,4 @@
+import React from 'react';
 // Returns random number up to 'limit'
 export const random = limit => Math.floor(Math.random() * limit);
 
@@ -5,4 +6,14 @@ export const random = limit => Math.floor(Math.random() * limit);
 export const checkDayTime = () => {
   const time = new Date();
   return time.getHours() > 5 && time.getHours() < 19 ? 'day' : 'night';
+};
+
+export const devideIntoChars = (word, props) => {
+  return word.split('').map((letter, index) => {
+    return (
+      <span key={index} {...props}>
+        {letter}
+      </span>
+    );
+  });
 };
