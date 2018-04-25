@@ -30,7 +30,6 @@ class Layout extends Component {
           closed={this.sideDrawerClosedHandler}
         />
         <main className={styles.content}>{this.props.children}</main>
-        <SocialMedia />
       </div>
     );
   }

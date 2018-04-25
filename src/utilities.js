@@ -17,7 +17,12 @@ export const devideIntoChars = (word, animatedClassName, delayIndex) => (
   // animatedClassName - String of className from 'animate.css'
   // delayIndex - Number divider for consistent animation delay
   word.split('').map((letter, index) => (
-    <Animated key={index} animationIn={animatedClassName} style={{ animationDelay: `${index / delayIndex}s` }} isVisible={true}>
+    <Animated 
+      key={index} 
+      animationIn={animatedClassName} 
+      style={{ animationDelay: `${index / delayIndex}s` }} 
+      isVisible={true}
+    >
       <span>
         {letter}
       </span>

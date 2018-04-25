@@ -1,35 +1,53 @@
 import React from 'react';
 
-import styles from './SocialMedia.css';
+import styles from './SocialMedia.scss';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { Animated } from 'react-animated-css';
+import Background from '../UI/Background/Background';
 
 const socialMedia = () => {
   const socialProfiles = [
-    { link: "https://github.com/olbesp", icon: ["fab", "github"] },
-    { link: "https://www.linkedin.com/in/olbesp/", icon: ["fab", "linkedin"] },
-    { link: "https://www.facebook.com/olbesp", icon: ["fab", "facebook"] }
+    { link: "https://github.com/olbesp", title: 'github', icon: ["fab", "github"] },
+    { link: "https://www.linkedin.com/in/olbesp/", title: 'linkedin', icon: ["fab", "linkedin"] },
+    { link: "https://www.facebook.com/olbesp", title: 'facebook', icon: ["fab", "facebook"] }
   ];
 
   const icons = socialProfiles.map((profile, index) => {
     return (
-      <li key={index}>
+      <li key={index} className={styles.SocialMedia__list__item}>
         <a href={profile.link}
-          style={{animationDelay: `${index / 8}s`}}
+          className={styles.SocialMedia__link}
+          style={{animationDelay: `${index / 8}s`, display: 'flex'}}
           target="_blank"
-          rel="noopener noreferrer">
-          <FontAwesomeIcon icon={profile.icon} />
+          rel="noopener noreferrer"
+        >
+          <Animated
+            animationIn='rollIn'
+            isVisible={true}
+            className={styles.SocialMedia__link__icon}
+          >
+            <FontAwesomeIcon icon={profile.icon} />
+          </Animated>
+          <Animated
+            animationIn='rollIn'
+            isVisible={true}
+            className={styles.SocialMedia__link__title}
+          >
+            <span>{profile.title}</span>
+          </Animated>
         </a>
       </li>    
     );
   });
 
   return (
-    <footer className={styles.SocialMedia}>
-      <div>Made by me © 2018</div>
-      <ul>
-        {icons}
-      </ul>
-    </footer>
+    <Background gradient="linear-gradient(90deg, rgba(67, 206, 162, .3), rgba(24, 90, 157, .3))">
+      <div className={styles.SocialMedia}>
+        <ul className={styles.SocialMedia__list}>
+          {icons}
+        </ul>
+      </div>
+    </Background>
   );
 };
 
