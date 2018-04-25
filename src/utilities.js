@@ -8,10 +8,15 @@ export const checkDayTime = () => {
   return time.getHours() > 5 && time.getHours() < 19 ? 'day' : 'night';
 };
 
-export const devideIntoChars = (word, props) => {
+export const sequentialAnimationDelay = (dividend) => ({ animationDelay: `${dividend / 5}s`});
+
+export const devideIntoChars = (word, classname, animate) => {
   return word.split('').map((letter, index) => {
     return (
-      <span key={index} {...props}>
+      <span key={index}
+        className={classname}
+        style={animate ? sequentialAnimationDelay(index) : null}
+      >
         {letter}
       </span>
     );
