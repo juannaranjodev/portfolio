@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 
 import styles from './HomePage.css';
-import Media from 'react-media';
+// import Media from 'react-media';
 import Background from '../../components/UI/Background/Background';
-import CityImage from '../../components/CityImage/CityImage';
-import PersonImage from '../../components/PersonImage/PersonImage';
 import MainHeading from '../../components/MainHeading/MainHeading';
 
 class HomePage extends Component {
@@ -22,10 +20,7 @@ class HomePage extends Component {
       
           <div className={styles.HomePage}>
             <Background time={this.props.time} stars={this.props.stars}>
-              <CityImage city={this.props.city} time={this.props.time} />
-              <Media query="(min-width: 768px)">
-                {matches => matches ? <PersonImage /> : null}
-              </Media>
+              
             </Background>
             <MainHeading
               time={this.props.time}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import styles from './ProjectPreview.css';
-import { random } from '../../containers/App/App';
+import { random } from '../../utilities';
 
 class ProjectPreview extends Component {
 

@@ -7,8 +7,19 @@
 }
 
 html {
-/* 1rem = 10px */
   font-size: 62.5%;
+
+  @include respond(tablet) { 
+    font-size: 75%; 
+  }
+
+  @include respond(laptop) {
+    font-size: 87.5%; // 1rem = 14px
+  }
+
+  @include respond(laptop-lg) {
+    font-size: 100%; // 1rem = 16px
+  }
 }
 
 body {
