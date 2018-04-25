@@ -1,10 +1,11 @@
 .Logo {
   display: flex;
-  align-items: center;  
+  align-items: center;
+  position: relative;
+  z-index: 10;
 
   &__image {
-    position: relative;
-    z-index: 3;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,8 +18,6 @@
     background-position: center;
     transform: rotate(45deg);
     box-shadow: $boxShadowDark;
-    // color: rgb(67, 206, 162);
-    // color: rgb(24, 90, 157);
   }
 
   &__name {
@@ -27,11 +26,13 @@
     display: flex;
     align-items: center;
     margin-left: 2rem;
+    
     color: $colorWhite;
     font-family: 'Lalezar', cursive;
 
     &__firstname {
       font-size: 2rem;
+      display: flex;
 
       @include respond(tablet) { 
         font-size: 2.5rem; 
@@ -39,8 +40,8 @@
     }
 
     &__lastname {
+      display: flex;
       font-size: 1rem;
-      animation: appearFromLeft 1.3s backwards;
 
       @include respond(tablet) {
         font-size: 1.5rem;
@@ -48,18 +49,4 @@
     }
 
   }
-}
-
-.letter {
-  animation: typing .2s backwards;
-}
-
-@keyframes typing {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes appearFromLeft {
-  from { transform: translateX(-200%); }
-  to { transform: translateX(0); }
 }
