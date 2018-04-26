@@ -1,22 +1,22 @@
 import React from 'react';
 
-import styles from './NavigationMenu.css';
-import NavigationMenuItem from './NavigationMenuItem/NavigationMenuItem';
+import styles from './NavigationMenu.scss';
+import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationMenu = () => (
   <ul className={styles.NavigationMenu}>
-    <NavigationMenuItem path="/home">
+    <NavigationItem path="/home">
       Home
-    </NavigationMenuItem>
-    <NavigationMenuItem path="/aboutme">
+    </NavigationItem>
+    <NavigationItem path="/aboutme">
       About Me
-    </NavigationMenuItem>
-    <NavigationMenuItem path="/works">
+    </NavigationItem>
+    <NavigationItem path="/works">
       Works
-    </NavigationMenuItem>
-    <NavigationMenuItem path="/contacts">
+    </NavigationItem>
+    <NavigationItem path="/contacts">
       Contacts
-    </NavigationMenuItem>
+    </NavigationItem>
   </ul>
 );
 
