@@ -18,14 +18,11 @@ fontawesome.library.add(brands);
 export const TimeContext = React.createContext(checkDayTime());
 
 class App extends Component {
-  // state = {
-  //   time: checkDayTime()
-  // }
 
   render() {
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <TimeContext.Provider value={checkDayTime()}>
+      <TimeContext.Provider value={checkDayTime()}>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Layout>
             <Switch>
               <Route path="/home" component={HomePage} />
@@ -35,8 +32,8 @@ class App extends Component {
               <Redirect from="/" to="/home" />
             </Switch>
           </Layout>
-        </TimeContext.Provider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </TimeContext.Provider>
     );
   }
 }
