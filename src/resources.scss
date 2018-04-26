@@ -18,6 +18,12 @@ $boxShadowDark: 0 0 1rem rgba(0,0,0,.9);
   align-items: center;
 }
 
+@mixin flexAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @mixin background {
   background-position: center;
   background-size: cover;

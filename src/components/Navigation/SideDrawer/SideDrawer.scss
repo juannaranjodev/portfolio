@@ -9,11 +9,10 @@
   background-color: #272727;
   box-shadow: 1rem 0 1rem rgba(0, 0, 0, .3);
   padding: 32px 16px;
-  box-sizing: border-box;
   transition: transform .3s ease-out;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
   .SideDrawer {
     display: none;
   }
