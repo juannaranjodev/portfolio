@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import styles from './Layout.css';
+import styles from './Layout.scss';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
-import SocialMedia from '../../components/SocialMedia/SocialMedia';
+import Background from '../../components/UI/Background/Background';
 
 class Layout extends Component {
   state = {
@@ -23,13 +23,20 @@ class Layout extends Component {
   render() {
     return (
       <div className={styles.Layout}>
-        <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} open={this.state.showSideDrawer}
-          closed={this.sideDrawerClosedHandler} />
-        <SideDrawer
-          open={this.state.showSideDrawer}
-          closed={this.sideDrawerClosedHandler}
-        />
-        <main className={styles.content}>{this.props.children}</main>
+        <Background time={this.props.time} wallpaper>
+          <Toolbar 
+            drawerToggleClicked={this.sideDrawerToggleHandler}
+            open={this.state.showSideDrawer}
+            closed={this.sideDrawerClosedHandler}
+          />
+          <SideDrawer
+            open={this.state.showSideDrawer}
+            closed={this.sideDrawerClosedHandler}
+          />
+          <main className={styles.content}>
+            {this.props.children}
+          </main>
+        </Background>
       </div>
     );
   }

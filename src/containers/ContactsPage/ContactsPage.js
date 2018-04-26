@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import styles from './ContactsPage.css';
 import axios from 'axios';
-import Background from '../../components/UI/Background/Background';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/UI/Button/Button';
 import Input from '../../components/UI/Input/Input';
@@ -87,7 +86,7 @@ class ContactsPage extends Component {
             {this.state.error ? 'Something went wrong' : 'Thank You!'}
           </div>
         </Modal>
-        <Background time={this.props.time} stars={this.props.stars}>
+        
 
           <PageHeader title="Let's connect" />
           <p className={[styles.ContactsPage__message, this.props.time === 'night' ? styles.light : styles.dark].join(' ')}>
@@ -109,7 +108,6 @@ class ContactsPage extends Component {
             <p className={styles.ContactsPage__instruction}>* &mdash; required</p>
             <Button type="submit" size="medium" color="orange">Submit</Button>
           </form>
-        </Background>
       </div>
     );
   }

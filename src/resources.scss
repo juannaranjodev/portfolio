@@ -4,6 +4,23 @@ $colorSecondary: #e6902f;
 $colorWhite: #f0f0f0;
 
 $boxShadowDark: 0 0 1rem rgba(0,0,0,.9);
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin background {
+  background-position: center;
+  background-size: cover;
+}
 ///////////////////////
 // MEDIA QUERY MANAGER
 ///////////////////////

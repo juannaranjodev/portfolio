@@ -24,20 +24,12 @@ class App extends Component {
     return (
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div className={styles.App}>
-          <Layout>
+          <Layout time={this.state.time}>
             <Switch>
-              <Route path="/home" render={() => {
-                return <HomePage stars={this.state.stars} time={this.state.time} city={this.state.city} />}
-              } />
-              <Route path="/aboutme" render={() => {
-                return <AboutMePage stars={this.state.stars} time={this.state.time} flowerTree={this.state.flowerTree} />}
-              } />
-              <Route path="/works" render={() => {
-                return <PortfolioPage stars={this.state.stars} time={this.state.time} />} 
-              }/>
-              <Route path="/contacts" render={() => {
-                return <ContactsPage time={this.state.time} stars={this.state.stars} />}
-              } />
+              <Route path="/home" component={HomePage} />
+              <Route path="/aboutme" component={AboutMePage} />
+              <Route path="/works" component={PortfolioPage} />
+              <Route path="/contacts" component={ContactsPage} />
               <Redirect from="/" to="/home" />
             </Switch>
           </Layout>

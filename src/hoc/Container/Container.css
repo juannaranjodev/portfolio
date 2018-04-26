@@ -4,7 +4,6 @@
 	overflow-y: scroll;
 	overflow-x: hidden;
   text-align: center;
-  box-shadow: 0 -1rem 1rem rgba(0,0,0,.3) inset, 0 1rem 1rem rgba(0,0,0,.3) inset;
 }
 
 .Container::-webkit-scrollbar-track {

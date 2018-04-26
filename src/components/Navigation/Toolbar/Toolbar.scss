@@ -1,6 +1,14 @@
 .Toolbar {
   width: 100%;
-  // padding: 0 2rem;
+
+  &__menu {
+    @include flexBetween;
+    background-image: linear-gradient(
+      #94705b, #665034 5%,
+      #665034 95%, #94705b
+    );
+    box-shadow: $boxShadowDark;
+  }
 }
 
 @media (max-width: 999px) {

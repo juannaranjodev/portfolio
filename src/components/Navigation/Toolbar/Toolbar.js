@@ -9,11 +9,13 @@ import SocialMedia from '../../SocialMedia/SocialMedia';
 const toolbar = (props) => (
   <header className={styles.Toolbar}>
     <SocialMedia />
-    <Logo />
-    <DrawerToggle clicked={props.drawerToggleClicked} open={props.open} close={props.closed}/>
-    <nav className={styles.desktopOnly}>
-      <NavigationMenu />
-    </nav>
+    <div className={styles.Toolbar__menu}>
+      <Logo />
+      <DrawerToggle clicked={props.drawerToggleClicked} open={props.open} close={props.closed}/>
+      <nav className={styles.desktopOnly}>
+        <NavigationMenu />
+      </nav>
+    </div>
   </header>
 );
 

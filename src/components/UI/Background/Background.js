@@ -52,14 +52,23 @@ const nightImages = {
 }
 
 const background = (props) => {
-  const createBackgroundDOM = (imagePath, props) => (
-    <div
-      className={styles.Background}
-      style={{ backgroundImage: `${props.gradient ? `${props.gradient},` : ''} url(${imagePath})` }}
-    >
-      {props.children}
-    </div>
-  );
+  const createBackgroundDOM = (imagePath, props) => {
+    let backgroundStyle = {
+      backgroundImage: `${props.gradient ? `${props.gradient},` : ''} url(${imagePath})`,
+    };
+    if (props.wallpaper) {
+      backgroundStyle.minHeight = '100vh';
+      backgroundStyle.backgroundAttachment = 'fixed';
+    }
+    return (
+      <div
+        className={styles.Background}
+        style={backgroundStyle}
+      >
+        {props.children}
+      </div>
+    );
+  };
 
   let images = headerImages;
   if (props.time) {

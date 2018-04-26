@@ -104,14 +104,12 @@ class PortfolioPage extends Component {
         )
       );
       portfolio = (
-        <Aux>
-          <Container>
-            <PageHeader title="My featured works" />
-            <div className={styles.Projects} onClick={this.showModalHandler}>
-              {projectsPreview}
-            </div>
-          </Container>
-        </Aux>
+        <Container>
+          <PageHeader title="My featured works" />
+          <div className={styles.Projects} onClick={this.showModalHandler}>
+            {projectsPreview}
+          </div>
+        </Container>
       );
     }
 
@@ -132,9 +130,7 @@ class PortfolioPage extends Component {
         <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
           {projectModal}
         </Modal>
-        <Background time={this.props.time} stars={this.props.stars}>
-          {portfolio}
-        </Background>
+        {portfolio}
       </Aux>
     );
   }

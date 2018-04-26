@@ -3,27 +3,24 @@
   align-items: center;
   position: relative;
   z-index: 10;
+  margin-left: 2rem;
 
   &__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     width: 5rem;
     height: 5rem;
-    background-size: cover;
     font-family: 'Bowlby One SC', cursive;
     font-size: 3rem;
     color: $colorWhite;
-    background-position: center;
     transform: rotate(45deg);
     box-shadow: $boxShadowDark;
+    @include background;
   }
 
   &__name {
     position: relative;
     height: 100%;
-    display: flex;
-    align-items: center;
+    @include flexCenter;
     margin-left: 2rem;
     color: $colorWhite;
     font-family: 'Lalezar', cursive;

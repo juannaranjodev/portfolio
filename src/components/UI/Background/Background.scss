@@ -1,6 +1,5 @@
 .Background {
   width: 100%;
-  // overflow: hidden;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+  @include background;
 }
