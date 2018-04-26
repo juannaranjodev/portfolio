@@ -1,0 +1,67 @@
+.MainHeading {
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 10;
+
+  &__name {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+    margin: 1rem;
+    font-family: 'Lalezar', cursive;
+
+    @include respond(phone) { 
+      margin: 1rem; 
+    }
+
+    @include respond(tablet) { 
+      font-size: 3.5rem; 
+    }
+  }
+
+  &__role {
+    @include flexCenter;
+    letter-spacing: .25rem;
+    font-size: 2.5rem;
+    font-family: 'Bowlby One SC', cursive;
+
+    @include respond(tablet) { 
+      font-size: 3rem; 
+    }
+  }
+
+  &__message {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 700;
+    letter-spacing: .75rem;
+
+    @include respond(phone) { 
+      margin: 1rem 10%; 
+    }
+
+    @include respond(tablet) { 
+      font-size: 1.5rem; 
+    }
+  }
+}
+
+.light {
+  color: $colorWhite;
+}
+
+.dark { 
+  color: $colorSecondaryLight;
+  text-shadow: 2px 0 $colorSecondaryDark;
+}
+
+.letter {
+  transition: all .2s;
+    
+  &:hover {
+    display: inline-block;
+    transform: rotate(5deg) scale(1.4);
+    color: $colorSecondary;
+  }
+}

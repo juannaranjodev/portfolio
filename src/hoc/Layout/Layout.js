@@ -4,6 +4,7 @@ import styles from './Layout.scss';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 import Background from '../../components/UI/Background/Background';
+import { TimeContext } from '../../containers/App/App';
 
 class Layout extends Component {
   state = {
@@ -23,22 +24,21 @@ class Layout extends Component {
   render() {
     return (
       <div className={styles.Layout}>
-        <Background 
-          time={this.props.time} 
-          
-          wallpaper />
-          <Toolbar 
-            drawerToggleClicked={this.sideDrawerToggleHandler}
-            open={this.state.showSideDrawer}
-            closed={this.sideDrawerClosedHandler}
-          />
-          <SideDrawer
-            open={this.state.showSideDrawer}
-            closed={this.sideDrawerClosedHandler}
-          />
-          <main className={styles.content}>
-            {this.props.children}
-          </main>
+        <TimeContext.Consumer>
+          {time => <Background wallpaper time={time} />}
+        </TimeContext.Consumer>
+        <Toolbar 
+          drawerToggleClicked={this.sideDrawerToggleHandler}
+          open={this.state.showSideDrawer}
+          closed={this.sideDrawerClosedHandler}
+        />
+        <SideDrawer
+          open={this.state.showSideDrawer}
+          closed={this.sideDrawerClosedHandler}
+        />
+        <main className={styles.content} time={this.props.time}>
+          {this.props.children}
+        </main>
       </div>
     );
   }

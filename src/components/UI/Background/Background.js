@@ -114,7 +114,7 @@ const background = (props) => {
         </Media>
       }
     </Media>
-  )
+  );
 };
 
 export default background;

@@ -3,7 +3,7 @@ import React from 'react';
 import { Animated } from 'react-animated-css';
 import styles from './Logo.scss';
 import logoBackground from '../../assets/background-night-xxs.jpg';
-import { devideIntoChars } from '../../utilities';
+import { devideAndAnimate } from '../../utilities';
 
 const logo = () => (
   <div className={styles.Logo}>
@@ -21,10 +21,10 @@ const logo = () => (
     </Animated>
     <div className={styles.Logo__name}>
       <div className={styles.Logo__name__firstname}>
-        {devideIntoChars('Oleksii', 'rollIn', 5)}
+        {devideAndAnimate('Oleksii', 'rollIn', 5)}
       </div>
       <div className={styles.Logo__name__lastname}>
-        {devideIntoChars('Bespalko', 'fadeInRightBig', 15)}
+        {devideAndAnimate('Bespalko', 'fadeInRightBig', 15)}
       </div>
     </div>
   </div>

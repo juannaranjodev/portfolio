@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-import styles from './App.css';
+// import styles from './App.css';
 
 import Layout from '../../hoc/Layout/Layout';
 import HomePage from '../HomePage/HomePage';
@@ -15,16 +15,18 @@ import brands from '@fortawesome/fontawesome-free-brands';
 
 fontawesome.library.add(brands);
 
+export const TimeContext = React.createContext(checkDayTime());
+
 class App extends Component {
-  state = {
-    time: checkDayTime()
-  }
+  // state = {
+  //   time: checkDayTime()
+  // }
 
   render() {
     return (
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <div className={styles.App}>
-          <Layout time={this.state.time}>
+        <TimeContext.Provider value={checkDayTime()}>
+          <Layout>
             <Switch>
               <Route path="/home" component={HomePage} />
               <Route path="/aboutme" component={AboutMePage} />
@@ -33,7 +35,7 @@ class App extends Component {
               <Redirect from="/" to="/home" />
             </Switch>
           </Layout>
-        </div>
+        </TimeContext.Provider>
       </BrowserRouter>
     );
   }
