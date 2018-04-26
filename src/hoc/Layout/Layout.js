@@ -23,7 +23,10 @@ class Layout extends Component {
   render() {
     return (
       <div className={styles.Layout}>
-        <Background time={this.props.time} wallpaper>
+        <Background 
+          time={this.props.time} 
+          
+          wallpaper />
           <Toolbar 
             drawerToggleClicked={this.sideDrawerToggleHandler}
             open={this.state.showSideDrawer}
@@ -36,7 +39,6 @@ class Layout extends Component {
           <main className={styles.content}>
             {this.props.children}
           </main>
-        </Background>
       </div>
     );
   }

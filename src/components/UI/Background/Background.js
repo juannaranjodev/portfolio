@@ -55,10 +55,18 @@ const background = (props) => {
   const createBackgroundDOM = (imagePath, props) => {
     let backgroundStyle = {
       backgroundImage: `${props.gradient ? `${props.gradient},` : ''} url(${imagePath})`,
+      minHeight: '100vh',
+      backgroundAttachment: 'fixed',
+      filter: 'grayscale(50%) sepia(80%)',
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      zIndex: '-1'
     };
-    if (props.wallpaper) {
-      backgroundStyle.minHeight = '100vh';
-      backgroundStyle.backgroundAttachment = 'fixed';
+    if (!props.wallpaper) {
+      backgroundStyle = { 
+        backgroundImage: `${props.gradient ? `${props.gradient},` : ''} url(${imagePath})`
+      };
     }
     return (
       <div

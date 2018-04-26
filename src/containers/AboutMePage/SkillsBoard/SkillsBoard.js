@@ -26,7 +26,7 @@ class SkillsBoard extends Component {
   }
 
   componentWillUnmount() {
-    this.setState({ skills: null })
+    this.setState({ skills: null, error: false })
   }
 
   shouldComponentUpdate(nextProps, nextState) {

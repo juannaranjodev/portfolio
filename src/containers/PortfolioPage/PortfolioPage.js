@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import styles from './PortfolioPage.css';
 import axios from 'axios';
-import Background from '../../components/UI/Background/Background';
 import ProjectPreview from '../../components/ProjectPreview/ProjectPreview';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
