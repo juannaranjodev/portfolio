@@ -10,8 +10,16 @@ import ContactsPage from '../ContactsPage/ContactsPage';
 import { checkDayTime } from '../../utilities';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
+import faHome from '@fortawesome/fontawesome-free-solid/faHome';
+import faUserSecret from '@fortawesome/fontawesome-free-solid/faUserSecret';
+import faImage from '@fortawesome/fontawesome-free-solid/faImage';
+import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
+import faCode from '@fortawesome/fontawesome-free-solid/faCode';
+import faLink from '@fortawesome/fontawesome-free-solid/faLink';
 
-fontawesome.library.add(brands);
+fontawesome.library.add(
+  brands, faHome, faUserSecret, faImage, faEnvelope, faCode, faLink
+);
 
 export const TimeContext = React.createContext(checkDayTime());
 

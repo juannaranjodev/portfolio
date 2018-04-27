@@ -2,20 +2,21 @@ import React from 'react';
 
 import styles from './NavigationMenu.scss';
 import NavigationItem from './NavigationItem/NavigationItem';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 const navigationMenu = () => (
   <ul className={styles.NavigationMenu}>
     <NavigationItem path="/home">
-      Home
+      <FontAwesomeIcon icon="home" /> Home
     </NavigationItem>
     <NavigationItem path="/aboutme">
-      About Me
+      <FontAwesomeIcon icon="user-secret" /> About me
     </NavigationItem>
     <NavigationItem path="/works">
-      Works
+      <FontAwesomeIcon icon="image" /> Works
     </NavigationItem>
     <NavigationItem path="/contacts">
-      Contacts
+      <FontAwesomeIcon icon="envelope" /> Contacts
     </NavigationItem>
   </ul>
 );

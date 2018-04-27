@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './ProjectModal.css';
 import Button from '../UI/Button/Button';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 const projectModal = (props) => (
   <div className={styles.ProjectModal}>
@@ -22,8 +23,12 @@ const projectModal = (props) => (
         {props.tools.map((tool, index) => <li className={styles.toolBox__tool} key={index}>{tool}</li>) }
       </ul>
       <footer className={styles.data__footer}>
-        <Button href={props.code} newtab color="blue" size="large">Code</Button>
-        <Button href={props.app} newtab color="blue" size="large">Link</Button>
+        <Button href={props.code} newtab color="blue" size="large">
+          <FontAwesomeIcon icon="code" />
+        </Button>
+        <Button href={props.app} newtab color="blue" size="large">
+          <FontAwesomeIcon icon="link" />
+        </Button>
       </footer>
     </div>
   </div>
