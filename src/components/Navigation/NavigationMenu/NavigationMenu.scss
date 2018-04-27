@@ -3,10 +3,8 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-}
 
-@media (min-width: 1024px) {
-  .NavigationMenu {
+  @include respond(laptop) {
     flex-direction: row;
   }
 }

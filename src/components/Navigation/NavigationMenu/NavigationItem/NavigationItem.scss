@@ -4,6 +4,10 @@
   font-size: 1.25rem;
   margin: 1rem auto;
 
+  @include respond(laptop) {
+    margin: 0 .5rem;
+  }
+
   &__button,
   &__button:visited {
     display: inline-block;
@@ -19,11 +23,5 @@
 
   &__button:hover {
     color: $colorSecondary;
-  }
-}
-
-@media (min-width: 1024px) {
-  .NavigationItem {
-    margin: 0 2rem;
   }
 }

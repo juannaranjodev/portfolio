@@ -4,6 +4,7 @@ $colorPrimaryDark: #185a9d;
 $colorSecondaryLight: #94705b;
 $colorSecondary: #e6902f;
 $colorSecondaryDark: #665034;
+$colorSecondaryDarkest: #423119;
 $colorWhite: #f0f0f0;
 
 $boxShadowDark: 0 0 1rem rgba(0,0,0,.9);
@@ -37,8 +38,14 @@ $boxShadowDark: 0 0 1rem rgba(0,0,0,.9);
   @if $breakpoint == phone {
     @media only screen and (min-width: 550px) { @content };
   }
+  @if $breakpoint == small-height {
+    @media only screen and (min-height: 500px) { @content };
+  }
   @if $breakpoint == tablet {
     @media only screen and (min-width: 768px) { @content };
+  }
+  @if $breakpoint == med-height {
+    @media only screen and (min-height: 768px) { @content };
   }
   @if $breakpoint == laptop {
     @media only screen and (min-width: 1024px) { @content }; 

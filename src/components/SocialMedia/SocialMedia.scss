@@ -1,14 +1,25 @@
 .SocialMedia {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   width: 100%;
+  height: 10vh;
   padding: 0 2rem;
   color: $colorWhite;
   font-size: 1.25rem;
   font-family: 'Lalezar', cursive;
 
+  @include respond(small-height) {
+    height: 7.5vh;
+  }
+
+  @include respond(med-height) {
+    height: 5vh;
+  }
+
   &__list {
     padding: .5rem 0;
     list-style: none;
-    text-align: right;
 
     &__item {
       display: inline-block;

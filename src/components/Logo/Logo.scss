@@ -19,10 +19,11 @@
 
   &__name {
     position: relative;
-    height: 100%;
+    padding-top: .25rem;
     @include flexCenter;
     margin-left: 2rem;
     color: $colorWhite;
+    text-shadow: 3px 0 $colorSecondaryDarkest;
     font-family: 'Lalezar', cursive;
 
     &__firstname {
