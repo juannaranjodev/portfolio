@@ -9,7 +9,6 @@ import ProjectModal from '../../components/ProjectModal/ProjectModal';
 import Button from '../../components/UI/Button/Button';
 import Container from '../../hoc/Container/Container';
 import PageHeader from '../../components/PageHeader/PageHeader';
-import Aux from '../../hoc/Aux/Aux';
 
 class PortfolioPage extends Component {
   state = {
@@ -87,7 +86,7 @@ class PortfolioPage extends Component {
           } else if (amountOfProjects % 2 === 0) {
             return '20%';
           }
-          return '33%';
+          return '33.3%';
         }
         return false;
       }
@@ -125,12 +124,12 @@ class PortfolioPage extends Component {
     }
 
     return (
-      <Aux>
+      <React.Fragment>
         <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
           {projectModal}
         </Modal>
         {portfolio}
-      </Aux>
+      </React.Fragment>
     );
   }
 }

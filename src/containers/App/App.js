@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-// import styles from './App.css';
-
 import Layout from '../../hoc/Layout/Layout';
 import HomePage from '../HomePage/HomePage';
 import AboutMePage from '../AboutMePage/AboutMePage';
