@@ -7,7 +7,8 @@ $colorSecondaryDark: #665034;
 $colorSecondaryDarkest: #423119;
 $colorWhite: #f0f0f0;
 
-$boxShadowDark: 0 0 1rem rgba(0,0,0,.9);
+$boxShadowVertical: 0 -.15rem .5rem rgba(0,0,0,.5), 0 .5rem 1rem rgba(0,0,0,.6);
+$boxShadowCenter: 0 0 1.5rem rgba(0,0,0,.7);
 
 @mixin flexCenter {
   display: flex;

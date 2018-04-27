@@ -6,14 +6,12 @@
   left: 0;
   top: 0;
   z-index: 200;
-  background-color: #272727;
+  background-image: linear-gradient(90deg, $colorPrimaryLight, $colorPrimaryDark);
   box-shadow: 1rem 0 1rem rgba(0, 0, 0, .3);
   padding: 32px 16px;
   transition: transform .3s ease-out;
-}
 
-@media (min-width: 1024px) {
-  .SideDrawer {
+  @include respond(laptop) {
     display: none;
   }
 }
