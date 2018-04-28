@@ -56,6 +56,7 @@ const background = (props) => {
     let backgroundStyle = {
       backgroundImage: `${props.gradient ? `${props.gradient},` : ''} url(${imagePath})`,
       minHeight: '100vh',
+      filter: 'grayscale(60%)',
       backgroundAttachment: 'fixed',
       position: 'absolute',
       top: '0',

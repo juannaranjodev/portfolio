@@ -1,0 +1,14 @@
+.Technologies {
+  @include flexBetween;
+  margin-bottom: 2rem;
+
+  & * {
+    width: 1.75rem;
+    height: 1.75rem;
+
+    @include respond(tablet) {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+  }
+}

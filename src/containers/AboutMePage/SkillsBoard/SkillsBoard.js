@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import styles from './SkillsBoard.scss';
 import axios from 'axios';
 import { BarChart } from 'react-easy-chart';
-// import { Devicon } from 'devicon-react';
 import Spinner from '../../../components/UI/Spinner/Spinner';
+import Media from 'react-media';
+import Technologies from '../Technologies/Technologies';
 
 class SkillsBoard extends Component {
   state = {
@@ -62,18 +63,35 @@ class SkillsBoard extends Component {
       const skills = this.state.skills.map((skill, index) => {
         return { x: skill.title, y: skill.value, color: '#e6902f' };
       });
+      // skillsData = (
+      //   <div className={styles.SkillsBoard}>
+      //     <BarChart
+      //       axes
+      //       grid
+      //       margin={{ top: 50, right: 10, bottom: 60, left: 30}}
+      //       height={resizeSkillsBoard() / 2}
+      //       width={resizeSkillsBoard()}
+      //       data={skills}
+      //     />
+      //   </div>
+      // );
       skillsData = (
-        <div className={styles.SkillsBoard}>
-        <BarChart
-          axes
-          grid
-          margin={{ top: 50, right: 30, bottom: 60, left: 30}}
-          height={resizeSkillsBoard() / 2}
-          width={resizeSkillsBoard()}
-          data={skills}
-        />
-        </div>
-      );
+        <Media query={{ maxWidth: 1024 }}>
+          {matches => matches ?
+            <Technologies tools={skills.map(skill => skill.x)} /> :
+            <div className={styles.SkillsBoard}>
+              <BarChart
+                axes
+                grid
+                margin={{ top: 50, right: 10, bottom: 60, left: 30}}
+                height={resizeSkillsBoard() / 2}
+                width={resizeSkillsBoard()}
+                data={skills}
+              />
+            </div>
+          }
+        </Media>
+      )
     }
 
     return skillsData;
