@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
 import axios from 'axios';
-import Board from '../../../components/UI/Board/Board';
-import SkillIndex from './SkillIndex/SkillIndex';
+import { BarChart } from 'react-easy-chart';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 
 class SkillsBoard extends Component {
@@ -36,13 +35,22 @@ class SkillsBoard extends Component {
   render() {
     let skillsData = null;
     if (!this.state.error) {
-      skillsData = <Board><Spinner /></Board>;
+      skillsData = <Spinner />;
     }
     if (this.state.skills) {
       const skills = this.state.skills.map((skill, index) => {
-        return <SkillIndex key={index} title={skill.title} value={skill.value} animationDelay={index / 10} />
+        return { x: skill.title, y: skill.value, color: '#e6902f' };
       });
-      skillsData = <Board>{skills}</Board>;
+      skillsData = (
+        <BarChart
+          axes
+          grid
+          // colorBars
+          height={300}
+          // width={650}
+          data={skills}
+        />
+      );
     }
     return skillsData;
   }
