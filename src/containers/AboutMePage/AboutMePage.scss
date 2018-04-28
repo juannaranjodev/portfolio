@@ -1,0 +1,24 @@
+.AboutMePage {
+  @include flexCenter;
+  flex-wrap: wrap;
+
+  & > * {
+    width: 95%;
+
+    @include respond(phone) {
+      width: 90%;
+    }
+
+    @include respond(tablet) {
+      width: 80%;
+    }
+
+    @include respond(laptop) {
+      width: 75%;
+    }
+
+    @include respond(laptop-lg) {
+      width: 65%;
+    }
+  }
+}

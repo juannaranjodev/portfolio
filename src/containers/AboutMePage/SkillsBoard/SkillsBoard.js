@@ -42,6 +42,7 @@ class SkillsBoard extends Component {
         return { x: skill.title, y: skill.value, color: '#e6902f' };
       });
       skillsData = (
+        <div>
         <BarChart
           axes
           grid
@@ -50,6 +51,7 @@ class SkillsBoard extends Component {
           // width={650}
           data={skills}
         />
+        </div>
       );
     }
     return skillsData;

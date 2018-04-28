@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import styles from './AboutMePage.scss';
 import Container from '../../hoc/Container/Container';
 import Description from './Description/Description';
 import SkillsBoard from './SkillsBoard/SkillsBoard';
@@ -20,8 +21,10 @@ class AboutMePage extends Component {
     return (
       <Container>
         <PageHeader title="Few words about me" />
-        <Description time={this.props.time} />
-        <SkillsBoard />
+        <div className={styles.AboutMePage}>
+          <SkillsBoard />
+          <Description time={this.props.time} />
+        </div>
       </Container>
     );
   }
