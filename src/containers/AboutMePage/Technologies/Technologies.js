@@ -71,7 +71,7 @@ const technologies = (props) => {
   let techIcons = props.tools.map((tool, index) => (
     <InnerHTML key={index} html={techTools[`${tool.toLowerCase()}`]} />
   ));
-  console.log(props.tools);
+  
   return (
     <div className={styles.Technologies}>
       {techIcons}
