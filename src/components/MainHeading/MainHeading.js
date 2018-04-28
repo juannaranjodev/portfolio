@@ -17,7 +17,7 @@ const mainHeading = (props) => {
   return (
     <TimeContext.Consumer>
       {time => (
-        <div className={[styles.MainHeading, styles[time === 'night' ? 'light' : 'dark']].join(' ')}>
+        <div className={[styles.MainHeading, time === 'night' ? 'light' : 'dark'].join(' ')}>
           <h3 className={styles.MainHeading__role}>
             {devideAndAnimate(headers.role, 'tada', 20)}
           </h3>
@@ -28,7 +28,7 @@ const mainHeading = (props) => {
               isVisible={true}
             >
 
-              {devideIntoChars(headers.name, { className: styles.letter })}
+              {devideIntoChars(headers.name, { className: 'letter' })}
             </Animated>
           </h1>
           <h5 className={styles.MainHeading__message}>

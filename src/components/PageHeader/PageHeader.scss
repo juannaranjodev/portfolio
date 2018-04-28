@@ -1,0 +1,16 @@
+.PageHeader {
+  display: inline-block;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: 'Bowlby One SC', cursive;
+  letter-spacing: .2rem;
+
+  @include respond(phone) {
+    font-size: 2rem; 
+  }
+
+  @include respond(laptop) {
+    font-size: 2.5rem; 
+  }
+}

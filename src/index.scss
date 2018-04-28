@@ -32,3 +32,22 @@ body {
   background-color: $colorPrimary;
   color: $colorWhite;
 }
+
+:global .letter {
+  transition: all .2s;
+    
+  &:hover {
+    display: inline-block;
+    transform: rotate(5deg) scale(1.4);
+    color: $colorSecondary;
+  }
+}
+
+:global .light {
+  color: $colorWhite;
+}
+
+:global .dark { 
+  color: $colorSecondaryLight;
+  text-shadow: 2px 0 $colorSecondaryDark;
+}
