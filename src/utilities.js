@@ -14,10 +14,9 @@ export const checkDayTime = () => {
 };
 
 // Devides a word into characters with 'span' elements with animation
-export const devideAndAnimate = (word, animatedClassName, delayIndex) => (
+export const devideAndAnimate = (word, animatedClassName) => (
   // word - String to devide into chars
   // animatedClassName - String of className from 'animate.css'
-  // delayIndex - Number divider for consistent animation delay
   word.split('').map((letter, index) => {
     let char = <span key={index}>&nbsp;</span>;
     
@@ -26,7 +25,7 @@ export const devideAndAnimate = (word, animatedClassName, delayIndex) => (
         <Animated
           key={index}
           animationIn={animatedClassName}
-          style={{ animationDelay: `${index / delayIndex}s` }}
+          animationInDelay={index * 100}
           isVisible={true}
         >
           <span>{letter}</span>
@@ -70,7 +69,7 @@ export const splitAndAnimate = (sentence) => {
     <Animated
       key={index}
       animationIn={classes[random(classes.length)]}
-      style={{ animationDelay: `${index / 5}s` }}
+      animationInDelay={index * 200}
       isVisible={true}
     >
       {

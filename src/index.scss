@@ -43,11 +43,11 @@ body {
   }
 }
 
-:global .light {
+:global .night {
   color: $colorWhite;
 }
 
-:global .dark { 
+:global .day { 
   color: $colorSecondaryLight;
   text-shadow: 2px 0 $colorSecondaryDark;
 }

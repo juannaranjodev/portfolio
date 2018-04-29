@@ -4,7 +4,6 @@ import styles from './MainHeading.scss';
 import Button from '../UI/Button/Button';
 import { Animated } from 'react-animated-css';
 import { TimeContext } from '../../containers/App/App';
-
 import { devideAndAnimate, devideIntoChars, splitAndAnimate } from '../../utilities';
 
 const mainHeading = (props) => {
@@ -17,9 +16,9 @@ const mainHeading = (props) => {
   return (
     <TimeContext.Consumer>
       {time => (
-        <div className={[styles.MainHeading, time === 'night' ? 'light' : 'dark'].join(' ')}>
+        <div className={[styles.MainHeading, time].join(' ')}>
           <h3 className={styles.MainHeading__role}>
-            {devideAndAnimate(headers.role, 'tada', 20)}
+            {devideAndAnimate(headers.role, 'tada')}
           </h3>
           <h1>
             <Animated
@@ -27,7 +26,6 @@ const mainHeading = (props) => {
               animationIn="slideInLeft"
               isVisible={true}
             >
-
               {devideIntoChars(headers.name, { className: 'letter' })}
             </Animated>
           </h1>
