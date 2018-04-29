@@ -27,8 +27,9 @@ export const devideAndAnimate = (word, animatedClassName) => (
           animationIn={animatedClassName}
           animationInDelay={index * 100}
           isVisible={true}
+          style={{display: 'inline-block'}}
         >
-          <span>{letter}</span>
+          {letter}
         </Animated>
       );
     }
