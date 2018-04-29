@@ -15,9 +15,13 @@ const navigationMenu = () => {
 
   const createNavItems = (isSmallDevice) => (
     menu.map((navItem, index) => (
-      <NavigationItem key={index} path={navItem.name}>
+      <NavigationItem 
+        key={index}
+        path={navItem.path}
+        tooltip={!isSmallDevice ? navItem.name.toUpperCase() : null}
+      >
         <FontAwesomeIcon icon={navItem.icon} />
-        {isSmallDevice && ` ${navItem.name.toUpperCase()}`}
+        { isSmallDevice && ` ${navItem.name.toUpperCase()}` }
       </NavigationItem>
     ))
   );

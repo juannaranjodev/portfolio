@@ -6,6 +6,7 @@
 
   @include respond(laptop) {
     margin: 0 .5rem;
+    font-size: 2rem;
   }
 
   &__button,

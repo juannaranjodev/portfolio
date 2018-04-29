@@ -25,10 +25,12 @@ class Layout extends Component {
     return (
       <div className={styles.Layout}>
         <TimeContext.Consumer>
-          {time => <Background 
-            wallpaper time={time}
-            gradient="linear-gradient(90deg, rgba(67, 206, 162, .3), rgba(24, 90, 157, .3))"
-          />}
+          {
+            time => <Background 
+              wallpaper time={time}
+              gradient="linear-gradient(90deg, rgba(67, 206, 162, .3), rgba(24, 90, 157, .3))"
+            />
+          }
         </TimeContext.Consumer>
         <Toolbar 
           drawerToggleClicked={this.sideDrawerToggleHandler}
