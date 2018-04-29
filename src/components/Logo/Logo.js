@@ -4,9 +4,10 @@ import { Animated } from 'react-animated-css';
 import styles from './Logo.scss';
 import logoBackground from '../../assets/background-night-xxs.jpg';
 import { devideAndAnimate } from '../../utilities';
+import { Link } from 'react-router-dom';
 
 const logo = () => (
-  <div className={styles.Logo}>
+  <Link to="/home" style={{ textDecoration: 'none' }} className={styles.Logo}>
     <Animated animationIn="bounceInLeft" isVisible={true}>
       <div
         className={styles.Logo__image}
@@ -27,7 +28,7 @@ const logo = () => (
         {devideAndAnimate('Bespalko', 'fadeInRightBig', 15)}
       </div>
     </div>
-  </div>
+  </Link>
 );
 
 export default logo;
