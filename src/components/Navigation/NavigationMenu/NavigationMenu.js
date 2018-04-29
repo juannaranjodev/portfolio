@@ -3,22 +3,38 @@ import React from 'react';
 import styles from './NavigationMenu.scss';
 import NavigationItem from './NavigationItem/NavigationItem';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import Media from 'react-media';
 
-const navigationMenu = () => (
-  <ul className={styles.NavigationMenu}>
-    <NavigationItem path="/home">
-      <FontAwesomeIcon icon="home" /> Home
-    </NavigationItem>
-    <NavigationItem path="/aboutme">
-      <FontAwesomeIcon icon="user-secret" /> About me
-    </NavigationItem>
-    <NavigationItem path="/works">
-      <FontAwesomeIcon icon="image" /> Works
-    </NavigationItem>
-    <NavigationItem path="/contacts">
-      <FontAwesomeIcon icon="envelope" /> Contacts
-    </NavigationItem>
-  </ul>
-);
+const navigationMenu = () => {
+  const menu = [
+    { name: 'home', path: '/home', icon: 'home' },
+    { name: 'about me', path: '/aboutme', icon: 'user-secret' },
+    { name: 'works', path: '/works', icon: 'image' },
+    { name: 'contacts', path: '/contacts', icon: 'envelope' }
+  ];
 
+  const createNavItems = (isSmallDevice) => (
+    menu.map((navItem, index) => (
+      <NavigationItem key={index} path={navItem.name}>
+        <FontAwesomeIcon icon={navItem.icon} />
+        {isSmallDevice && ` ${navItem.name.toUpperCase()}`}
+      </NavigationItem>
+    ))
+  );
+
+  const navItems = (
+    <Media query={{ maxWidth: 1024 }}>
+      {matches => matches ?
+        createNavItems(true) :
+        createNavItems(false)
+      }
+    </Media>
+  );
+
+  return (
+    <ul className={styles.NavigationMenu}>
+      {navItems}
+    </ul>
+  );
+};
 export default navigationMenu;
