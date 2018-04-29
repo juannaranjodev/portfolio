@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Animated } from 'react-animated-css';
+import InnerHTML from 'dangerously-set-inner-html';
 
 // Returns random number up to 'limit'
 export const random = limit => Math.floor(Math.random() * limit);
@@ -49,3 +50,32 @@ export const devideIntoChars = (word, props) => (
     return char;
   })
 );
+
+// Splits the sentence into the words and randomly animates them
+export const splitAndAnimate = (sentence) => {
+  // sentence - Srting contains more then one word
+  const classes = [
+    // Contains classes from 'Animate.css'
+    'rotateInUpRight',
+    'fadeInLeft',
+    'fadeInRight',
+    'rotateInUpLeft',
+    'fadeInUpBig',
+    'fadeInDownBig'
+  ];
+
+  const words = sentence.split(' ');
+
+  return words.map((word, index) => (
+    <Animated
+      key={index}
+      animationIn={classes[random(classes.length)]}
+      style={{ animationDelay: `${index / 5}s` }}
+      isVisible={true}
+    >
+      {
+        index !== words.length - 1 ? <InnerHTML html={`${word}&nbsp;`} /> : word
+      }
+    </Animated>
+  ));
+};

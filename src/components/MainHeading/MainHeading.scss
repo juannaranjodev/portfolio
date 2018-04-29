@@ -31,6 +31,7 @@
   }
 
   &__message {
+    @include flexCenter;
     margin-bottom: 1rem;
     font-size: 1.25rem;
     line-height: 2rem;
@@ -46,22 +47,3 @@
     }
   }
 }
-
-// .light {
-//   color: $colorWhite;
-// }
-
-// .dark { 
-//   color: $colorSecondaryLight;
-//   text-shadow: 2px 0 $colorSecondaryDark;
-// }
-
-// .letter {
-//   transition: all .2s;
-    
-//   &:hover {
-//     display: inline-block;
-//     transform: rotate(5deg) scale(1.4);
-//     color: $colorSecondary;
-//   }
-// }

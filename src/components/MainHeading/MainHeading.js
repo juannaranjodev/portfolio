@@ -5,7 +5,7 @@ import Button from '../UI/Button/Button';
 import { Animated } from 'react-animated-css';
 import { TimeContext } from '../../containers/App/App';
 
-import { devideAndAnimate, devideIntoChars } from '../../utilities';
+import { devideAndAnimate, devideIntoChars, splitAndAnimate } from '../../utilities';
 
 const mainHeading = (props) => {
   const headers = {
@@ -32,7 +32,7 @@ const mainHeading = (props) => {
             </Animated>
           </h1>
           <h5 className={styles.MainHeading__message}>
-            {headers.message}
+            {splitAndAnimate(headers.message)}
           </h5>
           <Button
             type="router-link"
