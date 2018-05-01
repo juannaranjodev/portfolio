@@ -33,9 +33,8 @@ const mainHeading = (props) => {
             {splitAndAnimate(headers.message)}
           </h5>
           <Button
-            type="router-link"
+            buttonType="routerLink"
             href="/works"
-            color="blue"
             size="large"
           >
             Projects

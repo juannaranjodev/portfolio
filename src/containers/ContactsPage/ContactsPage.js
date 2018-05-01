@@ -106,7 +106,7 @@ class ContactsPage extends Component {
               ))
             }
             <p className={styles.ContactsPage__instruction}>* &mdash; required</p>
-            <Button type="submit" size="medium" color="orange">Submit</Button>
+            <Button buttonType="submit" size="medium">Submit</Button>
           </form>
       </div>
     );

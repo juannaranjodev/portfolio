@@ -20,10 +20,10 @@ const description = (props) => {
     aboutTools: {
       header: 'What I use',
       text: `
-        I write the most part of my code using JavaScript - ES6 and React. 
+        I write the most part of my code using JavaScript - ES6+ and React. 
         I do my web apps dynamic with Ajax, APIs, Firebase.
         I use HTML5 and CSS3 features and I like to build layouts from scratch. 
-        But I can use Bootstrap 4 or Materialize CSS frameworks to increase my speed in this process.
+        But I can use Bootstrap 4 or MaterializeCSS frameworks to increase my speed in this process.
         I find Sass preprocessor interesting for me and effective in the development process. 
         But there is no problem to use others.
         There is no way to work remotely with efficiency without communication 
@@ -39,7 +39,12 @@ const description = (props) => {
       <section>
         <h3>{content.aboutMe.header}</h3>
         <p>{content.aboutMe.text}</p>
-        <p><Button type="router-link" size="small" href="/contacts" color="orange">Drop me a line</Button>, if you have interesting business ideas to work on.</p>
+        <p>
+          <Button buttonType="routerLink" textLink size="small" href="/contacts">
+            Drop me a line
+          </Button>
+          , if you have interesting business ideas to work on.
+        </p>
       </section>
       <section>
         <h3>{content.aboutTools.header}</h3>
