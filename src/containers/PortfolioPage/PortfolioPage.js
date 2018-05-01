@@ -57,7 +57,7 @@ class PortfolioPage extends Component {
       }}>
         There is some problem with data, sorry. 
         Also you can see my projects on GitHub:
-        <Button href="https://github.com/olbesp" size="small" color="orange"> https://github.com/olbesp</Button>
+        <Button href="https://github.com/olbesp" textLink> https://github.com/olbesp</Button>
       </p>
     );
 
@@ -74,30 +74,12 @@ class PortfolioPage extends Component {
     let projectsPreview;
 
     if (this.state.projects) {
-
-      const setProjectWidth = () => {
-        if (window.innerWidth >= 768) {
-          const amountOfProjects = this.state.projects.length;
-          if (window.innerWidth < window.innerHeight) {
-            return '50%';
-          }
-          if (amountOfProjects % 4 === 0) {
-            return '25%';
-          } else if (amountOfProjects % 2 === 0) {
-            return '20%';
-          }
-          return '33.3%';
-        }
-        return false;
-      }
-
       projectsPreview = this.state.projects
         .map(project => (
           <ProjectPreview id={project.id} 
             key={project.id} 
             title={project.title} 
             img={project.image}
-            width={setProjectWidth()}
           />
         )
       );
