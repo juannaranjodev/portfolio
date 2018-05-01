@@ -1,7 +1,8 @@
 import React from 'react';
 
-import styles from './Description.css';
+import styles from './Description.scss';
 import Button from '../../../components/UI/Button/Button';
+import { Animated } from 'react-animated-css';
 
 const description = (props) => {
   const content = {
@@ -36,20 +37,28 @@ const description = (props) => {
   
   return (
     <div className={classes}>
-      <section>
-        <h3>{content.aboutMe.header}</h3>
-        <p>{content.aboutMe.text}</p>
-        <p>
+      <Animated
+        animationIn="slideInDown"
+        isVisible={true}
+        className={styles.Description__section}
+      >
+        <h3 className={styles.Description__section__header}>{content.aboutMe.header}</h3>
+        <p className={styles.Description__section__content}>{content.aboutMe.text}</p>
+        <p className={styles.Description__section__content}>
           <Button buttonType="routerLink" textLink href="/contacts">
             Drop me a line
           </Button>
           , if you have interesting business ideas to work on.
         </p>
-      </section>
-      <section>
-        <h3>{content.aboutTools.header}</h3>
-        <p>{content.aboutTools.text}</p>
-      </section>
+      </Animated>
+      <Animated
+        animationIn="slideInUp"
+        isVisible={true}
+        className={styles.Description__section}
+      >
+        <h3 className={styles.Description__section__header}>{content.aboutTools.header}</h3>
+        <p className={styles.Description__section__content}>{content.aboutTools.text}</p>
+      </Animated>
     </div>
   );
 }
