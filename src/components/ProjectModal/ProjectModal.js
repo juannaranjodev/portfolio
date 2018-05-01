@@ -23,10 +23,10 @@ const projectModal = (props) => (
         {props.tools.map((tool, index) => <li className={styles.toolBox__tool} key={index}>{tool}</li>) }
       </ul>
       <footer className={styles.data__footer}>
-        <Button href={props.code} newtab color="blue" size="large">
+        <Button buttonType="anchor" href={props.code} newtab size="large">
           <FontAwesomeIcon icon="code" />
         </Button>
-        <Button href={props.app} newtab color="blue" size="large">
+        <Button buttonType="anchor" href={props.app} newtab size="large">
           <FontAwesomeIcon icon="link" />
         </Button>
       </footer>

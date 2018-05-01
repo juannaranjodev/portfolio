@@ -1,0 +1,55 @@
+.Button {
+
+  &,
+  &:visited {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: inherit;
+    transition: all .2s;
+    cursor: pointer;
+    color: $colorWhite;
+    text-shadow: none;
+    overflow: hidden;
+    border: none;
+    background-color: $colorPrimary;
+  }
+
+  &:hover {
+    background-color: $colorSecondary;
+    transform: translateY(-0.1rem);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(0);
+  }
+}
+
+.Link {
+  text-decoration: none;
+  color: $colorSecondary;
+}
+
+.large { 
+  padding: 1.5rem 4rem; 
+  font-size: 1.5rem; 
+  font-weight: bold;
+}
+
+.medium { 
+  padding: 1rem 2rem; 
+  font-size: 1.2rem; 
+  font-weight: bold;
+}
+
+.small { 
+  padding: .5rem 1rem; 
+  font-size: 1rem; 
+  font-weight: 300;
+}
