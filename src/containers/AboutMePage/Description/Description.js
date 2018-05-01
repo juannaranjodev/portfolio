@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Description.scss';
 import Button from '../../../components/UI/Button/Button';
 import { Animated } from 'react-animated-css';
+import { TimeContext } from '../../App/App';
 
 const description = (props) => {
   const content = {
@@ -32,35 +33,39 @@ const description = (props) => {
         We'll keep projects on-track and under control.`
     }
   };
-
-  const classes = [styles.Description, props.time === 'night' ? styles.light : styles.dark].join(' ');
   
   return (
-    <div className={classes}>
-      <Animated
-        animationIn="slideInDown"
-        isVisible={true}
-        className={styles.Description__section}
-      >
-        <h3 className={styles.Description__section__header}>{content.aboutMe.header}</h3>
-        <p className={styles.Description__section__content}>{content.aboutMe.text}</p>
-        <p className={styles.Description__section__content}>
-          <Button buttonType="routerLink" textLink href="/contacts">
-            Drop me a line
-          </Button>
-          , if you have interesting business ideas to work on.
-        </p>
-      </Animated>
-      <Animated
-        animationIn="slideInUp"
-        isVisible={true}
-        className={styles.Description__section}
-      >
-        <h3 className={styles.Description__section__header}>{content.aboutTools.header}</h3>
-        <p className={styles.Description__section__content}>{content.aboutTools.text}</p>
-      </Animated>
-    </div>
+    <TimeContext.Consumer>
+      {time => (
+        <div className={[styles.Description, time].join(' ')}>
+          <Animated
+            animationIn="fadeInDown"
+            isVisible={true}
+            animationInDelay={1000}
+            className={styles.Description__section}
+          >
+            <h3 className={styles.Description__section__header}>{content.aboutMe.header}</h3>
+            <p className={styles.Description__section__content}>{content.aboutMe.text}</p>
+            <p className={styles.Description__section__content}>
+              <Button buttonType="routerLink" textLink href="/contacts">
+                Drop me a line
+              </Button>
+                  , if you have interesting business ideas to work on.
+            </p>
+          </Animated>
+          <Animated
+            animationIn="fadeInUp"
+            isVisible={true}
+            animationInDelay={1000}
+            className={styles.Description__section}
+          >
+            <h3 className={styles.Description__section__header}>{content.aboutTools.header}</h3>
+            <p className={styles.Description__section__content}>{content.aboutTools.text}</p>
+          </Animated>
+        </div>
+      )}
+    </TimeContext.Consumer>
   );
-}
+};
 
 export default description;
