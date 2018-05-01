@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './PortfolioPage.css';
+import styles from './PortfolioPage.scss';
 import axios from 'axios';
 import ProjectPreview from '../../components/ProjectPreview/ProjectPreview';
 import Spinner from '../../components/UI/Spinner/Spinner';

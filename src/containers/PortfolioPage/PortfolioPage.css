@@ -1,8 +1,0 @@
-.Projects {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  z-index: 3;
-}
