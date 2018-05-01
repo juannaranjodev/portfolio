@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import styles from './ProjectPreview.css';
+import styles from './ProjectPreview.scss';
 import { random } from '../../utilities';
 import Media from 'react-media';
 

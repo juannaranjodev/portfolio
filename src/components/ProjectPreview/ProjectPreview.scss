@@ -3,39 +3,40 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-}
 
-.Project__img {
-  width: 100%;
-  transition: all 3s;
-  filter: grayscale(100%);
-}
+  &__img {
+    width: 100%;
+    transition: all 3s;
+    filter: grayscale(100%);
 
-.Project__title {
-  width: 100%;
-  position: absolute;
-  top: -50%;
-  left: 0;
-  color: #27adfa;
-  text-shadow: 0 2px #0973b1;
-  text-align: center;
-  font-weight: bold;
-  font-size: 2rem;
-  transition: all .5s;
-  transform: translateY(-50%);
-}
+    @include respond(tablet) {
+      transform: scale(1.15);
+    }
+  }
 
-.Project:hover .Project__title {
-  top: 50%;
-}
+  &__title {
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    color: $colorPrimary;
+    text-shadow: 0 2px $colorPrimaryDark;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: all .5s;
+    transform: translateY(-50%);
+  }
+  &:hover &__title {
+    top: 50%;
+  }
 
-@media (min-width: 450px) {
-  .Project { width: 50%; }
-}
-
-@media (min-width: 768px) {  
-  .Project__img { transform: scale(1.15); }
-  .Project:hover .Project__img { transform: scale(1.02); }
+  &:hover &__img {
+    
+    @include respond(tablet) {
+      transform: scale(1.02);
+    }
+  }
 }
 
 .fromTop { animation: appearFromTop 1.5s 1s backwards; }
