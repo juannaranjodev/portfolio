@@ -24,13 +24,15 @@ const socialMedia = () => {
           <Animated
             animationIn='rollIn'
             isVisible={true}
+            animationInDelay={200 * index}
             className={styles.SocialMedia__link__icon}
           >
             <FontAwesomeIcon icon={profile.icon} />
           </Animated>
           <Animated
-            animationIn='rollIn'
+            animationIn='fadeInDown'
             isVisible={true}
+            animationInDelay={300 * index}
             className={styles.SocialMedia__link__title}
           >
             <span>{profile.title}</span>

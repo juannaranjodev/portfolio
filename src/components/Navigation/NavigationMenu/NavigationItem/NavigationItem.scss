@@ -18,7 +18,7 @@
     transition: all .2s;
 
     &.active {
-      color: $colorPrimaryDark;
+      color: $colorSecondary;
 
       @include respond(laptop) {
         color: $colorPrimary;

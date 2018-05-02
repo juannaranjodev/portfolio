@@ -10,7 +10,6 @@ export const random = limit => Math.floor(Math.random() * limit);
 export const checkDayTime = () => {
   const time = new Date();
   return time.getHours() > 5 && time.getHours() < 19 ? 'day' : 'night';
-  // return 'night';
 };
 
 // Devides a word into characters with 'span' elements with animation
