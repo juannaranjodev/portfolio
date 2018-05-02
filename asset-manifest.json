@@ -1,6 +1,23 @@
 {
-  "main.css": "static/css/main.d3c0893b.css",
-  "main.css.map": "static/css/main.d3c0893b.css.map",
-  "main.js": "static/js/main.41e1924e.js",
-  "main.js.map": "static/js/main.41e1924e.js.map"
+  "main.css": "static/css/styles.css",
+  "main.css.map": "static/css/styles.css.map",
+  "main.js": "static/js/main.81bff9a1.js",
+  "main.js.map": "static/js/main.81bff9a1.js.map",
+  "static/media/background-day-lg.jpg": "static/media/background-day-lg.3c394d60.jpg",
+  "static/media/background-day-md.jpg": "static/media/background-day-md.d0e78f36.jpg",
+  "static/media/background-day-sm.jpg": "static/media/background-day-sm.bbc9df84.jpg",
+  "static/media/background-day-xlg.jpg": "static/media/background-day-xlg.b8e463cc.jpg",
+  "static/media/background-day-xs.jpg": "static/media/background-day-xs.b4b8d7d5.jpg",
+  "static/media/background-day-xxs.jpg": "static/media/background-day-xxs.4ce0ca77.jpg",
+  "static/media/background-night-lg.jpg": "static/media/background-night-lg.cb9c186c.jpg",
+  "static/media/background-night-md.jpg": "static/media/background-night-md.05bc7d1b.jpg",
+  "static/media/background-night-sm.jpg": "static/media/background-night-sm.7b05175c.jpg",
+  "static/media/background-night-xlg.jpg": "static/media/background-night-xlg.c489b473.jpg",
+  "static/media/background-night-xs.jpg": "static/media/background-night-xs.cb3b314d.jpg",
+  "static/media/background-night-xxs.jpg": "static/media/background-night-xxs.725e7598.jpg",
+  "static/media/header-lg.jpg": "static/media/header-lg.24747e6e.jpg",
+  "static/media/header-md.jpg": "static/media/header-md.ea449419.jpg",
+  "static/media/header-sm.jpg": "static/media/header-sm.af5a5af8.jpg",
+  "static/media/header-xlg.jpg": "static/media/header-xlg.5cf3a18a.jpg",
+  "static/media/header-xs.jpg": "static/media/header-xs.d567d0c5.jpg"
 }
