@@ -18,7 +18,7 @@ const button = (props) => {
       </a>,
     button: <button onClick={props.clicked} className={classes}>{props.children}</button>,
     routerLink: <Link to={props.href} className={classes}>{props.children}</Link>,
-    submit: <button type="input" disabled={props.disabled} className={classes}>{props.children}</button>
+    formSubmit: <button type="submit" disabled={props.disabled} className={classes}>{props.children}</button>
   };
 
   return buttonTypes[props.buttonType];

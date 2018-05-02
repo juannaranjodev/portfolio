@@ -45,8 +45,16 @@ body {
 
 :global .night {
   color: $colorWhite;
+
+  &::placeholder {
+    color: rgba($colorWhite, .5);
+  }
 }
 
 :global .day {
   color: $colorBlack;
+
+  &::placeholder {
+    color: rgba($colorBlack, .5);
+  }
 }
