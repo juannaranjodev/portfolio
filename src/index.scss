@@ -47,7 +47,6 @@ body {
   color: $colorWhite;
 }
 
-:global .day { 
-  color: $colorSecondaryLight;
-  text-shadow: 2px 0 $colorSecondaryDark;
+:global .day {
+  color: $colorBlack;
 }

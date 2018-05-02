@@ -16,8 +16,8 @@
     @include flexBetween;
     height: 50%;
     background-image: linear-gradient(
-      $colorSecondaryLight, $colorSecondaryDark 5%,
-      $colorSecondaryDark 95%, $colorSecondaryLight
+      $colorGray, $colorBlack 5%,
+      $colorBlack 95%, $colorGray
     );
     box-shadow: $boxShadowVertical;
   }
