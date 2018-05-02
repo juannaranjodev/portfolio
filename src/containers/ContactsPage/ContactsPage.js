@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
-import styles from './ContactsPage.css';
+import styles from './ContactsPage.scss';
 import axios from 'axios';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/UI/Button/Button';
 import Input from '../../components/UI/Input/Input';
 import Modal from '../../components/UI/Modal/Modal';
+import { TimeContext } from '../App/App';
 
 const createInput = (tag, type, placeholder, required = true) => {
   return {
@@ -78,37 +79,43 @@ class ContactsPage extends Component {
       });
     }
     return (
-      <div className={styles.ContactsPage}>
-        <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
-          <div 
-            className={[styles.letter, this.props.time === 'day' ? styles.day : styles.night].join(' ')}
-          >
-            {this.state.error ? 'Something went wrong' : 'Thank You!'}
-          </div>
-        </Modal>
-        
-
-          <PageHeader title="Let's connect" />
-          <p className={[styles.ContactsPage__message, this.props.time === 'night' ? styles.light : styles.dark].join(' ')}>
-            If you find my works interesting and
-            if I can help you or your team in your project,
-            or even if you want to ask a question, send me an email.
+      <TimeContext.Consumer>
+        {time => (
+          <div className={styles.ContactsPage}>
+            <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
+              <div
+                className={[styles.letter, time].join(' ')}
+              >
+                {this.state.error ? 'Something went wrong' : 'Thank You!'}
+              </div>
+            </Modal>
+            <PageHeader title="Let's connect" />
+            <p className={[styles.ContactsPage__message, time].join(' ')}>
+              If you find my works interesting and
+              if I can help you or your team in your project,
+              or even if you want to ask a question, send me an email.
           </p>
-          <form onSubmit={this.submitHandler} className={[styles.ContactsPage__form, this.props.time === 'night' ? styles.light : styles.dark].join(' ')} method="GET">
-            {
-              formElementsArray.map(formElement => (
-                <Input key={formElement.id}
-                  changed={(e) => this.inputChangedHandler(e, formElement.id)}
-                  elementType={formElement.config.elementType}
-                  elementConfig={formElement.config.elementConfig}
-                  value={formElement.config.value}
-                />
-              ))
-            }
-            <p className={styles.ContactsPage__instruction}>* &mdash; required</p>
-            <Button buttonType="submit" size="medium">Submit</Button>
-          </form>
-      </div>
+            <form 
+              onSubmit={this.submitHandler} 
+              className={[styles.ContactsPage__form, time].join(' ')} 
+              method="GET"
+            >
+              {
+                formElementsArray.map(formElement => (
+                  <Input key={formElement.id}
+                    changed={(e) => this.inputChangedHandler(e, formElement.id)}
+                    elementType={formElement.config.elementType}
+                    elementConfig={formElement.config.elementConfig}
+                    value={formElement.config.value}
+                  />
+                ))
+              }
+              <p className={styles.ContactsPage__instruction}>* &mdash; required</p>
+              <Button buttonType="submit" size="medium">Submit</Button>
+            </form>
+          </div>
+        )}
+      </TimeContext.Consumer>
     );
   }
 }

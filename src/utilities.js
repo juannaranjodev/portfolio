@@ -9,8 +9,8 @@ export const random = limit => Math.floor(Math.random() * limit);
 // Returns time of day with corresponding word
 export const checkDayTime = () => {
   const time = new Date();
-  return time.getHours() > 5 && time.getHours() < 19 ? 'day' : 'night';
-  // return 'night';
+  // return time.getHours() > 5 && time.getHours() < 19 ? 'day' : 'night';
+  return 'night';
 };
 
 // Devides a word into characters with 'span' elements with animation

@@ -41,7 +41,7 @@ class Layout extends Component {
           open={this.state.showSideDrawer}
           closed={this.sideDrawerClosedHandler}
         />
-        <main className={styles.content} time={this.props.time}>
+        <main className={styles.content}>
           {this.props.children}
         </main>
       </div>

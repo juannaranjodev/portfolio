@@ -1,0 +1,21 @@
+.Container {
+  @include fullSize;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	text-align: center;
+	
+	&::-webkit-scrollbar-track {
+		box-shadow: 0 0 6px rgba($colorBlack, .5) inset;
+		background-color: $colorGray;
+	}
+
+	&::-webkit-scrollbar {
+		width: 12px;
+		background-color: $colorGray;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		box-shadow: 0 0 6px rgba($colorBlack, .5) inset;
+		background-color: $colorSecondary;
+	}
+}

@@ -6,12 +6,13 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 const projectModal = (props) => (
   <div className={styles.ProjectModal}>
-    <a className={styles.ProjectModal__image} style={{ backgroundImage: `url(${props.image})` }} href={props.app} target="_blank" rel="noopener noreferrer">
-      <div 
-        // className={styles.ProjectModal__image} 
-       
-      >
-      </div>
+    <a 
+      className={styles.ProjectModal__image} 
+      style={{ backgroundImage: `url(${props.image})` }} 
+      href={props.app} 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >  
     </a>
     <div className={styles.ProjectModal__data}>
       <header className={styles.data__header}>
