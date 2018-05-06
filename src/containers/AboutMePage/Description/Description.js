@@ -14,8 +14,8 @@ const description = (props) => {
         I build web applications with responsive layouts for that they work correctly on any devices.
         My highest priorities are intuitive UX/UI and fast loading of our projects.
 
-        And what about my personaity?
-        I like knowledge, and I strongly believe self learning and constant growth enrich every single life.
+        And what about my personality?
+        I like knowledge, and I strongly believe self-learning and constant growth enrich every single life.
         I like to create beautiful things and it's the main reason why I do what I do.
         I understand the challenges of remote work, but if you really love what you do there are no challenges which you could not overcome.`
     },
@@ -29,7 +29,7 @@ const description = (props) => {
         I find Sass preprocessor interesting for me and effective in the development process. 
         But there is no problem to use others.
         There is no way to work remotely with efficiency without communication 
-        and organisation tools like Slack, Skype, Asana, Trello and others.
+        and organization tools like Slack, Skype, Asana, Trello, and others.
         We'll keep projects on-track and under control.`
     }
   };
