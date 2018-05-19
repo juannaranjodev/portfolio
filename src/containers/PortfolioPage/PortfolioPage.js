@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import styles from './PortfolioPage.scss';
-import axios from 'axios';
 import ProjectPreview from '../../components/ProjectPreview/ProjectPreview';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
@@ -9,29 +9,18 @@ import ProjectModal from '../../components/ProjectModal/ProjectModal';
 import Button from '../../components/UI/Button/Button';
 import Container from '../../hoc/Container/Container';
 import PageHeader from '../../components/PageHeader/PageHeader';
+import * as actions from '../../store/actions/index';
 
 class PortfolioPage extends Component {
   state = {
-    projects: null,
     showModal: false,
     modalContent: null,
     error: false
   }
 
-  getProjects = () => {
-    axios.get('https://olbesp-portfolio.firebaseio.com/projects.json')
-      .then(response => {
-        const projects = response.data;
-        this.setState({ projects });
-      })
-      .catch(error => {
-        this.setState({ error: true });
-      });
-  }
-
   showModalHandler = (e) => {
-    if (this.state.projects) {
-      this.state.projects.forEach(project => {
+    if (this.props.projects) {
+      this.props.projects.forEach(project => {
         if (e.target.parentNode.id === project.id) {
           this.setState({ modalContent: project, showModal: true });
         }
@@ -44,7 +33,7 @@ class PortfolioPage extends Component {
   }
 
   componentDidMount() {
-    this.getProjects();
+    this.props.onFetchProjects();
   }
 
   render() {
@@ -73,8 +62,8 @@ class PortfolioPage extends Component {
     let projectModal = <div></div>;
     let projectsPreview;
 
-    if (this.state.projects) {
-      projectsPreview = this.state.projects
+    if (this.props.projects) {
+      projectsPreview = this.props.projects
         .map(project => (
           <ProjectPreview id={project.id} 
             key={project.id} 
@@ -116,4 +105,12 @@ class PortfolioPage extends Component {
   }
 }
 
-export default PortfolioPage;
+const mapStateToProps = state => ({
+  projects: state.portfolio.projects
+});
+
+const mapDispatchToProps = dispatch => ({
+  onFetchProjects: () => dispatch(actions.fetchProjects())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(PortfolioPage);
