@@ -26,7 +26,6 @@ fontawesome.library.add(
 export const TimeContext = React.createContext(checkDayTime());
 
 class App extends Component {
-
   render() {
     return (
       <TimeContext.Provider value={checkDayTime()}>
@@ -47,6 +46,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
