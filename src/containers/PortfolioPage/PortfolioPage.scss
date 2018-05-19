@@ -2,4 +2,16 @@
   @include flexStart;
   flex-wrap: wrap;
   overflow: hidden;
+
+  &__loading {
+    @include flexCenter;
+    height: 100vh;
+  }
+
+  &__error {
+    margin-top: 7rem;
+    width: 40%;
+    color: #fff;
+    font-size: 2rem;
+  }
 }

@@ -38,25 +38,15 @@ class PortfolioPage extends Component {
 
   render() {
     let portfolio = (
-      <p style={{
-        marginTop: '7rem',
-        width: '40%', 
-        color: '#fff',
-        fontSize: '2rem'
-      }}>
+      <div className={styles.Projects__error}>
         There is some problem with data, sorry. 
         Also you can see my projects on GitHub:
         <Button href="https://github.com/olbesp" textLink> https://github.com/olbesp</Button>
-      </p>
+      </div>
     );
 
     if (!this.state.error) {
-      portfolio = <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh'
-      }}><Spinner /></div>; 
+      portfolio = <div className={styles.Projects__loading}><Spinner /></div>; 
     }
 
     let projectModal = <div></div>;
