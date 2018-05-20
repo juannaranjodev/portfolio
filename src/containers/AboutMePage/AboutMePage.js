@@ -13,7 +13,7 @@ class AboutMePage extends Component {
         <PageHeader title="Few words about me" />
         <div className={styles.AboutMePage}>
           <SkillsBoard />
-          <Description time={this.props.time} />
+          <Description />
         </div>
       </Container>
     );

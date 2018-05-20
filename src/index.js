@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
 import './index.scss';
-import App from './containers/App/App';
+import App from './App/App';
 import registerServiceWorker from './registerServiceWorker';
 import portfolioReducer from './store/reducers/portfolio';
 import skillsBoardReducer from './store/reducers/skillsBoard';

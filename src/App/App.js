@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-import Layout from '../../hoc/Layout/Layout';
-import asyncComponent from '../../hoc/AsyncComponent/AsyncComponent';
+import Layout from '../hoc/Layout/Layout';
+import asyncComponent from '../hoc/AsyncComponent/AsyncComponent';
 
-import { checkDayTime } from '../../utilities';
+import { checkDayTime } from '../utilities';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import faHome from '@fortawesome/fontawesome-free-solid/faHome';
@@ -14,10 +14,10 @@ import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
 import faCode from '@fortawesome/fontawesome-free-solid/faCode';
 import faLink from '@fortawesome/fontawesome-free-solid/faLink';
 
-const AsyncHome = asyncComponent(() => import('../HomePage/HomePage'));
-const AsyncAboutMe = asyncComponent(() => import('../AboutMePage/AboutMePage'));
-const AsyncPortfolio = asyncComponent(() => import('../PortfolioPage/PortfolioPage'));
-const AsyncContacts = asyncComponent(() => import('../ContactsPage/ContactsPage'));
+const AsyncHome = asyncComponent(() => import('../containers/HomePage/HomePage'));
+const AsyncAboutMe = asyncComponent(() => import('../containers/AboutMePage/AboutMePage'));
+const AsyncPortfolio = asyncComponent(() => import('../containers/PortfolioPage/PortfolioPage'));
+const AsyncContacts = asyncComponent(() => import('../containers/ContactsPage/ContactsPage'));
 
 fontawesome.library.add(
   brands, faHome, faUserSecret, faImage, faEnvelope, faCode, faLink
