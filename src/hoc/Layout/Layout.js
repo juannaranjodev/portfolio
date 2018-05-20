@@ -4,7 +4,7 @@ import styles from './Layout.scss';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 import Background from '../../components/UI/Background/Background';
-import { TimeContext } from '../../containers/App/App';
+import { TimeContext } from '../../App/App';
 
 class Layout extends Component {
   state = {

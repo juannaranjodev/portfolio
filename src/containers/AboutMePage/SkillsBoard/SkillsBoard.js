@@ -1,68 +1,47 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import styles from './SkillsBoard.scss';
-import axios from 'axios';
 import { BarChart } from 'react-easy-chart';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import Media from 'react-media';
 import Technologies from '../Technologies/Technologies';
 import { Animated } from 'react-animated-css';
 import { random } from '../../../utilities';
+import * as actions from '../../../store/actions/index';
 
 class SkillsBoard extends Component {
-  state = {
-    windowWidth: window.innerWidth,
-    skills: null,
-    error: false
-  }
-
-  getData = () => {
-    axios.get('https://olbesp-portfolio.firebaseio.com/skills.json')
-    .then(response => {
-      this.setState({ skills: response.data });
-    })
-    .catch(error => {
-      this.setState({ error: true });
-    });
-  }
-
-  windowResizeHandler = (e) => {
-    this.setState({windowWidth: e.target.innerWidth});
-  }
 
   componentDidMount() {
-    this.getData();
-    window.addEventListener('resize', this.windowResizeHandler);
+    this.props.onFetchSkills();
+    window.addEventListener('resize', this.props.onResizeWindow);
   }
 
   componentWillUnmount() {
-    this.setState({ skills: null, error: false })
-    window.removeEventListener('resize', this.windowResizeHandler);
+    window.removeEventListener('resize', this.props.onResizeWindow);
   }
 
   render() {
     const resizeSkillsBoard = () => {
-      const windowSize = this.state.windowWidth;
+      // Resizes BarChart component depending on inner width of browser
+      const windowSize = this.props.windowWidth;
       switch (true) {
-        case (windowSize < 550):
-          return windowSize * 0.95;
-        case (windowSize < 768):
-          return windowSize * 0.9;
-        case (windowSize < 1024):
-          return windowSize * 0.8;
-        case (windowSize < 1200):
-          return windowSize * 0.75;
-        default:
-          return windowSize * 0.65;
+        case (windowSize < 550): return windowSize * 0.95;
+        case (windowSize < 768): return windowSize * 0.9;
+        case (windowSize < 1024): return windowSize * 0.8;
+        case (windowSize < 1200): return windowSize * 0.75;
+        default: return windowSize * 0.65;
       }
-    }
+    };
 
     let skillsData = null;
-    if (!this.state.error) {
+
+    if (!this.props.error) {
       skillsData = <div style={{width: '90%'}}><Spinner /></div>;
     }
-    if (this.state.skills) {
-      const skills = this.state.skills.map((skill, index) => {
+
+    if (this.props.skills) {
+      const skills = this.props.skills.map((skill, index) => {
         return { x: skill.title, y: skill.value, color: '#e6902f' };
       });
 
@@ -86,11 +65,22 @@ class SkillsBoard extends Component {
             </Animated>
           }
         </Media>
-      )
+      );
     }
 
     return skillsData;
   }
 }
 
-export default SkillsBoard;
+const mapStateToProps = state => ({
+  windowWidth: state.skillsBoard.windowWidth,
+  skills: state.skillsBoard.skills,
+  error: state.skillsBoard.error
+});
+
+const mapDispatchToProps = dispatch => ({
+  onResizeWindow: event => dispatch(actions.resizeWindow(event)),
+  onFetchSkills: () => dispatch(actions.fetchSkills())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SkillsBoard);

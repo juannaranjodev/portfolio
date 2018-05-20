@@ -6,7 +6,7 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 import Button from '../../components/UI/Button/Button';
 import Input from '../../components/UI/Input/Input';
 import Modal from '../../components/UI/Modal/Modal';
-import { TimeContext } from '../App/App';
+import { TimeContext } from '../../App/App';
 
 const createInput = (tag, type, placeholder, required = true) => {
   return {

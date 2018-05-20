@@ -3,9 +3,9 @@ import React from 'react';
 import styles from './Description.scss';
 import Button from '../../../components/UI/Button/Button';
 import { Animated } from 'react-animated-css';
-import { TimeContext } from '../../App/App';
+import { TimeContext } from '../../../App/App';
 
-const description = (props) => {
+const description = props => {
   const content = {
     aboutMe: {
       header: 'Who I am',

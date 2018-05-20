@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import styles from './PortfolioPage.scss';
-import axios from 'axios';
 import ProjectPreview from '../../components/ProjectPreview/ProjectPreview';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
@@ -9,92 +9,57 @@ import ProjectModal from '../../components/ProjectModal/ProjectModal';
 import Button from '../../components/UI/Button/Button';
 import Container from '../../hoc/Container/Container';
 import PageHeader from '../../components/PageHeader/PageHeader';
+import * as actions from '../../store/actions/index';
 
 class PortfolioPage extends Component {
-  state = {
-    projects: null,
-    showModal: false,
-    modalContent: null,
-    error: false
-  }
-
-  getProjects = () => {
-    axios.get('https://olbesp-portfolio.firebaseio.com/projects.json')
-      .then(response => {
-        const projects = response.data;
-        this.setState({ projects });
-      })
-      .catch(error => {
-        this.setState({ error: true });
-      });
-  }
-
-  showModalHandler = (e) => {
-    if (this.state.projects) {
-      this.state.projects.forEach(project => {
-        if (e.target.parentNode.id === project.id) {
-          this.setState({ modalContent: project, showModal: true });
-        }
-      });
-    }
-  }
-
-  closeModalHandler = () => {
-    this.setState({ showModal: false, modalContent: null });
-  }
 
   componentDidMount() {
-    this.getProjects();
+    this.props.onFetchProjects();
   }
 
   render() {
-    let portfolio = (
-      <p style={{
-        marginTop: '7rem',
-        width: '40%', 
-        color: '#fff',
-        fontSize: '2rem'
-      }}>
-        There is some problem with data, sorry. 
-        Also you can see my projects on GitHub:
-        <Button href="https://github.com/olbesp" textLink> https://github.com/olbesp</Button>
-      </p>
-    );
+    let pageContent = null;
+    let projectModal = <div></div>;
+    let projectsPreview = null;
 
-    if (!this.state.error) {
-      portfolio = <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh'
-      }}><Spinner /></div>; 
+    if (this.props.error) {
+      pageContent = (
+        <div className={styles.Projects__error}>
+          <div>{this.props.error.message}</div>
+          You can check my projects on GitHub:
+          <div>
+            <Button buttonType="anchor" href="https://github.com/olbesp" newtab textLink size="medium">
+              https://github.com/olbesp
+            </Button>
+          </div>
+        </div>
+      );
     }
 
-    let projectModal = <div></div>;
-    let projectsPreview;
+    if (!this.props.error) {
+      pageContent = <div className={styles.Projects__loading}><Spinner /></div>;
+    }
 
-    if (this.state.projects) {
-      projectsPreview = this.state.projects
-        .map(project => (
-          <ProjectPreview id={project.id} 
-            key={project.id} 
-            title={project.title} 
-            img={project.image}
-          />
-        )
-      );
-      portfolio = (
+    if (this.props.projects) {
+      projectsPreview = this.props.projects.map(project => (
+        <ProjectPreview id={project.id}
+          key={project.id}
+          title={project.title}
+          img={project.image}
+        />
+      ));
+      pageContent = (
         <Container>
           <PageHeader title="My featured works" />
-          <div className={styles.Projects} onClick={this.showModalHandler}>
+          <div className={styles.Projects} onClick={(e) => this.props.onModalOpened(e, this.props.projects)}>
             {projectsPreview}
           </div>
         </Container>
       );
     }
 
-    if (this.state.modalContent) {
-      const project = this.state.modalContent;
+    if (this.props.modalContent) {
+      const project = this.props.modalContent;
       projectModal = <ProjectModal 
         title={project.title} 
         image={project.image}
@@ -102,18 +67,34 @@ class PortfolioPage extends Component {
         tools={project.tools}
         code={project.links.code}
         app={project.links.app}
-        closeModal={this.closeModalHandler} />
+        closeModal={this.props.onModalClosed} />
     }
 
     return (
       <React.Fragment>
-        <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
+        <Modal 
+          show={this.props.showModal}
+          modalClosed={this.props.onModalClosed}
+        >
           {projectModal}
         </Modal>
-        {portfolio}
+        {pageContent}
       </React.Fragment>
     );
   }
 }
 
-export default PortfolioPage;
+const mapStateToProps = state => ({
+  projects: state.portfolio.projects,
+  showModal: state.portfolio.showModal,
+  modalContent: state.portfolio.modalContent,
+  error: state.portfolio.error
+});
+
+const mapDispatchToProps = dispatch => ({
+  onFetchProjects: () => dispatch(actions.fetchProjects()),
+  onModalOpened: (event, projects) => dispatch(actions.modalHandler(event, projects)),
+  onModalClosed: () => dispatch(actions.modalClosed())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(PortfolioPage);

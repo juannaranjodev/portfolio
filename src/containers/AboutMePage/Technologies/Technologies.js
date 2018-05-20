@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Technologies.scss';
 import InnerHTML from 'dangerously-set-inner-html';
 
-const technologies = (props) => {
+const technologies = props => {
   const techTools = {
     html: `
       <svg viewBox="0 0 128 128">

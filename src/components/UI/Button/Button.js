@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Button.scss';
 import { Link } from 'react-router-dom';
 
-const button = (props) => {
+const button = props => {
   const classes = props.textLink ? 
     styles.Link : 
     [styles.Button, styles[props.size]].join(' ');

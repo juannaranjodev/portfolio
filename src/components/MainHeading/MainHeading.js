@@ -3,10 +3,10 @@ import React from 'react';
 import styles from './MainHeading.scss';
 import Button from '../UI/Button/Button';
 import { Animated } from 'react-animated-css';
-import { TimeContext } from '../../containers/App/App';
+import { TimeContext } from '../../App/App';
 import { devideAndAnimate, devideIntoChars, splitAndAnimate } from '../../utilities';
 
-const mainHeading = (props) => {
+const mainHeading = props => {
   const headers = {
     name: 'Oleksii Bespalko',
     role: 'Front-end Developer',
