@@ -22,43 +22,39 @@ class PortfolioPage extends Component {
     let projectModal = <div></div>;
     let projectsPreview = null;
 
-    switch (true) {
-      case !this.props.error:
-        pageContent = <div className={styles.Projects__loading}><Spinner /></div>;
-        break;
-      case this.props.projects:
-        projectsPreview = this.props.projects.map(project => (
-          <ProjectPreview id={project.id}
-            key={project.id}
-            title={project.title}
-            img={project.image}
-          />
-        ));
-        pageContent = (
-          <Container>
-            <PageHeader title="My featured works" />
-            <div className={styles.Projects} onClick={(e) => this.props.onModalOpened(e, this.props.projects)}>
-              {projectsPreview}
-            </div>
-          </Container>
-        );
-        break;
-      default: pageContent = (
+    if (this.props.error) {
+      pageContent = (
         <div className={styles.Projects__error}>
           <div>{this.props.error.message}</div>
           You can check my projects on GitHub:
           <div>
-            <Button 
-              buttonType="anchor"
-              href="https://github.com/olbesp"
-              newtab
-              textLink
-              size="medium"
-            >
+            <Button buttonType="anchor" href="https://github.com/olbesp" newtab textLink size="medium">
               https://github.com/olbesp
             </Button>
           </div>
         </div>
+      );
+    }
+
+    if (!this.props.error) {
+      pageContent = <div className={styles.Projects__loading}><Spinner /></div>;
+    }
+
+    if (this.props.projects) {
+      projectsPreview = this.props.projects.map(project => (
+        <ProjectPreview id={project.id}
+          key={project.id}
+          title={project.title}
+          img={project.image}
+        />
+      ));
+      pageContent = (
+        <Container>
+          <PageHeader title="My featured works" />
+          <div className={styles.Projects} onClick={(e) => this.props.onModalOpened(e, this.props.projects)}>
+            {projectsPreview}
+          </div>
+        </Container>
       );
     }
 
