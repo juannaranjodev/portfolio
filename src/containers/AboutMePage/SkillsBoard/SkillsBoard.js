@@ -1,29 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import styles from './SkillsBoard.scss';
-import axios from 'axios';
 import { BarChart } from 'react-easy-chart';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import Media from 'react-media';
 import Technologies from '../Technologies/Technologies';
 import { Animated } from 'react-animated-css';
 import { random } from '../../../utilities';
+import * as actions from '../../../store/actions/index';
 
 class SkillsBoard extends Component {
   state = {
-    windowWidth: window.innerWidth,
-    skills: null,
-    error: false
-  }
-
-  getData = () => {
-    axios.get('https://olbesp-portfolio.firebaseio.com/skills.json')
-    .then(response => {
-      this.setState({ skills: response.data });
-    })
-    .catch(error => {
-      this.setState({ error: true });
-    });
+    windowWidth: window.innerWidth
   }
 
   windowResizeHandler = (e) => {
@@ -31,12 +20,11 @@ class SkillsBoard extends Component {
   }
 
   componentDidMount() {
-    this.getData();
+    this.props.onFetchSkills();
     window.addEventListener('resize', this.windowResizeHandler);
   }
 
   componentWillUnmount() {
-    this.setState({ skills: null, error: false })
     window.removeEventListener('resize', this.windowResizeHandler);
   }
 
@@ -55,14 +43,14 @@ class SkillsBoard extends Component {
         default:
           return windowSize * 0.65;
       }
-    }
+    };
 
     let skillsData = null;
-    if (!this.state.error) {
+    if (!this.props.error) {
       skillsData = <div style={{width: '90%'}}><Spinner /></div>;
     }
-    if (this.state.skills) {
-      const skills = this.state.skills.map((skill, index) => {
+    if (this.props.skills) {
+      const skills = this.props.skills.map((skill, index) => {
         return { x: skill.title, y: skill.value, color: '#e6902f' };
       });
 
@@ -86,11 +74,20 @@ class SkillsBoard extends Component {
             </Animated>
           }
         </Media>
-      )
+      );
     }
 
     return skillsData;
   }
 }
 
-export default SkillsBoard;
+const mapStateToProps = state => ({
+  skills: state.skillsBoard.skills,
+  error: state.skillsBoard.error
+});
+
+const mapDispatchToProps = dispatch => ({
+  onFetchSkills: () => dispatch(actions.fetchSkills())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SkillsBoard);

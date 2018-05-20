@@ -7,12 +7,14 @@ import thunk from 'redux-thunk';
 import './index.scss';
 import App from './containers/App/App';
 import registerServiceWorker from './registerServiceWorker';
-import portfolioReducer from './store/reducers/portfolio'; 
+import portfolioReducer from './store/reducers/portfolio';
+import skillsBoardReducer from './store/reducers/skillsBoard';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-  portfolio: portfolioReducer
+  portfolio: portfolioReducer,
+  skillsBoard: skillsBoardReducer
 });
 
 const store = createStore(
