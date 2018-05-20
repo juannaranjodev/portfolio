@@ -6,8 +6,9 @@ const fetchProjectsSuccess = projects => ({
   projects
 });
 
-const fetchProjectsFail = () => ({
-  type: actionTypes.FETCH_PROJECTS_FAIL
+const fetchProjectsFail = (error) => ({
+  type: actionTypes.FETCH_PROJECTS_FAIL,
+  error
 });
 
 export const fetchProjects = () => dispatch => {
@@ -16,7 +17,7 @@ export const fetchProjects = () => dispatch => {
       dispatch(fetchProjectsSuccess(response.data));
     })
     .catch(error => {
-      dispatch(fetchProjectsFail());
+      dispatch(fetchProjectsFail(error));
     });
 };
 

@@ -4,18 +4,18 @@ const initialState = {
   projects: null,
   showModal: false,
   modalContent: null,
-  error: false
+  error: null
 };
 
 const fetchProjects = (state, action) => ({
   ...state,
   projects: action.projects,
-  error: false
+  error: null
 });
 
 const fetchProjectsFail = (state, action) => ({
   ...state,
-  error: true
+  error: action.error
 });
 
 const modalOpened = (state, action) => ({

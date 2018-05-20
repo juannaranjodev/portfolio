@@ -12,43 +12,53 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 import * as actions from '../../store/actions/index';
 
 class PortfolioPage extends Component {
-  
+
   componentDidMount() {
     this.props.onFetchProjects();
   }
 
   render() {
-    let portfolio = (
-      <div className={styles.Projects__error}>
-        There is some problem with data, sorry. 
-        Also you can see my projects on GitHub:
-        <Button href="https://github.com/olbesp" textLink> https://github.com/olbesp</Button>
-      </div>
-    );
-
-    if (!this.props.error) {
-      portfolio = <div className={styles.Projects__loading}><Spinner /></div>; 
-    }
-
+    let pageContent = null;
     let projectModal = <div></div>;
-    let projectsPreview;
+    let projectsPreview = null;
 
-    if (this.props.projects) {
-      projectsPreview = this.props.projects.map(project => (
-        <ProjectPreview id={project.id} 
-          key={project.id} 
-          title={project.title} 
-          img={project.image}
-        />
-      ));
-
-      portfolio = (
-        <Container>
-          <PageHeader title="My featured works" />
-          <div className={styles.Projects} onClick={(e) => this.props.onModalOpened(e, this.props.projects)}>
-            {projectsPreview}
+    switch (true) {
+      case !this.props.error:
+        pageContent = <div className={styles.Projects__loading}><Spinner /></div>;
+        break;
+      case this.props.projects:
+        projectsPreview = this.props.projects.map(project => (
+          <ProjectPreview id={project.id}
+            key={project.id}
+            title={project.title}
+            img={project.image}
+          />
+        ));
+        pageContent = (
+          <Container>
+            <PageHeader title="My featured works" />
+            <div className={styles.Projects} onClick={(e) => this.props.onModalOpened(e, this.props.projects)}>
+              {projectsPreview}
+            </div>
+          </Container>
+        );
+        break;
+      default: pageContent = (
+        <div className={styles.Projects__error}>
+          <div>{this.props.error.message}</div>
+          You can check my projects on GitHub:
+          <div>
+            <Button 
+              buttonType="anchor"
+              href="https://github.com/olbesp"
+              newtab
+              textLink
+              size="medium"
+            >
+              https://github.com/olbesp
+            </Button>
           </div>
-        </Container>
+        </div>
       );
     }
 
@@ -72,7 +82,7 @@ class PortfolioPage extends Component {
         >
           {projectModal}
         </Modal>
-        {portfolio}
+        {pageContent}
       </React.Fragment>
     );
   }

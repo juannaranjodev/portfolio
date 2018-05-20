@@ -9,9 +9,9 @@
   }
 
   &__error {
-    margin-top: 7rem;
-    width: 40%;
-    color: #fff;
+    margin: 7rem auto 0;
+    text-align: center;
+    color: $colorWhite;
     font-size: 2rem;
   }
 }
