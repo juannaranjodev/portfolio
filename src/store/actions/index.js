@@ -1,2 +1,2 @@
 export { fetchProjects, modalHandler, modalClosed } from './portfolio';
-export { fetchSkills } from './skillsBoard';
+export { fetchSkills, resizeWindow } from './skillsBoard';

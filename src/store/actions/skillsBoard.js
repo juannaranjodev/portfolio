@@ -19,3 +19,12 @@ export const fetchSkills = () => dispatch => {
       dispatch(fetchSkillsFail());
     });
 };
+
+const getWindowWidth = windowWidth => ({
+  type: actionTypes.RESIZE_WINDOW,
+  windowWidth
+});
+
+export const resizeWindow = event => dispatch => {
+  dispatch(getWindowWidth(event.target.innerWidth));
+};

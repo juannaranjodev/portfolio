@@ -11,44 +11,35 @@ import { random } from '../../../utilities';
 import * as actions from '../../../store/actions/index';
 
 class SkillsBoard extends Component {
-  state = {
-    windowWidth: window.innerWidth
-  }
-
-  windowResizeHandler = (e) => {
-    this.setState({windowWidth: e.target.innerWidth});
-  }
 
   componentDidMount() {
     this.props.onFetchSkills();
-    window.addEventListener('resize', this.windowResizeHandler);
+    window.addEventListener('resize', this.props.onResizeWindow);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.windowResizeHandler);
+    window.removeEventListener('resize', this.props.onResizeWindow);
   }
 
   render() {
     const resizeSkillsBoard = () => {
-      const windowSize = this.state.windowWidth;
+      // Resizes BarChart component depending on inner width of browser
+      const windowSize = this.props.windowWidth;
       switch (true) {
-        case (windowSize < 550):
-          return windowSize * 0.95;
-        case (windowSize < 768):
-          return windowSize * 0.9;
-        case (windowSize < 1024):
-          return windowSize * 0.8;
-        case (windowSize < 1200):
-          return windowSize * 0.75;
-        default:
-          return windowSize * 0.65;
+        case (windowSize < 550): return windowSize * 0.95;
+        case (windowSize < 768): return windowSize * 0.9;
+        case (windowSize < 1024): return windowSize * 0.8;
+        case (windowSize < 1200): return windowSize * 0.75;
+        default: return windowSize * 0.65;
       }
     };
 
     let skillsData = null;
+
     if (!this.props.error) {
       skillsData = <div style={{width: '90%'}}><Spinner /></div>;
     }
+
     if (this.props.skills) {
       const skills = this.props.skills.map((skill, index) => {
         return { x: skill.title, y: skill.value, color: '#e6902f' };
@@ -82,11 +73,13 @@ class SkillsBoard extends Component {
 }
 
 const mapStateToProps = state => ({
+  windowWidth: state.skillsBoard.windowWidth,
   skills: state.skillsBoard.skills,
   error: state.skillsBoard.error
 });
 
 const mapDispatchToProps = dispatch => ({
+  onResizeWindow: event => dispatch(actions.resizeWindow(event)),
   onFetchSkills: () => dispatch(actions.fetchSkills())
 });
 
