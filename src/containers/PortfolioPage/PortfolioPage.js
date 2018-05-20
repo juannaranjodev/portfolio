@@ -12,26 +12,7 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 import * as actions from '../../store/actions/index';
 
 class PortfolioPage extends Component {
-  state = {
-    showModal: false,
-    modalContent: null,
-    error: false
-  }
-
-  showModalHandler = (e) => {
-    if (this.props.projects) {
-      this.props.projects.forEach(project => {
-        if (e.target.parentNode.id === project.id) {
-          this.setState({ modalContent: project, showModal: true });
-        }
-      });
-    }
-  }
-
-  closeModalHandler = () => {
-    this.setState({ showModal: false, modalContent: null });
-  }
-
+  
   componentDidMount() {
     this.props.onFetchProjects();
   }
@@ -45,7 +26,7 @@ class PortfolioPage extends Component {
       </div>
     );
 
-    if (!this.state.error) {
+    if (!this.props.error) {
       portfolio = <div className={styles.Projects__loading}><Spinner /></div>; 
     }
 
@@ -53,27 +34,26 @@ class PortfolioPage extends Component {
     let projectsPreview;
 
     if (this.props.projects) {
-      projectsPreview = this.props.projects
-        .map(project => (
-          <ProjectPreview id={project.id} 
-            key={project.id} 
-            title={project.title} 
-            img={project.image}
-          />
-        )
-      );
+      projectsPreview = this.props.projects.map(project => (
+        <ProjectPreview id={project.id} 
+          key={project.id} 
+          title={project.title} 
+          img={project.image}
+        />
+      ));
+
       portfolio = (
         <Container>
           <PageHeader title="My featured works" />
-          <div className={styles.Projects} onClick={this.showModalHandler}>
+          <div className={styles.Projects} onClick={(e) => this.props.onModalOpened(e, this.props.projects)}>
             {projectsPreview}
           </div>
         </Container>
       );
     }
 
-    if (this.state.modalContent) {
-      const project = this.state.modalContent;
+    if (this.props.modalContent) {
+      const project = this.props.modalContent;
       projectModal = <ProjectModal 
         title={project.title} 
         image={project.image}
@@ -81,12 +61,15 @@ class PortfolioPage extends Component {
         tools={project.tools}
         code={project.links.code}
         app={project.links.app}
-        closeModal={this.closeModalHandler} />
+        closeModal={this.props.onModalClosed} />
     }
 
     return (
       <React.Fragment>
-        <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
+        <Modal 
+          show={this.props.showModal}
+          modalClosed={this.props.onModalClosed}
+        >
           {projectModal}
         </Modal>
         {portfolio}
@@ -96,11 +79,16 @@ class PortfolioPage extends Component {
 }
 
 const mapStateToProps = state => ({
-  projects: state.portfolio.projects
+  projects: state.portfolio.projects,
+  showModal: state.portfolio.showModal,
+  modalContent: state.portfolio.modalContent,
+  error: state.portfolio.error
 });
 
 const mapDispatchToProps = dispatch => ({
-  onFetchProjects: () => dispatch(actions.fetchProjects())
+  onFetchProjects: () => dispatch(actions.fetchProjects()),
+  onModalOpened: (event, projects) => dispatch(actions.modalHandler(event, projects)),
+  onModalClosed: () => dispatch(actions.modalClosed())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PortfolioPage);

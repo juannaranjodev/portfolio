@@ -19,3 +19,23 @@ export const fetchProjects = () => dispatch => {
       dispatch(fetchProjectsFail());
     });
 };
+
+const modalOpened = modalContent => ({
+  type: actionTypes.MODAL_OPENED,
+  modalContent
+});
+
+export const modalClosed = () => ({
+  type: actionTypes.MODAL_CLOSED,
+  modalContent: null
+});
+
+export const modalHandler = (event, projects) => dispatch => {
+  if (projects) {
+    projects.forEach(project => {
+      if (event.target.parentNode.id === project.id) {
+        dispatch(modalOpened(project));
+      }
+    });
+  }
+};

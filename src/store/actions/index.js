@@ -1,1 +1,1 @@
-export { fetchProjects } from './portfolio';
+export { fetchProjects, modalHandler, modalClosed } from './portfolio';
